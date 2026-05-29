@@ -157,7 +157,7 @@ function Home() {
                         <h1>Begin Trading with Your Favorite Coins</h1>
                         <p>
                           <p>
-                            Welcome to Taikonz! A next-gen Blockchain and Crypto
+                            Welcome to FinzoX ! A next-gen Blockchain and Crypto
                             Exchange platform that offers trader with an endless
                             assets buy and selling feature with real money.
                           </p>
@@ -417,9 +417,9 @@ function Home() {
           <div className="container">
             <div className="row justify-center">
               <div className="col-lg-10">
-                <h1 className="gradion_text">Why Taikonz ?</h1>
+                <h1 className="gradion_text">Why FinzoX ?</h1>
                 <p className="text_des">
-                  Taikonz operates on the ERC-20 network, allowing it to easily
+                  FinzoX operates on the ERC-20 network, allowing it to easily
                   integrate with a wide range of tools across multiple
                   blockchains, <br />
                   while maintaining solid security. That’s not all, it also
@@ -471,7 +471,7 @@ function Home() {
                             </h4>
                             <div className="ic__card__description">
                               <p>
-                                Taikonz has the potential to execute millions of
+                                FinzoX has the potential to execute millions of
                                 transactions every second, and the system.
                               </p>
                             </div>
@@ -560,7 +560,7 @@ function Home() {
                             </h4>
                             <div className="ic__card__description">
                               <p>
-                                Taikonz has the potential to execute millions of
+                                FinzoX has the potential to execute millions of
                                 transactions every second, and the system.
                               </p>
                             </div>
@@ -727,7 +727,7 @@ function Home() {
                   easier than ever.
                 </h2>
                 <p className="text_des">
-                  Taikonz makes it easier to invest and trade in cryptocurrency{" "}
+                  FinzoX makes it easier to invest and trade in cryptocurrency{" "}
                   <br />
                   than any other platform.
                 </p>
@@ -753,7 +753,7 @@ function Home() {
                             <h5 className="step__card__heading"> Create account</h5>{" "}
                             <div className="step__card__description">
                               <p>
-                                Taikonz has the potential to execute millions of
+                                FinzoX has the potential to execute millions of
                                 transactions every second, and the system.
                               </p>
                             </div>
@@ -812,7 +812,7 @@ function Home() {
                             <div className="step__card__description">
                               <p>
                                 The organisation has done all necessary to make
-                                Taikonz the most secure exchange.
+                                FinzoX the most secure exchange.
                               </p>
                             </div>
                           </div>
@@ -970,7 +970,7 @@ function Home() {
               Available Currencies
             </h2>
             <p className="text_des">
-              There are various crypto currencies available in Taikonz, and you
+              There are various crypto currencies available in FinzoX, and you
               may easily trade and <br />
               invest in all of them.
             </p>
@@ -1076,13 +1076,13 @@ function Home() {
                     data-aos-duration="2000"
                   >
                     <div className="six_secton_s pl-0">
-                      <h1 className="gradion_text ">About Taikonz</h1>
+                      <h1 className="gradion_text ">About FinzoX</h1>
 
                       <p>
-                        Now is your time. With Taikonz you can buy, sell and
+                        Now is your time. With FinzoX you can buy, sell and
                         trade crypto assets with amazing ease, confidence and
                         trust. Whether you’re a first time investor or a
-                        professional trader - Taikonz has got you both covered!
+                        professional trader - FinzoX has got you both covered!
                       </p>
                     </div>
                   </div>

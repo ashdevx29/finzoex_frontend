@@ -5,22 +5,33 @@
 @tailwind utilities;
 
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif ;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Inter", sans-serif ;
 }
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto", sans-serif ;
 }
+
+/* New Css for Finzo X */
+.inter{
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* end css */
+
+
 
 .qr_img {
   border-radius: 20px;
@@ -3586,7 +3597,7 @@ input:placeholder-shown {
     font-size: 35px;
   }
   .class-padding {
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
   .dash_board_search_box {
     left: 17%;
@@ -3638,7 +3649,7 @@ input:placeholder-shown {
     left: 104px !important;
   }
   .class-padding {
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .dash_board_search_box {
     left: 14%;

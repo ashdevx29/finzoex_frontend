@@ -223,7 +223,7 @@ function Home() {
                     <div className="col-lg-12">
                       <div className="card_logoki pading_cardd">
                         <div className="form_content">
-                          <h1 className="gradion_text">Welcome to Taikonz</h1>
+                          <h1 className="gradion_text">Welcome to FinzoX</h1>
                           <p>
                             Let’s start by submitting your registration details.
                           </p>

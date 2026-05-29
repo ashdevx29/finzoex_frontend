@@ -111,14 +111,14 @@ function Home() {
                   <li className="mb-4">
                     <p className="u-para--readable mb-6">
                       You are responsible for maintaining the security of your
-                      account and password. Taikonz cannot and will not be
+                      account and password. FinzoX cannot and will not be
                       liable for any loss or damage from your failure to comply
                       with this security obligation.
                     </p>
                   </li>
                   <li className="mb-4">
                     <p className="u-para--readable mb-6">
-                      You will promptly notify Taikonz if you become aware of
+                      You will promptly notify FinzoX if you become aware of
                       any unauthorized use of, or access to, our Service through
                       your account, including any unauthorized use of your
                       password or account.
@@ -126,13 +126,13 @@ function Home() {
                   </li>
                   <li className="mb-4">
                     <p className="u-para--readable mb-6">
-                      Taikonz reserves all rights to put hold on your account if
+                      FinzoX reserves all rights to put hold on your account if
                       found any suspicious activity
                     </p>
                   </li>
                   <li className="mb-4">
                     <p className="u-para--readable mb-6">
-                      Taikonz reserves all rights to ask any necessary details
+                      FinzoX reserves all rights to ask any necessary details
                       such as source of funds and other details to investigate
                       and avoid any cases related to money laundering or illegal
                       activities.
@@ -141,16 +141,16 @@ function Home() {
                 </ul>
                 <h3 className="text-xl font-bold my-4">Conduct restrictions</h3>
                 <p className="u-para--readable mb-6">
-                  While using Taikonz you agree that under any circumstance you
+                  While using FinzoX you agree that under any circumstance you
                   will not resort to:
                 </p>
                 <ul className="list-circle pl-8">
                   <li className="mb-4">
                     <p className="u-para--readable mb-6">
-                      Attempt to disrupt or tamper with Taikonz's servers in
+                      Attempt to disrupt or tamper with FinzoX's servers in
                       ways that could harm our Website or Service, to place
-                      undue burden on Taikonz's servers through automated means,
-                      or to access Taikonz's Service in ways that exceed your
+                      undue burden on FinzoX's servers through automated means,
+                      or to access FinzoX's Service in ways that exceed your
                       authorization.
                     </p>
                   </li>
@@ -180,11 +180,11 @@ function Home() {
                   In case any sort of a fraudulent or suspicious activity is
                   found within (or linked to) your account(s), your (or linked)
                   account(s) shall be frozen until given a clean chit by an
-                  investigation for the same, done with the help of the Taikonz
+                  investigation for the same, done with the help of the FinzoX
                   team.
                 </p>
                 <p className="u-para--readable mb-6">
-                  The usage of Taikonz warrants that consumers don't misuse our
+                  The usage of FinzoX warrants that consumers don't misuse our
                   Services. For example but not limited to, don't interfere with
                   our Services or try to access them using a method other than
                   the interface and the instructions that we provide. Any misuse
@@ -231,9 +231,9 @@ function Home() {
                 <p className="u-para--readable mb-6">
                   Yo hereby authorise and give consent to us to call you through
                   any third party service providers to inform / alert regarding
-                  the update related to Taikonz. You further confirm that by
+                  the update related to FinzoX. You further confirm that by
                   sending any of such message / calls, you will not hold
-                  Taikonz, its thirdy party service provider liable / institute
+                  FinzoX, its thirdy party service provider liable / institute
                   complaint under the Telecom Commercial Communication Customer
                   Preference (TRAI) regulation, 2010 or such other applicable
                   regulations including any amendment thereof, as may be
@@ -314,7 +314,7 @@ function Home() {
                     rel="noopener noreferrer nofollow"
                     className="font-bold c-links "
                   >
-                    hi@Taikonz.com
+                    hi@FinzoX.com
                   </a>{" "}
                   or via the contact form.
                 </p>

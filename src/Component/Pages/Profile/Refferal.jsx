@@ -100,7 +100,7 @@ console.log(refferanceref.current,"-0-0-0-0")
     referralHistory(pageNumber);
     setCurrentPage(pageNumber);
   };
-  const title = "Welcome to Taikonz";
+  const title = "Welcome to FinzoX";
 
   const handlePageChange_reward = (pageNumber) => {
     rewardHistory(pageNumber);

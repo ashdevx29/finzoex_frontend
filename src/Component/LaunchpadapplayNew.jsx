@@ -576,7 +576,7 @@ function Home() {
                   src={new URL("../img/keedx-logo-light.png", import.meta.url).href}
                   className="logo lighttheme"
                 />
-                <h1>Taikonz Launchpad Application Form</h1>
+                <h1>FinzoX Launchpad Application Form</h1>
               </div>
             </div>
           </div>
@@ -1166,7 +1166,7 @@ function Home() {
                           <div className="form-group">
                             <label>
                               How much of the Token Sale would you like to
-                              allocate to Taikonz Launchpad
+                              allocate to FinzoX Launchpad
                             </label>
                             <input
                               type="number"
@@ -1386,7 +1386,7 @@ function Home() {
                       <div className="fonrm_card_s page_dss">
                         <div className="form-group mb-5">
                           <label>
-                            Taikonz can publish any of the information you
+                            FinzoX can publish any of the information you
                             provide
                           </label>
                           <div className="custom-control custom-radio mt-3">
@@ -1738,7 +1738,7 @@ function Home() {
               </p>
 
               <p>
-                <span>How much of the Token Sale would you like to allocate to Taikonz Launchpad</span>
+                <span>How much of the Token Sale would you like to allocate to FinzoX Launchpad</span>
                 <span>
                 {allocate}
                 </span>
@@ -2069,7 +2069,7 @@ function Home() {
               </p>
 
               <p>
-                <span>How much of the Token Sale would you like to allocate to Taikonz Launchpad</span>
+                <span>How much of the Token Sale would you like to allocate to FinzoX Launchpad</span>
                 <span>
                 {allocate}
                 </span>

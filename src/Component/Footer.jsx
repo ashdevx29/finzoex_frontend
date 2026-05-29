@@ -126,7 +126,7 @@ function Footer() {
               <div className="site-info__row">
                 <section id="block-4" className="widget widget_block widget_text">
                   <p className="site-info__copyright">
-                     ©2023 Taikonz. All rights reserved
+                     ©2023 FinzoX. All rights reserved
                   </p>
                 </section>
                 <section id="nav_menu-7" className="widget widget_nav_menu">

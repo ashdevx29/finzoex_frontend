@@ -55,7 +55,7 @@ function Home() {
                   src={new URL("../img/keedx-logo-light.png", import.meta.url).href}
                   className="logo lighttheme"
                 />
-                <h1>Taikonz Launchpad user purchase token history</h1>
+                <h1>FinzoX Launchpad user purchase token history</h1>
               </div>
             </div>
           </div>

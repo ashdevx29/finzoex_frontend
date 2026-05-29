@@ -696,7 +696,7 @@ function Home() {
                                                 Transfer{" "}
                                                 {withdrawDet &&
                                                   withdrawDet.currencysymbol}{" "}
-                                                from Taikonz to other wallet
+                                                from FinzoX to other wallet
                                                 address{" "}
                                               </p>
                                               {withdrawDet &&

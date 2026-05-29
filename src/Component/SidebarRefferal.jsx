@@ -109,7 +109,7 @@ function Home() {
     referralHistory(pageNumber);
     setCurrentPage(pageNumber);
   };
-  const title = "Welcome to Taikonz";
+  const title = "Welcome to FinzoX";
 
   const get_rewardHistory = async (page) => {
     try {
