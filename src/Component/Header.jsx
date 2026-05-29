@@ -115,7 +115,7 @@ function Header() {
         <nav className="container navbar navbar-expand-lg ">
           <a className="navbar-brand" href="/">
             <img
-              src={new URL("../img/newimg/logowhitee.png", import.meta.url).href}
+              src={new URL("../img/home/finzoex_logo.png", import.meta.url).href}
               className="logo darktheme"
             />
             <img
