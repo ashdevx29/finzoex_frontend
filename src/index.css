@@ -77,13 +77,13 @@ textarea {
   font-weight: 400;
 }
 .onlywhitee.new_login_bb .register_login .form-control {
-  background: #2c2c2c;
+  background: #000000;
   color: #fff;
   border: none;
   border-radius: 10px;
 }
 .onlywhitee.new_login_bb .register_login .form-textarea {
-  background: #2c2c2c;
+  background: #000000;
   color: #fff;
   border: none;
   padding: 1rem;
