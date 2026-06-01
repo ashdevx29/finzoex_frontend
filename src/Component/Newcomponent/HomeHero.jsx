@@ -4,6 +4,7 @@ import cardimg from "../../img/home/right-box.png";
 import bgHero from "../../img/home/bg-hero.png";
 import { FaLessThan } from "react-icons/fa6";
 
+
 const HeroSection = () => {
   return (
     <section
