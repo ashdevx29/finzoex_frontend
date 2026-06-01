@@ -356,6 +356,25 @@ button.link.active {
   transform: translate(-50%, -50%);
 }
 
+.stake-card-grid-item {
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .stake-card-grid-item {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stake-card-grid-item {
+    flex-basis: 25% !important;
+    max-width: 25% !important;
+  }
+}
+
 button.primary_butn {
   background: #4f41a4 !important;
   text-transform: capitalize !important;
@@ -371,19 +390,40 @@ button.primary_butn {
   display: flex;
   align-items: center;
 }
+
 .bootsrab_tabs .nav li a {
   display: block;
-  color: #9685ff;
   padding: 10px 33px;
-  border: 1px solid #9685ff;
-  border-radius: 10px;
   margin-right: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+
+  /* Gradient Border */
+  border: 1.5px solid #00A5FF;
+  background:
+    linear-gradient(#0b1120, #0b1120) padding-box,
+    linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) border-box;
+
+  /* Gradient Text */
+  background-image: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  transition: all 0.3s ease;
 }
+
+/* Active Tab */
 .bootsrab_tabs .nav li a.active {
-  color: #fff;
-  background: #4f41a4;
-  border: 1px solid #4f41a4;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  border: 1.5px solid transparent;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
 }
+
+
 .search_bar {
   display: flex;
   justify-content: flex-start;
@@ -405,13 +445,15 @@ button.primary_butn {
   flex-grow: 1;
 }
 .card_launchpad {
-  background: #252525;
-  padding: 20px;
+  background: #191919e3;
+  padding: 15px;
   border-radius: 20px;
   cursor: pointer;
+  border: 1px solid #003037;
 }
 .css-1dyfeew-MuiGrid-root > .MuiGrid-item {
-  padding-left: 25px !important;
+  padding-left: 15px !important;
+
 }
 .css-1n5bjej-MuiGrid-root > .MuiGrid-item {
   padding-left: 0px !important;
@@ -483,7 +525,7 @@ button.primary_butn {
   font-weight: 300;
 }
 .class-padding {
-  padding: 0 80px;
+  padding: 0 60px;
 }
 .new_login_bb .register_login .btn-primary {
   padding: 12px 10px;
@@ -947,8 +989,11 @@ button.primary_butn {
 .colo_bold small {
   font-size: 25px;
   font-weight: 500;
-  color: #9685ff;
   margin-left: 6px;
+
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .APY p {
@@ -1516,15 +1561,15 @@ span.primary_red {
 }
 .new_buyform .formplac li a {
   flex-grow: 1;
-  color: #9685ff;
-  border: 1px solid #4f41a4;
+  color: #21A75F;
+  border: 1px solid #21A75F;
   padding: 13px 10px;
   text-align: center;
   border-radius: 16px;
 }
 .new_buyform .formplac li a.active {
-  border: 1px solid #4f41a4;
-  background: #4f41a4;
+  border: 1px solid #21A75F;
+  background: #21A75F;
   border-radius: 16px !important;
 
   color: #fff;
@@ -1538,6 +1583,7 @@ span.primary_red {
   color: #fff;
   -webkit-text-fill-color: snow;
 }
+
 .light .form_pading_s.box .form-group {
   background: #fff;
   border-radius: 8px;
@@ -3221,7 +3267,7 @@ input:placeholder-shown {
 }
 
 .card_launchpad.stake_home {
-  min-height: 340px !important;
+  min-height: 300px !important;
   margin-top: 10px;
 }
 
@@ -3335,7 +3381,7 @@ input:placeholder-shown {
     width: 200px;
   }
   .class-padding {
-    padding: 0 40px;
+    padding: 0 30px;
   }
   .dash_board_search_box {
     left: 36%;
@@ -3496,7 +3542,7 @@ input:placeholder-shown {
     font-size: 15px;
   }
   .class-padding {
-    padding: 0 25px;
+    padding: 0 20px;
   }
   .dash_board_search_box {
     left: 23%;

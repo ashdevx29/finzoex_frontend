@@ -7,6 +7,7 @@ import bgImage from "../img/auth/signin.png";
 
 import apiService from "../core/service/detail";
 import { postMethod } from "../core/service/common.api";
+import Landing_header from "./Newcomponent/Landing_header";
 
 const Resetpass = () => {
   const navigate = useNavigate();
@@ -248,6 +249,8 @@ const Resetpass = () => {
   };
 
   return (
+    <>
+     <Landing_header />
     <div className="min-h-screen w-full flex items-center justify-center px-4 py-8 font-[Inter] relative overflow-hidden">
 
       {/* Background */}
@@ -427,6 +430,7 @@ const Resetpass = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

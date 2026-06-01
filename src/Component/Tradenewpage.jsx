@@ -1168,11 +1168,11 @@ function Home() {
                           src={new URL("../img/New_images/color.png", import.meta.url).href}
                           className=""
                         /> */}
-                        {pairDetref.current.from_symbol_id != null ? (
+                        {pairDetref.current?.from_symbol_id != null ? (
                           <>
                             <img
                               src={
-                                pairDetref.current.from_symbol_id.Currency_image
+                                pairDetref.current?.from_symbol_id?.Currency_image
                               }
                               className=""
                               width={32}
@@ -1429,7 +1429,7 @@ function Home() {
                                             )
                                           ) : (
                                             <tr>
-                                              <td colspan="3">
+                                              <td colSpan="3">
                                                 No results found
                                               </td>
                                             </tr>
@@ -2290,11 +2290,15 @@ function Home() {
                           </thead>
                           <tbody>
                             {orderbookLoader == true ? (
-                              <div className="loadingio-spinner-rolling-29xdivqpql3">
-                                <div className="ldio-pmaw4zkjqw">
-                                  <div></div>
-                                </div>
-                              </div>
+                              <tr>
+                                <td colSpan="3">
+                                  <div className="loadingio-spinner-rolling-29xdivqpql3">
+                                    <div className="ldio-pmaw4zkjqw">
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
                             ) : orderbookask.length > 0 ? (
                               orderbookask.map((ask, i) => {
                                 return (
@@ -2305,23 +2309,24 @@ function Home() {
                                       </span>
                                     </td>
                                     <td>{ask[1]}</td>
-                                    <td>{ask[2]}</td>
-                                    <div
-                                      className="red_overlay"
-                                      style={{
-                                        width:
-                                          ask.percent == 0
-                                            ? ask.percent + "%"
-                                            : 0 + "%",
-                                      }}
-                                    ></div>
+                                    <td style={{ position: "relative" }}>
+                                      {ask[2]}
+                                      <div
+                                        className="red_overlay"
+                                        style={{
+                                          width:
+                                            ask.percent == 0
+                                              ? ask.percent + "%"
+                                              : 0 + "%",
+                                        }}
+                                      ></div>
+                                    </td>
                                   </tr>
                                 );
                               })
                             ) : (
                               <tr>
-                                {" "}
-                                <td colSpan="3"> Data not found!</td>{" "}
+                                <td colSpan="3">Data not found!</td>
                               </tr>
                             )}
 
@@ -2340,11 +2345,15 @@ function Home() {
                             </tr>
 
                             {orderbookLoaderbid == true ? (
-                              <div className="loadingio-spinner-rolling-29xdivqpql3">
-                                <div className="ldio-pmaw4zkjqw">
-                                  <div></div>
-                                </div>
-                              </div>
+                              <tr>
+                                <td colSpan="3">
+                                  <div className="loadingio-spinner-rolling-29xdivqpql3">
+                                    <div className="ldio-pmaw4zkjqw">
+                                      <div></div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
                             ) : orderbookbid.length > 0 ? (
                               orderbookbid.map((bid, i) => {
                                 return (
@@ -2355,23 +2364,24 @@ function Home() {
                                       </span>
                                     </td>
                                     <td>{bid[1]}</td>
-                                    <td>{bid[2]}</td>
-                                    <div
-                                      className="green_overlay"
-                                      style={{
-                                        width:
-                                          bid.percent == 0
-                                            ? bid.percent + "%"
-                                            : 0 + "%",
-                                      }}
-                                    ></div>
+                                    <td style={{ position: "relative" }}>
+                                      {bid[2]}
+                                      <div
+                                        className="green_overlay"
+                                        style={{
+                                          width:
+                                            bid.percent == 0
+                                              ? bid.percent + "%"
+                                              : 0 + "%",
+                                        }}
+                                      ></div>
+                                    </td>
                                   </tr>
                                 );
                               })
                             ) : (
                               <tr>
-                                {" "}
-                                <td colSpan="3"> Data not found!</td>{" "}
+                                <td colSpan="3">Data not found!</td>
                               </tr>
                             )}
                           </tbody>
@@ -2420,16 +2430,15 @@ function Home() {
                             })
                           ) : (
                             <tr>
-                              {" "}
                               {checkAuth ? (
-                                <td colSpan="3"> No found market trades!</td>
+                                <td colSpan="3">No found market trades!</td>
                               ) : (
                                 <td colSpan="3">
                                   <Button className="btn btn-primary-alta connectBtn mt-5">
                                     <Link to="/login">Login to continue</Link>
-                                  </Button>{" "}
+                                  </Button>
                                 </td>
-                              )}{" "}
+                              )}
                             </tr>
                           )}
                         </tbody>

@@ -11,6 +11,7 @@ import { Button, Loader } from "semantic-ui-react";
 import useState from "react-usestateref";
 import moment from "moment";
 import Pagination from "react-js-pagination";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const [perpage, setperpage] = useState(10);
@@ -1060,9 +1061,21 @@ function Home() {
     getStakingHistory_yield(pageNumber);
   };
 
+  const pageBackgroundStyle = pageLoader
+    ? undefined
+    : {
+        backgroundImage: `url(${DashboardBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main
+        className="main-content   bg-cover onlywhitee "
+        style={pageBackgroundStyle}
+      >
         <Header />
 
         {pageLoader == true ? (
@@ -1073,6 +1086,7 @@ function Home() {
           </Grid>
         ) : (
           <>
+
             <div className={step1}>
               <div className="class-padding">
                 <Grid
@@ -1082,13 +1096,97 @@ function Home() {
                   marginTop={"20px"}
                 >
                   {/* Item for xs (extra small) screens */}
-                  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                  {/* <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <div className="heading_card_new">
                       <h1>
                         Stake <i className="ri-arrow-right-line"></i>
                       </h1>
                     </div>
-                  </Grid>
+                  </Grid> */}
+
+                  <Grid item xs={12}>
+  <div className="w-full rounded-xl border !border-[#0066FF] bg-[#191919C7] px-4 py-5 md:!px-20 md:py-6 shadow-[0_0_25px_rgba(0,102,255,0.15)]">
+    
+    {/* Heading */}
+    <div className="flex items-center gap-4 md:gap-8 mb-4 md:mb-5">
+      <div className="w-12 h-12 rounded-full bg-[#111827] flex items-center justify-center border border-[#1e293b]">
+        <i className="ri-coins-line text-[#00D4FF] text-xl"></i>
+      </div>
+
+      <div>
+       <h1
+  className="text-lg md:text-2xl font-semibold leading-none bg-gradient-to-r from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent"
+>
+  Staking Overview
+</h1>
+        <p className="text-[#C5C5C5] text-xs md:text-sm mt-1">
+          Track your staking balance and values
+        </p>
+      </div>
+    </div>
+
+    {/* Stats */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
+      
+      {/* Card */}
+      <div className="flex flex-col items-center justify-center relative">
+        <div className="flex items-center gap-2 text-[#94A3B8] text-xs md:text-sm">
+          <i className="ri-stack-line text-xl text-[#00D4FF]"></i>
+          <span>Staked Tokens</span>
+        </div>
+
+        <h2 className="text-[#00A5FF] text-lg md:text-xl font-bold mt-2">
+          0.00
+        </h2>
+
+        {/* Divider */}
+        <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-12 w-[1px] bg-[#12345f]"></div>
+      </div>
+
+      {/* Card */}
+      <div className="flex flex-col items-center justify-center relative">
+        <div className="flex items-center gap-2 text-[#94A3B8] text-xs md:text-sm">
+          <i className="ri-lock-line text-xl text-[#00D4FF]"></i>
+          <span>Locked Liquidity</span>
+        </div>
+
+        <h2 className="text-[#00A5FF] text-lg md:text-xl font-bold mt-2">
+          0.00
+        </h2>
+
+        <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-12 w-[1px] bg-[#12345f]"></div>
+      </div>
+
+      {/* Card */}
+      <div className="flex flex-col items-center justify-center relative">
+        <div className="flex items-center gap-2 text-[#94A3B8] text-xs md:text-sm">
+          <i className="ri-funds-line text-xl text-[#00D4FF]"></i>
+          <span>Staked Value</span>
+        </div>
+
+        <h2 className="text-[#00A5FF] text-lg md:text-xl font-bold mt-2">
+          0.00
+        </h2>
+
+        <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-12 w-[1px] bg-[#12345f]"></div>
+      </div>
+
+      {/* Card */}
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex items-center gap-2 text-[#94A3B8] text-xs md:text-sm">
+          <i className="ri-wallet-3-line  text-xl text-[#00D4FF]"></i>
+          <span>Locked Value</span>
+        </div>
+
+        <h2 className="text-[#00A5FF] text-lg md:text-xl font-bold mt-2">
+          0.00
+        </h2>
+      </div>
+    </div>
+  </div>
+</Grid>
+
+                  
                   <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
                     <div className="bootsrab_tabs">
                       <ul className="nav nav-tabs">
@@ -1170,10 +1268,7 @@ function Home() {
                                     <Grid
                                       item
                                       xs={12}
-                                      sm={12}
-                                      md={12}
-                                      lg={4}
-                                      xl={3}
+                                      className="stake-card-grid-item"
                                     >
                                       <div className="card_launchpad stake_home">
                                         <div className="header_launc">
@@ -1189,7 +1284,9 @@ function Home() {
                                           </div>
                                         </div>
                                         <hr />
-                                        <div className="stake_button">
+
+
+                                        {/* <div className="stake_button">
                                           <h4>
                                             <div className="colo_bold">
                                               {staking1 &&
@@ -1233,7 +1330,75 @@ function Home() {
                                               </Button>
                                             )}
                                           </h4>
-                                        </div>
+                                        </div> */}
+
+                                        <div className="flex items-center justify-between gap-4 flex-wrap mt-4">
+  <div className="flex flex-col">
+    <span className="text-[#94A3B8] text-xs">APY</span>
+    <small className="text-[24px] font-semibold bg-gradient-to-r from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+      {staking1 && staking1.id == item._id ? `${apy}%` : "0%"}
+    </small>
+  </div>
+
+  {/* Buttons */}
+  <div>
+    {authToken == false ? (
+      <Link to="/login">
+        <button
+          type="button"
+          className="
+            px-6 py-2.5 rounded-xl
+            border border-[#0066FF]
+            bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+            text-white font-medium text-sm
+            hover:scale-[1.02]
+            transition-all duration-300
+            shadow-[0_0_20px_rgba(0,102,255,0.35)]
+          "
+        >
+          Login to Continue
+        </button>
+      </Link>
+    ) : staking1 && staking1.id == item._id ? (
+      <button
+        type="button"
+        data-toggle="modal"
+        data-target="#stacknow"
+        onClick={() => stakeNow(item, "fixed")}
+        className="
+          px-6 py-2.5 rounded-xl
+          border border-[#0066FF]
+          bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+          text-white font-medium text-sm
+          hover:scale-[1.02]
+          transition-all duration-300
+          shadow-[0_0_20px_rgba(0,102,255,0.35)]
+        "
+      >
+        Stake Now
+      </button>
+    ) : (
+      <button
+        type="button"
+        onClick={() => choosePlan(item)}
+        className="
+          px-6 py-2.5 rounded-xl
+          border border-[#0066FF]
+          bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+          text-white font-medium text-sm
+          hover:scale-[1.02]
+          transition-all duration-300
+          shadow-[0_0_20px_rgba(0,102,255,0.35)]
+        "
+      >
+        Stake Now
+      </button>
+    )}
+  </div>
+</div>
+
+
+
                                         <div className="data_launc">
                                           <p className="flex_content_stake">
                                             Minimum Stake:
@@ -1408,10 +1573,7 @@ function Home() {
                                   <Grid
                                     item
                                     xs={12}
-                                    sm={12}
-                                    md={12}
-                                    lg={4}
-                                    xl={3}
+                                    className="stake-card-grid-item"
                                   >
                                     <div className="card_launchpad stake_home">
                                       <div className="header_launc">
@@ -1427,42 +1589,55 @@ function Home() {
                                         </div>
                                       </div>
                                       <hr />
-                                      <div className="stake_button">
-                                        <h4>
-                                          <div className="colo_bold">
-                                            <small>{item.APRinterest} % </small>
-                                          </div>{" "}
-                                          {/* <a
-                                        onClick={() =>
-                                          stakeNow(item, "flexible")
-                                        }
-                                      >
-                                        Stake
-                                      </a> */}
-                                          {authToken == false ? (
-                                            <Button
-                                              type="button"
-                                              data-toggle="modal"
-                                              className="login_button"
-                                              data-target="#stacknow"
-                                            >
-                                              <Link to="/login">
-                                                Login to continue!
-                                              </Link>
-                                            </Button>
-                                          ) : (
-                                            <Button
-                                              className="notactive"
-                                              type="button"
-                                              onClick={() =>
-                                                stakeNow(item, "flexible")
-                                              }
-                                            >
-                                              Stake Now
-                                            </Button>
-                                          )}
-                                        </h4>
-                                      </div>
+
+                                        <div className="flex items-center justify-between gap-4 flex-wrap mt-4">
+  <div className="flex flex-col">
+    <span className="text-[#94A3B8] text-xs">APY</span>
+    <small className="text-[24px] font-semibold bg-gradient-to-r from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+      {item.APRinterest ? `${item.APRinterest}%` : "0%"}
+    </small>
+  </div>
+
+  {/* Button */}
+  <div>
+    {authToken == false ? (
+      <Link to="/login">
+        <button
+          type="button"
+          className="
+            px-6 py-2.5 rounded-xl
+            border border-[#0066FF]
+            bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+            text-white font-medium text-sm
+            hover:scale-[1.02]
+            transition-all duration-300
+            shadow-[0_0_20px_rgba(0,102,255,0.35)]
+          "
+        >
+          Login to Continue
+        </button>
+      </Link>
+    ) : (
+      <button
+        type="button"
+        onClick={() => stakeNow(item, "flexible")}
+        className="
+          px-6 py-2.5 rounded-xl
+          border border-[#0066FF]
+          bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+          text-white font-medium text-sm
+          hover:scale-[1.02]
+          transition-all duration-300
+          shadow-[0_0_20px_rgba(0,102,255,0.35)]
+        "
+      >
+        Stake Now
+      </button>
+    )}
+  </div>
+</div>
+
+
                                       <div className="data_launc">
                                         <p className="flex_content_stake">
                                           Minimum Stake:
@@ -1529,10 +1704,7 @@ function Home() {
                                         <Grid
                                           item
                                           xs={12}
-                                          sm={12}
-                                          md={12}
-                                          lg={4}
-                                          xl={3}
+                                          className="stake-card-grid-item"
                                         >
                                           <div className="card_launchpad stake_home">
                                             <div className="header_launc">
@@ -1809,10 +1981,7 @@ function Home() {
                                         <Grid
                                           item
                                           xs={12}
-                                          sm={12}
-                                          md={12}
-                                          lg={4}
-                                          xl={3}
+                                          className="stake-card-grid-item"
                                         >
                                           <div className="card_launchpad stake_home">
                                             <div className="header_launc">
@@ -2089,10 +2258,7 @@ function Home() {
                                         <Grid
                                           item
                                           xs={12}
-                                          sm={12}
-                                          md={12}
-                                          lg={4}
-                                          xl={3}
+                                          className="stake-card-grid-item"
                                         >
                                           <div className="card_launchpad stake_home">
                                             <div className="header_launc">
@@ -3464,6 +3630,8 @@ function Home() {
                 {/* Your other components and content */}
               </div>
             </div>
+
+            
             <div className={step2}>
               <div maxWidth="class-padding">
                 <Grid
