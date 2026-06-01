@@ -56,19 +56,19 @@ function PrivacyPolicy() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-4 md:px-6 py-10 md:py-16">
+      <div className="relative z-10 px-3 md:px-6 py-6 md:py-16">
         <div className="max-w-7xl mx-auto">
 
           {/* Card */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl p-6 md:p-10">
+          <div className="rounded-xl md:rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl p-6 lg:p-10">
 
             {/* Heading */}
-            <div className="mb-10 text-center">
+            <div className="mb-6 md:mb-10 text-center">
               <h1 className="text-white text-3xl md:text-5xl font-semibold leading-[1.2] tracking-tight">
                 Privacy Policy
               </h1>
 
-              <p className="text-[#A0A0A0] mt-4 text-sm md:text-base">
+              <p className="text-[#A0A0A0] mt-2 md:mt-4 text-sm md:text-base">
                 Last updated: 26 July 2022
               </p>
             </div>

@@ -7,6 +7,7 @@ import bgImage from "../img/auth/signin1.png";
 
 import apiService from "../core/service/detail";
 import { postMethod } from "../core/service/common.api";
+import Landing_header from "./Newcomponent/Landing_header";
 
 import { AES, enc } from "crypto-js";
 import { v4 as uuid } from "uuid";
@@ -280,6 +281,8 @@ const Register = () => {
   };
 
   return (
+    <>
+     <Landing_header />
     <div className="min-h-screen w-full flex items-center justify-center px-4 py-8 font-[Inter] relative overflow-hidden">
 
       {/* Background */}
@@ -588,6 +591,8 @@ const Register = () => {
         </div>
       </div>
     </div>
+    </>
+    
   );
 };
 

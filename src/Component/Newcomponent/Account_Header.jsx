@@ -61,11 +61,11 @@ const App = () => {
   const currentUrl = window.location.href;
 
   console.log(currentUrl, "currentUrl");
-  const URL = currentUrl.split("/")[3];
+const currentPath = currentUrl.split("/")[3];
   console.log(URL, "URL");
   const [authtoken, setauthtoken] = useState(false);
-  const [Activestate, setActivestate, Activestateref] = useState(URL);
-
+const [Activestate, setActivestate, Activestateref] =
+  useState(currentPath);
   const [currenychoose, setCurrencyChoose, currenychooseref] = useState("INR");
 
   useEffect(() => {
