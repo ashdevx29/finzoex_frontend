@@ -311,12 +311,12 @@ const [Activestate, setActivestate, Activestateref] =
         <Toolbar className="dilesd">
           <img
             onClick={homeNav}
-            src={new URL("../../img/New_images/logo_dark.png", import.meta.url).href}
+            src={new URL("../../img/home/finzoex_logo.png", import.meta.url).href}
             className="img-fluid logo_new"
           />
           <img
             onClick={homeNav}
-            src={new URL("../../img/New_images/logo_light.png", import.meta.url).href}
+            src={new URL("../../img/home/finzoex_logo.pngg", import.meta.url).href}
             className="img-fluid light_logo"
           />
 
@@ -549,7 +549,7 @@ const [Activestate, setActivestate, Activestateref] =
               )}
               <Grid item className="d-flex align-items-center">
                 {/* <ToggleLight /> */}
-                <div>
+                {/* <div>
                   {isOpenref.current == true ? (
                     <div>
                       <input
@@ -580,7 +580,7 @@ const [Activestate, setActivestate, Activestateref] =
                       </label>
                     </div>
                   )}
-                </div>
+                </div> */}
                 {authtoken == true ? (
                   ""
                 ) : (
