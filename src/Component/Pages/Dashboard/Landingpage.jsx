@@ -253,7 +253,7 @@ function Home() {
         <section className="relative overflow-hidden bg-black py-8  sm:!py-14 lg:!py-24">
 
           {/* Left Top Glow */}
-          <div className="absolute -top-20 -left-20 w-[450px] h-[450px] bg-[#0066FF] opacity-20 blur-[160px]" />
+          <div className="absolute -top-20 -left-20 w-[450px] h-[450px] bg-[#00D4FF] opacity-20 blur-[160px]" />
 
           {/* Right Bottom Glow */}
           <div className="absolute -bottom-20 -right-10 w-[250px] h-[250px] bg-[#155DFC] opacity-50 blur-[180px]" />
@@ -324,7 +324,7 @@ function Home() {
                       <p
                         className="
                           inline-flex items-center gap-2
-                          text-[#0066FF]
+                          text-[#00D4FF]
                           text-[10px] sm:text-xs
                           font-[400]
                           tracking-[1.4px]
@@ -333,12 +333,12 @@ function Home() {
                           mb-3
                           px-4 py-2
                           rounded-full
-                          bg-[#0066FF0F]
-                          border-t-[0.77px] border-t-[#0066FF40]
-                          shadow-[0px_3px_4px_0px_#0066FF4D]
+                          bg-[#00D4FF0F]
+                          border-t-[0.77px] border-t-[#00D4FF40]
+                          shadow-[0px_3px_4px_0px_#00D4FF4D]
                         "
                       >
-                        <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                        <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                         TRADING PRODUCTS
                       </p>
                     </div>
@@ -383,7 +383,7 @@ function Home() {
                           ${
                             activeTab === item.id
                               ? "bg-[linear-gradient(180deg,_#0054D1_0%,_rgba(0,102,255,0.3)_50.48%,_#0054D1_100%)]"
-                              : "bg-[#000000] border !border-[#01337C] shadow-[0_0_12px_#0066FF40] "
+                              : "bg-[#000000] border !border-[#01337C] shadow-[0_0_12px_#00D4FF40] "
                           }
                         `}
                       />
@@ -407,7 +407,7 @@ function Home() {
               <p
                 className="
                   inline-flex items-center gap-2
-                  text-[#0066FF]
+                  text-[#00D4FF]
                   text-[10px] sm:text-xs
                   font-semibold
                   tracking-[1.4px]
@@ -416,12 +416,12 @@ function Home() {
                   mb-3
                   px-4 py-2
                   rounded-full
-                  bg-[#0066FF0F]
-                  border-t-[0.77px] border-t-[#0066FF40]
-                  shadow-[0px_3px_4px_0px_#0066FF4D]
+                  bg-[#00D4FF0F]
+                  border-t-[0.77px] border-t-[#00D4FF40]
+                  shadow-[0px_3px_4px_0px_#00D4FF4D]
                 "
               >
-                <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                 Earn
               </p>
             </div>
@@ -527,7 +527,7 @@ function Home() {
                       key={index}
                       className="flex items-center gap-3"
                     >
-                      <FaCheck className="text-[#0066FF] text-sm" />
+                      <FaCheck className="text-[#00D4FF] text-sm" />
                       <span className="text-[#D1D5DB] font-[400] text-xs md:text-sm">{item}</span>
                     </div>
                   ))}
@@ -582,7 +582,7 @@ function Home() {
                 <p
                   className="
                     inline-flex items-center gap-2
-                    text-[#0066FF]
+                    text-[#00D4FF]
                     text-[10px] sm:text-xs
                     font-semibold
                     tracking-[1.4px]
@@ -591,12 +591,12 @@ function Home() {
                     mb-3
                     px-4 py-2
                     rounded-full
-                    bg-[#0066FF0F]
-                    border-t-[0.77px] border-t-[#0066FF40]
-                    shadow-[0px_3px_4px_0px_#0066FF4D]
+                    bg-[#00D4FF0F]
+                    border-t-[0.77px] border-t-[#00D4FF40]
+                    shadow-[0px_3px_4px_0px_#00D4FF4D]
                   "
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                   PORTFOLIO & WALLET
                 </p>
               </div>
@@ -680,7 +680,7 @@ function Home() {
                 <p
                   className="
                     inline-flex items-center gap-2
-                    text-[#0066FF]
+                    text-[#00D4FF]
                     text-[10px] sm:text-xs
                     font-semibold
                     tracking-[1.4px]
@@ -689,12 +689,12 @@ function Home() {
                     mb-3
                     px-4 py-2
                     rounded-full
-                    bg-[#0066FF0F]
-                    border-t-[0.77px] border-t-[#0066FF40]
-                    shadow-[0px_3px_4px_0px_#0066FF4D]
+                    bg-[#00D4FF0F]
+                    border-t-[0.77px] border-t-[#00D4FF40]
+                    shadow-[0px_3px_4px_0px_#00D4FF4D]
                   "
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                  <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                   SECURITY & COMPLIANCE
                 </p>
               </div>
@@ -905,7 +905,7 @@ function Home() {
                       <p
                         className="
                           inline-flex items-center gap-2
-                          text-[#0066FF]
+                          text-[#00D4FF]
                           text-[10px] sm:text-xs
                           font-[400]
                           tracking-[1.4px]
@@ -914,12 +914,12 @@ function Home() {
                           mb-2
                           px-4 py-2
                           rounded-full
-                          bg-[#0066FF0F]
-                          border-t-[0.77px] border-t-[#0066FF40]
-                          shadow-[0px_3px_4px_0px_#0066FF4D]
+                          bg-[#00D4FF0F]
+                          border-t-[0.77px] border-t-[#00D4FF40]
+                          shadow-[0px_3px_4px_0px_#00D4FF4D]
                         "
                       >
-                        <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                        <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                         INFRASTRUCTURE
                       </p>
                     </div>
@@ -1010,7 +1010,7 @@ function Home() {
                     <p
                       className="
                         inline-flex items-center gap-2
-                        text-[#0066FF]
+                        text-[#00D4FF]
                         text-[10px] sm:text-xs
                         font-semibold
                         tracking-[1.4px]
@@ -1019,12 +1019,12 @@ function Home() {
                         mb-3
                         px-4 py-2
                         rounded-full
-                        bg-[#0066FF0F]
-                        border-t-[0.77px] border-t-[#0066FF40]
-                        shadow-[0px_3px_4px_0px_#0066FF4D]
+                        bg-[#00D4FF0F]
+                        border-t-[0.77px] border-t-[#00D4FF40]
+                        shadow-[0px_3px_4px_0px_#00D4FF4D]
                       "
                     >
-                      <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                      <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                       GETTING STARTED
                     </p>
                   </div>
@@ -1257,7 +1257,7 @@ function Home() {
 
         {/* Footer */}
   
-    <footer className="w-full !font-['DM Sans'] bg-black shadow-[inset_0px_0px_34px_0px_#0066FF80] rounded-tl-[15px] rounded-tr-[15px]  pb-4 pt-10">
+    <footer className="w-full !font-['DM Sans'] bg-black shadow-[inset_0px_0px_34px_0px_#00D4FF80] rounded-tl-[15px] rounded-tr-[15px]  pb-4 pt-10">
       
       {/* Main Footer Box */}
       <div

@@ -1066,8 +1066,10 @@ function Home() {
     : {
         backgroundImage: `url(${DashboardBg})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
       };
 
   return (
@@ -1367,12 +1369,12 @@ function Home() {
         onClick={() => stakeNow(item, "fixed")}
         className="
           px-6 py-2.5 rounded-xl
-          border border-[#0066FF]
-          bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
+          border !border-[#00D4FF]
+          
           text-white font-medium text-sm
           hover:scale-[1.02]
           transition-all duration-300
-          shadow-[0_0_20px_rgba(0,102,255,0.35)]
+       
         "
       >
         Stake Now
@@ -1383,12 +1385,13 @@ function Home() {
         onClick={() => choosePlan(item)}
         className="
           px-6 py-2.5 rounded-xl
-          border border-[#0066FF]
-          bg-gradient-to-r from-[#00D4FF] to-[#0066FF]
-          text-white font-medium text-sm
+          border !border-[#00D4FF]
+         text-transparent
+bg-clip-text
+bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
           hover:scale-[1.02]
           transition-all duration-300
-          shadow-[0_0_20px_rgba(0,102,255,0.35)]
+          
         "
       >
         Stake Now
@@ -3641,7 +3644,7 @@ function Home() {
                   marginTop={"20px"}
                 >
                   <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
-                    <div className="card_logoki pading_cardd">
+                    <div className=" new_card_logoki card_logoki  pading_cardd ">
                       <Grid
                         container
                         spacing={2}
@@ -3661,7 +3664,7 @@ function Home() {
                               ></i>{" "}
                               Back
                             </Button>
-                            <h1 className="mb-4">Fill in the Details</h1>
+                          <h1 className="mb-4 text-[#B3B3B3] text-left ">Fill in the Details</h1>
                           </div>
                           {stakeTyperef.current == "fixed" ||
                           stakeTyperef.current == "yield" ? (
@@ -3825,6 +3828,16 @@ function Home() {
                         marginTop={"0px"}
                         className="pt-0"
                       >
+                        <Grid item xs={12} className="">
+                          <div className="APY">
+                            <p>
+                              APY
+                              <span>
+                                {stakingType == "fixed" ? apy : interest} %{" "}
+                              </span>
+                            </p>
+                          </div>
+                        </Grid>
                         {/* Item for xs (extra small) screens */}
                         <Grid
                           item
@@ -3852,23 +3865,15 @@ function Home() {
                               xl={6}
                               className="pt-0"
                             >
-                              <div className="APY">
-                                <p>
-                                  APY
-                                  <span>
-                                    {stakingType == "fixed" ? apy : interest} %{" "}
-                                  </span>
-                                </p>
-                              </div>
                               <div className="step-5 ">
-                                <div className="form_login_section p-0 mt-4 stake_box">
+                                <div className="form_login_section p-0 !mt-8 stake_box">
                                   <div className="form register_login p-0">
                                     <form className="form_pading_s">
                                       <div className="form-group">
                                         <label>Stake Amount</label>
                                         <div className="postion_reletitt">
                                           <input
-                                            className="form-control my-4"
+                                            className="form-control my-4 !bg-[#2C2C2C] text-white !rounded-xl"
                                             id="exampleInputPassword1"
                                             placeholder="Stake Amount"
                                             name="password"
@@ -3924,28 +3929,32 @@ function Home() {
                                       </div>
                                       <div className="line_border"></div>
                                     </form>
-                                    {authToken && authToken == true ? (
-                                      buttonLoader == false ? (
-                                        <button
-                                          className="btn btn-primary w-100"
-                                          onClick={confirmStack}
-                                        >
-                                          Confirm
-                                        </button>
-                                      ) : (
-                                        <button className="btn btn-primary w-100">
-                                          Loading...
-                                        </button>
-                                      )
-                                    ) : (
-                                      <button className="btn btn-primary w-100">
-                                        login to continue
-                                      </button>
-                                    )}
                                   </div>
                                 </div>
                               </div>
+
+                              <div className="mt-3">
+                                {authToken && authToken == true ? (
+                                  buttonLoader == false ? (
+                                    <button
+                                      className="btn btn-primary w-100"
+                                      onClick={confirmStack}
+                                    >
+                                      Confirm
+                                    </button>
+                                  ) : (
+                                    <button className="btn btn-primary w-100">
+                                      Loading...
+                                    </button>
+                                  )
+                                ) : (
+                                  <button className="btn btn-primary w-100">
+                                    login to continue
+                                  </button>
+                                )}
+                              </div>
                             </Grid>
+                            
                             <Grid
                               item
                               xs={12}
@@ -3996,7 +4005,12 @@ function Home() {
                                       <div className="form-group flex_start_sae">
                                         <p className="preview">
                                           APY:{" "}
-                                          <span>
+                                          <span className="
+        !bg-[linear-gradient(90deg,#03DDFD_0%,#0058F5_100%)]
+        !bg-clip-text
+        !text-transparent
+       
+      ">
                                             {stakingType == "fixed"
                                               ? apy
                                               : interest}{" "}
@@ -4007,7 +4021,14 @@ function Home() {
                                       <div className="form-group flex_start_sae">
                                         <p className="preview">
                                           Estimated Interest:{" "}
-                                          <span>
+                                         <span
+      className="
+        !bg-[linear-gradient(90deg,#03DDFD_0%,#0058F5_100%)]
+        !bg-clip-text
+        !text-transparent
+       
+      "
+    >
                                             {" "}
                                             {stakingType == "fixed"
                                               ? parseFloat(
@@ -4035,6 +4056,22 @@ function Home() {
               </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div className={step3}>
               <div maxWidth="class-padding">
                 <Grid
@@ -4045,7 +4082,7 @@ function Home() {
                 >
                   {/* Item for xs (extra small) screens */}
                   <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-                    <div className="card_logoki pading_cardd">
+                    <div className="card_logoki pading_cardd !bg-black ">
                       <div className="form_content">
                         <h1 className="mb-2 aling_flexx">
                           {" "}
@@ -4194,6 +4231,9 @@ function Home() {
                 {/* Your other components and content */}
               </div>
             </div>
+
+            
+
             <div className={step4}>
               <div maxWidth="class-padding">
                 <Grid

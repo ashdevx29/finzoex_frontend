@@ -403,7 +403,7 @@ const Register = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 mb-4 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Next"}
@@ -419,7 +419,7 @@ const Register = () => {
                 Email Verification
               </h1>
 
-              <p className="text-[#858282] text-[15px] leading-5 mb-6 font-[Roboto]">
+              <p className="text-[#fff] text-[16px] leading-6 mb-6 font-[Roboto]">
                 Please enter the verification code sent to your email.
               </p>
 
@@ -437,7 +437,7 @@ const Register = () => {
                     }
                   }}
                   placeholder="Enter code"
-                  className="w-full h-11 rounded-xl bg-white text-black placeholder:text-[#7B7B7B] px-4 outline-none border border-transparent focus:border-[#00D4FF] transition-all"
+                  className="w-full h-11 rounded-xl bg-white !text-[#000] placeholder:text-[#000] px-4 outline-none border border-transparent focus:border-[#00D4FF] transition-all"
                 />
 
                 {otpValidate && (
@@ -453,7 +453,7 @@ const Register = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Submit"}
@@ -510,7 +510,7 @@ const Register = () => {
                 <div className="mt-4 space-y-2 text-sm">
                   <p
                     className={
-                      level3 ? "text-green-400" : "text-gray-400"
+                      level3 ? "text-green-400" : "text-gray-200"
                     }
                   >
                     ✓ At least 8 characters
@@ -518,7 +518,7 @@ const Register = () => {
 
                   <p
                     className={
-                      level2 ? "text-green-400" : "text-gray-400"
+                      level2 ? "text-green-800" : "text-gray-200"
                     }
                   >
                     ✓ At least 1 number
@@ -526,7 +526,7 @@ const Register = () => {
 
                   <p
                     className={
-                      level1 ? "text-green-400" : "text-gray-400"
+                      level1 ? "text-green-400" : "text-gray-200"
                     }
                   >
                     ✓ At least 1 uppercase letter
@@ -540,7 +540,7 @@ const Register = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 Next
@@ -556,7 +556,7 @@ const Register = () => {
                 Account Created!
               </h1>
 
-              <p className="text-[#858282] text-[15px] leading-5 mb-6 font-[Roboto]">
+              <p className="text-[#fff] text-[15px] leading-5 mb-6 font-[Roboto]">
                 Add referral ID if you have one.
               </p>
 
@@ -580,7 +580,7 @@ const Register = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Done"}
@@ -895,21 +895,21 @@ export default Register;
 //       type="checkbox"
 //       checked={foo}
 //       onChange={(e) => setFoo(e.target.checked)}
-//       className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-[#9685ff]"
+//       className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-[#00D4FF]"
 //     />
 
 //     <div className="text-left text-sm sm:text-base text-[#7a7a7a] leading-6">
 //       I agree to{" "}
 //       <Link
 //         to=""
-//         className="text-[#9685ff] hover:underline"
+//         className="text-[#00D4FF] hover:underline"
 //       >
 //         FinzoX's Terms of Service
 //       </Link>{" "}
 //       &{" "}
 //       <Link
 //         to=""
-//         className="text-[#9685ff] hover:underline"
+//         className="text-[#00D4FF] hover:underline"
 //       >
 //         Privacy Policy
 //       </Link>

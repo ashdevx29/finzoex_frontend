@@ -1349,7 +1349,7 @@ function Home() {
                                                               className="ri-star-fill fav mr-3"
                                                               style={{
                                                                 color:
-                                                                  "#9685ff",
+                                                                  "#00D4FF",
                                                               }}
                                                               onClick={() =>
                                                                 add_fav_pair(
@@ -1489,7 +1489,7 @@ function Home() {
                                                           <i
                                                             className="ri-star-fill fav mr-3"
                                                             style={{
-                                                              color: "#9685ff",
+                                                              color: "#00D4FF",
                                                             }}
                                                             onClick={() =>
                                                               add_fav_pair(
@@ -1698,7 +1698,7 @@ function Home() {
                                                         <i
                                                           className="ri-star-fill fav mr-3"
                                                           style={{
-                                                            color: "#9685ff",
+                                                            color: "#00D4FF",
                                                           }}
                                                           onClick={() =>
                                                             add_fav_pair(
@@ -1811,7 +1811,7 @@ function Home() {
                                                         <i
                                                           className="ri-star-fill fav mr-3"
                                                           style={{
-                                                            color: "#9685ff",
+                                                            color: "#00D4FF",
                                                           }}
                                                           onClick={() =>
                                                             add_fav_pair(
@@ -1922,7 +1922,7 @@ function Home() {
                                                         <i
                                                           className="ri-star-fill fav mr-3"
                                                           style={{
-                                                            color: "#9685ff",
+                                                            color: "#00D4FF",
                                                           }}
                                                           onClick={() =>
                                                             add_fav_pair(
@@ -2033,7 +2033,7 @@ function Home() {
                                                         <i
                                                           className="ri-star-fill fav mr-3"
                                                           style={{
-                                                            color: "#9685ff",
+                                                            color: "#00D4FF",
                                                           }}
                                                           onClick={() =>
                                                             add_fav_pair(

@@ -1,12 +1,12 @@
 .text-gradient {
-    background: radial-gradient(75.03% 75.03% at 20.6% 12.42%, #0066FF 0%, #0054D1 45.19%, #003D99 100%);
+    background: radial-gradient(75.03% 75.03% at 20.6% 12.42%, #00D4FF 0%, #0054D1 45.19%, #003D99 100%);
     -webkit-background-clip: text;  
     -webkit-text-fill-color: transparent;
 }
 
 
 .bg-gradient {
-    background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+    background: linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%);
 
 }
 

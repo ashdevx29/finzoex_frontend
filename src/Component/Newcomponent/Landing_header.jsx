@@ -60,7 +60,7 @@ const Navbar = () => {
 
             <button
               onClick={() => navigate("/register")}
-              className="bg-[linear-gradient(135deg,_#00D4FF_0%,_#0066FF_100%)] 
+              className="bg-[linear-gradient(135deg,_#00D4FF_0%,_#00D4FF_100%)] 
                 text-[#0B0E13] px-6 py-[10px] rounded-[16px] text-sm font-[700] 
                 transition-all duration-300 
                 hover:scale-[1.05] 
@@ -109,7 +109,7 @@ const Navbar = () => {
         rounded-[14px]
         bg-[#000]
         border border-[#fff]
-        hover:border-[#0066FF]
+        hover:border-[#00D4FF]
         hover:bg-[#121212]
         transition-all duration-300
         group"
@@ -161,7 +161,7 @@ const Navbar = () => {
         w-full
         py-[13px]
         rounded-[14px]
-        bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)]
+        bg-[linear-gradient(135deg,#00D4FF_0%,#00D4FF_100%)]
         text-[#0B0E13]
         text-[15px]
         font-[700]

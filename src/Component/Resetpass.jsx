@@ -310,7 +310,7 @@ const Resetpass = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 mb-6 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Submit"}
@@ -358,7 +358,7 @@ const Resetpass = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4 duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Submit"}
@@ -419,7 +419,7 @@ const Resetpass = () => {
                 className="w-full h-11 rounded-xl font-medium text-black transition-all mt-4  duration-300 hover:scale-[1.02] disabled:opacity-70"
                 style={{
                   background:
-                    "linear-gradient(135deg, #00D4FF 0%, #0066FF 100%)",
+                    "linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%)",
                 }}
               >
                 {buttonLoader ? "Loading..." : "Submit"}

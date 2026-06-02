@@ -1640,9 +1640,9 @@ button.btn.btn-primary-alta {
   margin: 0 auto;
   display: block;
   padding: 10px 0px;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   color: #fff;
-  border: 1px solid #4f41a4 !important;
+  border: 1px solid #009DFF !important;
 }
 
 a.btn.btn-primary-alta:hover,
@@ -1651,9 +1651,9 @@ button.btn.btn-primary-alta:hover {
   margin: 0 auto;
   display: block;
   padding: 10px 0px;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   color: #fff;
-  border: 1px solid #4f41a4 !important;
+  border: 1px solid #009DFF !important;
 }
 
 button.btn.btn-primary-alta.notification:hover {
@@ -1674,7 +1674,7 @@ button.btn.btn-primary-alta {
 
 a.btn.btn-primary,
 button.btn.btn-primary {
-  background: #4f41a4;
+  background: #009DFF;
 }
 
 a.btn,
@@ -2609,7 +2609,7 @@ nav.pagination-wrapper .pagination li button {
 
 .login_button {
   background: none !important;
-  border: 1px solid #9685ff !important;
+  border: 1px solid #00D4FF !important;
 }
 
 .order-table a {
@@ -2657,7 +2657,7 @@ nav.pagination-wrapper .pagination li button {
 }
 
 .color-green {
-  color: #ef3e9e;
+  color: #E84747;
 }
 
 .curront_price {
@@ -2748,7 +2748,7 @@ nav.pagination-wrapper .pagination li button {
 }
 
 .text-red {
-  color: #ef3e9e;
+  color: #E84747;
 }
 
 .title-table h4 {
@@ -4409,8 +4409,8 @@ input::-webkit-inner-spin-button {
 }
 
 .page-item.active .page-link {
-  background-color: #4f41a4;
-  border-color: #4f41a4;
+  background-color: #009DFF;
+  border-color: #009DFF;
 }
 
 .page-link {
@@ -4462,15 +4462,15 @@ input[type="number"] {
 
 .range_btn>button.active {
   padding: 4px 6px !important;
-  color: #9685ff;
+  color: #00D4FF;
   width: 54px;
   min-width: auto;
-  border-color: #4f41a4;
+  border-color: #009DFF;
 }
 
 .range_btn>button.active:hover {
-  color: #9685ff;
-  border-color: #4f41a4 !important;
+  color: #00D4FF;
+  border-color: #009DFF !important;
 }
 
 .range_btn>button {
@@ -8426,13 +8426,52 @@ button.treiee {
 }
 
 .card_logoki {
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 20px;
+}
+
+.new_card_logoki {
+  position: relative !important;
+  border-radius: 20px !important;
+
+  background: linear-gradient(
+    129.79deg,
+    rgba(0, 0, 0, 0.11) 0.6%,
+    rgba(102, 102, 102, 0.11) 96.54%
+  ) !important;
+
+  -webkit-backdrop-filter: blur(61.7px) !important;
+  backdrop-filter: blur(61.7px) !important;
+
+  border: none !important;
+  overflow: hidden !important;
+}
+
+.new_card_logoki::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  padding: 1px !important;
+  border-radius: 20px !important;
+
+  background: linear-gradient(
+    130.21deg,
+    #1E1E1E 0.96%,
+    #585858 97.56%
+  ) !important;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0) !important;
+  -webkit-mask-composite: xor !important;
+  mask-composite: exclude !important;
+
+  pointer-events: none !important;
 }
 
 .form_pading_s .form-group {
   min-height: auto;
-  margin-bottom: 35px;
+  margin-bottom: 18px;
 }
 
 .form_pading_s {
@@ -11255,8 +11294,8 @@ body.light {
 .mgs_content .card_bg button,
 .mgs_content .card_bg button:hover {
   background: transparent;
-  color: #9685ff;
-  border: 1px solid #9685ff;
+  color: #00D4FF;
+  border: 1px solid #00D4FF;
   border-radius: 10px;
 }
 
@@ -11271,7 +11310,7 @@ body.light {
 }
 
 .span_graycolor {
-  color: #9685ff;
+  color: #00D4FF;
 }
 
 .contecnt_main {
@@ -11899,7 +11938,7 @@ body.light {
 }
 
 .light .edit-button {
-  color: #9685ff !important;
+  color: #00D4FF !important;
 }
 
 .light .payment_form {
@@ -12106,7 +12145,7 @@ body.light {
 }
 
 button.btn.btn-primary-alta.login_btn {
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   margin-left: 150px;
 }
 
@@ -12116,12 +12155,12 @@ button.btn.btn-primary-alta.login_btn a {
 
 button.btn.btn-primary-alta.login_btn:hover {
   color: #fff !important;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   border: 1px solid #553bf5 !important;
 }
 
 button.btn.btn-primary-alta.login_btn {
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   margin-left: 150px;
 }
 
@@ -12139,8 +12178,8 @@ button.notactive {
   background: transparent !important;
   font-size: 15px;
   width: auto;
-  color: #9685ff !important;
-  border: 1px solid #9685ff !important;
+  color: #00D4FF !important;
+  border: 1px solid #00D4FF !important;
   border-radius: 12px !important;
   margin-right: 10px;
   justify-content: center;
@@ -12148,8 +12187,8 @@ button.notactive {
 
 button.notactive:hover {
   color: #fff !important;
-  background: #4f41a4 !important;
-  border: 1p x solid #4f41a4 !important;
+  background: #009DFF !important;
+  border: 1p x solid #009DFF !important;
 }
 
 .light button .notactive:hover {
@@ -12238,7 +12277,7 @@ a.btn.clooee:hover {
 }
 
 .col-red {
-  color: #ef3e9e !important;
+  color: #E84747 !important;
 }
 
 .model_confirms .form-control {
@@ -12319,7 +12358,7 @@ a.btn.clooee:hover {
 }
 
 .notification {
-  color: #4f41a4;
+  color: #009DFF;
 }
 
 .content_notification h3 {
@@ -12445,7 +12484,7 @@ input[type="checkbox"] {
 }
 
 /* .css-1y942vo-MuiButtonBase-root-MuiButton-root.active,:active  {
-  color: #4f41a4;
+  color: #009DFF;
 } */
 .data_inner.all-history-data {
   text-wrap: wrap;

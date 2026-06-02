@@ -120,7 +120,7 @@ textarea {
   color: #7a7a7a !important;
 }
 .agrreement a {
-  color: #9685ff;
+  color: #00D4FF;
 }
 .agrreement {
   margin-top: 30px;
@@ -128,7 +128,7 @@ textarea {
 .new_login_bb .register_login .btn-primary {
   padding: 10px 10px;
   display: block;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   margin-top: 36px;
 }
 
@@ -219,7 +219,7 @@ p.right-margjs {
   display: block;
   width: 100%;
   text-align: center;
-  color: #9685ff;
+  color: #00D4FF;
   font-size: 16px;
 }
 .input_flex_propery {
@@ -244,7 +244,7 @@ p.right-margjs {
 }
 .a.accepte:active {
   display: block;
-  background: #4f41a4;
+  background: #009DFF;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -253,7 +253,7 @@ p.right-margjs {
 }
 a.accepte:focus {
   display: block;
-  background: #4f41a4;
+  background: #009DFF;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -262,7 +262,7 @@ a.accepte:focus {
 }
 a.accepte:focus {
   display: block;
-  background: #4f41a4;
+  background: #009DFF;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -304,7 +304,7 @@ a.accepte:focus {
 }
 button.primary_header_button,
 button.primary_header_button:hover {
-  background: #4f41a4;
+  background: #009DFF;
   text-transform: capitalize;
   padding: 8px 25px;
   font-size: 14px;
@@ -312,7 +312,7 @@ button.primary_header_button:hover {
   margin-right: 10px;
 }
 button.secondary_header_button {
-  border: 2px solid #4f41a4;
+  border: 2px solid #009DFF;
   color: #8d81d4;
   text-transform: capitalize;
   font-size: 14px;
@@ -326,7 +326,7 @@ button.link {
   color: #b3b3b3;
 }
 button.link.active {
-  color: #9685ff;
+  color: #00D4FF;
 }
 .heading_card_new {
   padding: 25px 20px;
@@ -347,7 +347,7 @@ button.link.active {
   content: "";
   height: 60px;
   width: 10px;
-  background: #4f41a4;
+  background: #009DFF;
   position: absolute;
   left: 0;
   border-radius: 0px 10px 10px 0px;
@@ -376,7 +376,7 @@ button.link.active {
 }
 
 button.primary_butn {
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   text-transform: capitalize !important;
   padding: 14px 25px !important;
   font-size: 17px !important;
@@ -403,7 +403,7 @@ button.primary_butn {
   border: 1.5px solid #00A5FF;
   background:
     linear-gradient(#0b1120, #0b1120) padding-box,
-    linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) border-box;
+    linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%) border-box;
 
   /* Gradient Text */
   background-image: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%);
@@ -445,7 +445,7 @@ button.primary_butn {
   flex-grow: 1;
 }
 .card_launchpad {
-  background: #191919e3;
+  background: #181818;
   padding: 15px;
   border-radius: 20px;
   cursor: pointer;
@@ -521,7 +521,7 @@ button.primary_butn {
 }
 .Launch_pad_steps span {
   font-size: 20px;
-  color: #9685ff;
+  color: #00D4FF;
   font-weight: 300;
 }
 .class-padding {
@@ -535,11 +535,11 @@ button.primary_butn {
 .new_login_bb .register_login .btn-second {
   padding: 10px 10px;
   display: block;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   margin-top: 36px;
-  border: 1px solid #4f41a4;
+  border: 1px solid #009DFF;
   background: transparent !important;
-  color: #4f41a4;
+  color: #009DFF;
 }
 .button_launch {
   display: flex;
@@ -592,7 +592,7 @@ button.primary_butn {
   width: fit-content !important;
   padding: 0 !important;
   font-size: 17px !important;
-  color: #b3b3b3 !important;
+  color: #b3b3b3;
 }
 .w-fit {
   width: auto !important;
@@ -629,7 +629,7 @@ button.primary_butn {
   background: #1c1a26;
   font-size: 17px;
   font-weight: 300;
-  color: #9685ff;
+  color: #00D4FF;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -716,8 +716,8 @@ button.primary_butn {
 }
 
 .tabs_inside .nav li a.active {
-  border-bottom: 2px solid #4f41a4;
-  color: #9685ff;
+  border-bottom: 2px solid #009DFF;
+  color: #00D4FF;
 }
 .tfa_box h3 {
   font-size: 34px;
@@ -740,7 +740,7 @@ button.primary_butn {
   margin: 24px 0px !important;
 }
 .menu_items_fex .navlink_new.active {
-  color: #9685ff;
+  color: #00D4FF;
 }
 .gap_button {
   display: flex;
@@ -753,17 +753,17 @@ button.primary_butn {
 .gap_button .form_pading_s h6 {
   font-size: 34px;
   font-weight: 500;
-  color: #9685ff;
+  color: #00D4FF;
 }
 .gap_button .groow-1 {
   flex-grow: 1;
 }
 .text-color-pur {
-  color: #9685ff !important;
+  color: #00D4FF !important;
 }
 
 .form_pading_s.box {
-  background: linear-gradient(93deg, #9685ff 3.79%, #683018 104.96%),
+  background: linear-gradient(93deg, #00D4FF 3.79%, #683018 104.96%),
     linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
   padding: 0 !important;
   border-radius: 11px;
@@ -869,14 +869,14 @@ button.primary_butn {
 }
 .payment_form button {
   background: transparent !important;
-  color: #9685ff !important;
+  color: #00D4FF !important;
   font-weight: 400 !important;
   color: #7a7a7a !important;
 
   font-size: 17px !important;
 }
 .payment_form button.primary_one {
-  color: #9685ff !important;
+  color: #00D4FF !important;
 }
 .marhing_pading {
   padding: 24px 24px !important;
@@ -917,16 +917,16 @@ button.primary_butn {
 }
 .stake_button h4 a {
   display: block;
-  color: #9685ff;
+  color: #00D4FF;
   /* padding: 10px 33px; */
-  /* border: 1px solid #9685ff; */
+  /* border: 1px solid #00D4FF; */
   border-radius: 10px;
   /* margin-right: 20px; */
 }
 .colo_bold {
   font-size: 25px;
   font-weight: 500;
-  color: #9685ff;
+  color: #00D4FF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -961,6 +961,7 @@ button.primary_butn {
   padding: 10px 0px;
   font-size: 14px;
 }
+
 .select_duration ul li a {
   padding: 4px 8px;
   border: 1px solid #333333;
@@ -968,12 +969,39 @@ button.primary_butn {
   color: #7a7a7a;
   font-size: 16px;
 }
+
 .select_duration ul li a.active {
+  position: relative;
   padding: 4px 8px;
-  border: 1px solid #fff;
+  border: 1px solid transparent;
   border-radius: 30px;
-  color: #fff;
+
+  background: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  display: inline-block;
 }
+
+.select_duration ul li a.active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 30px;
+
+  background: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
 .Srake_status {
   font-size: 14px;
   text-transform: capitalize;
@@ -991,7 +1019,7 @@ button.primary_butn {
   font-weight: 500;
   margin-left: 6px;
 
-  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  background: linear-gradient(135deg, #00D4FF 0%, #00D4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1003,7 +1031,7 @@ button.primary_butn {
   gap: 10px;
 }
 .APY p span {
-  color: #9685ff;
+  color: #00D4FF;
   font-size: 20px;
   font-weight: 400;
 }
@@ -1022,8 +1050,8 @@ button.primary_butn {
   color: #7a7a7a;
 }
 .tag_staking_yiedl.nav li a.active {
-  border-bottom: 1px solid #9685ff;
-  color: #9685ff;
+  border-bottom: 1px solid #00D4FF;
+  color: #00D4FF;
 }
 .font_normal {
   font-style: normal;
@@ -1047,7 +1075,7 @@ button.primary_butn {
   border-bottom: 1px solid #767676;
 }
 .color_sec {
-  color: #9685ff;
+  color: #00D4FF;
 }
 .aling_flexx {
   display: flex;
@@ -1056,7 +1084,7 @@ button.primary_butn {
 }
 .section_class_grs h4 {
   margin: 0;
-  color: #9685ff;
+  color: #00D4FF;
   font-size: 20px;
 }
 .section_class_grs h5 {
@@ -1100,12 +1128,12 @@ button.primary_butn {
 }
 .new_login_bb .register_login .btn-primary.burdas_buttnd {
   background: transparent !important;
-  color: #9685ff;
-  border: 1px solid #9685ff;
+  color: #00D4FF;
+  border: 1px solid #00D4FF;
 }
 .padidnr_color {
   font-size: 20px !important;
-  color: #9685ff !important;
+  color: #00D4FF !important;
 }
 .paddinte_ledy_o {
   padding-left: 0 !important;
@@ -1128,7 +1156,7 @@ button.primary_butn {
   color: #fff;
 }
 .data_inner span {
-  color: #9685ff;
+  color: #00D4FF;
   margin-right: 10px;
 }
 .bi-trash-fill::before {
@@ -1137,9 +1165,9 @@ button.primary_butn {
 }
 .data_inner button {
   display: block;
-  color: #9685ff;
+  color: #00D4FF;
   padding: 10px 14px;
-  border: 1px solid #9685ff;
+  border: 1px solid #00D4FF;
   border-radius: 10px;
   min-width: 130px;
 }
@@ -1245,11 +1273,11 @@ button.primary_butn {
   display: block;
   color: #fff;
   padding: 12px 14px;
-  border: 0px solid #9685ff;
+  border: 0px solid #00D4FF;
   border-radius: 10px;
   min-width: 110px;
   margin-left: auto;
-  background: #4f41a4;
+  background: #009DFF;
   font-weight: 400;
 }
 .text_primary_txt {
@@ -1290,7 +1318,7 @@ span.primary_red {
 .color_border {
   background: #232036;
   padding: 22px 20px;
-  border: 1px dashed #4f41a4;
+  border: 1px dashed #009DFF;
   border-radius: 10px;
 }
 .ne_bg_txt {
@@ -1335,7 +1363,7 @@ span.primary_red {
 }
 .chat_contianer .chat_footer button {
   padding: 14px 16px;
-  border: 1px solid #4f41a4;
+  border: 1px solid #009DFF;
   color: #7360e6;
   border-radius: 9px;
 }
@@ -1446,8 +1474,8 @@ span.primary_red {
   border: 1px solid #252525;
 }
 .trade_page_new .order-table a.active {
-  color: #9685ff;
-  border-color: #4f41a4;
+  color: #00D4FF;
+  border-color: #009DFF;
 }
 .trade_page_new .order-table .table thead th {
   color: #b3b3b3;
@@ -1530,8 +1558,8 @@ span.primary_red {
   margin-right: 10px;
 }
 .tabs_secion_nre_search .nav li a.active {
-  color: #9685ff;
-  border-color: #4f41a4;
+  color: #00D4FF;
+  border-color: #009DFF;
 }
 .d-none {
   display: none !important;
@@ -1548,8 +1576,8 @@ span.primary_red {
   text-align: center;
 }
 .trade_page_new .border_botton .title-table li a.active {
-  color: #9685ff;
-  border-bottom: 2px solid #4f41a4;
+  color: #00D4FF;
+  border-bottom: 2px solid #009DFF;
 }
 .trade_page_new .border_botton .title-table li {
   margin: 0;
@@ -1600,7 +1628,7 @@ span.primary_red {
   padding: 11px;
 }
 .light .onlywhitee.new_login_bb .register_login .form-control-ref {
-  color: #9685ff;
+  color: #00D4FF;
 }
 .new_buyform .nav {
   gap: 20px;
@@ -1619,9 +1647,10 @@ span.primary_red {
   border-bottom: 1px solid #252525 !important;
 }
 .inner_form li a.active {
-  color: #9685ff !important;
-  border-bottom: 1px solid #4f41a4 !important;
+  color: #00D4FF !important;
+  border-bottom: 1px solid #00D4FF !important;
 }
+
 .formtext label {
   color: #949393;
   margin-bottom: 0;
@@ -1642,9 +1671,9 @@ span.primary_red {
   margin: 0 auto;
   display: block;
   padding: 10px 0px;
-  background: #4f41a4 !important;
+  background: #009DFF !important;
   color: #fff;
-  border: 1px solid #4f41a4 !important;
+  border: 1px solid #009DFF !important;
 }
 .light .foem_group .form-group.vuttond > button {
   width: 100%;
@@ -1733,7 +1762,7 @@ span.color {
   gap: 20px;
 }
 .button_footer .button {
-  border: 1px solid #4f41a4 !important;
+  border: 1px solid #009DFF !important;
   color: #8d81d4 !important;
   text-transform: capitalize !important;
   font-size: 14px !important;
@@ -1804,7 +1833,7 @@ span.color {
   letter-spacing: 0.18px;
 }
 .banner-btn {
-  background: #4f41a4;
+  background: #009DFF;
   color: #fff;
 }
 /*  */
@@ -2043,8 +2072,8 @@ span.color {
 }
 .payment_cancel_btn {
   background: transparent;
-  border: 1px solid #4f41a4 !important;
-  color: #4f41a4 !important;
+  border: 1px solid #009DFF !important;
+  color: #009DFF !important;
 }
 /* DARK MODE START */
 
@@ -2061,7 +2090,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #00D4FF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2077,7 +2106,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #00D4FF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2094,7 +2123,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #00D4FF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2295,7 +2324,7 @@ span.color {
   height: 44px;
   border: none;
   border-radius: 12px;
-  background-color: #4f41a4;
+  background-color: #009DFF;
   color: #fff;
 }
 
@@ -2345,7 +2374,7 @@ span.color {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #9685ff;
+  color: #00D4FF;
   font-size: 59px;
   font-style: normal;
   font-weight: 800;
@@ -2690,7 +2719,7 @@ span.color {
   content: "";
   position: absolute !important;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #00D4FF;
   border-radius: 101px;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -2824,7 +2853,7 @@ span.color {
   font-weight: 400;
 }
 .modal-text1 h3 {
-  color: #9685ff;
+  color: #00D4FF;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -2933,8 +2962,8 @@ input {
   align-items: center;
   gap: 6px;
   border-radius: 12px;
-  border: 1.5px solid #4f41a4;
-  color: #9685ff;
+  border: 1.5px solid #009DFF;
+  color: #00D4FF;
   font-size: 16px;
   font-weight: 500;
 }
@@ -2995,23 +3024,23 @@ input {
   border-bottom: 1px solid black;
 }
 .new_buyform .formplac .limit_newcolor li a.active {
-  border-bottom: 1px solid #4f41a4 !important;
+  border-bottom: 1px solid #00d4ff !important;
   background: transparent;
-  -webkit-text-fill-color: #553bf5;
+  -webkit-text-fill-color: #00d4ff;
   border-radius: 0px !important;
 }
 
 .new_buyform .formplac .limit_newcolor li a.active {
-  border-bottom: 1px solid #553bf5 !important;
+  border-bottom: 1px solid #00d4ff !important;
   background: transparent;
-  -webkit-text-fill-color: #553bf5;
+  -webkit-text-fill-color: #00d4ff;
   border-radius: 0px !important;
 }
 
 .light .new_buyform .formplac .limit_newcolor li a.active {
-  border-bottom: 1px solid #553bf5 !important;
+  border-bottom: 1px solid #00d4ff !important;
   background: transparent;
-  -webkit-text-fill-color: #553bf5;
+  -webkit-text-fill-color: #00d4ff;
   border-radius: 0px !important;
 }
 
@@ -3020,8 +3049,8 @@ input {
   color: #000;
 }
 .light .new_login_bb .register_login .btn-second {
-  border: 1px solid #553bf5;
-  color: #553bf5 !important;
+  border: 1px solid #00d4ff;
+  color: #00d4ff !important;
 }
 .dilesd {
   display: flex;
@@ -3122,9 +3151,9 @@ input {
   background-position-y: -36px;
 }
 .register_btn {
-  color: #9685ff !important;
+  color: #00D4FF !important;
   text-transform: capitalize !important;
-  border: 1px solid #4f41a4 !important;
+  border: 1px solid #009DFF !important;
   border-radius: 12px !important;
   margin-right: 15px !important;
 }
@@ -3237,8 +3266,8 @@ input {
 }
 
 .stake_box .form_pading_s {
-  margin-top: 40px;
-  padding-bottom: 56px;
+  margin-top: 48px;
+  padding-bottom: 30px;
 }
 .claimed_btn {
   color: rgb(104, 227, 104) !important;
@@ -3604,9 +3633,9 @@ input:placeholder-shown {
   }
   .bootsrab_tabs .nav li a {
     display: block;
-    color: #9685ff;
+    color: #00D4FF;
     padding: 10px 26px;
-    border: 1px solid #9685ff;
+    border: 1px solid #00D4FF;
     border-radius: 10px;
     margin-right: 0px;
   }

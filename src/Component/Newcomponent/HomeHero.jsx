@@ -43,7 +43,7 @@ const HeroSection = () => {
               <p
                 className="
                   inline-flex items-center gap-2
-                  text-[#0066FF]
+                  text-[#00D4FF]
                   text-[10px] sm:text-xs
                   font-semibold
                   tracking-[1.4px]
@@ -52,12 +52,12 @@ const HeroSection = () => {
                   mb-3
                   px-4 py-2
                   rounded-full
-                  bg-[#0066FF0F]
-                  border-t-[0.77px] border-t-[#0066FF40]
-                  shadow-[0px_3px_4px_0px_#0066FF4D]
+                  bg-[#00D4FF0F]
+                  border-t-[0.77px] border-t-[#00D4FF40]
+                  shadow-[0px_3px_4px_0px_#00D4FF4D]
                 "
               >
-                <span className="w-2 h-2 rounded-full bg-[#0066FF] shadow-[0_0_8px_#0066FF]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-[0_0_8px_#00D4FF]"></span>
                 PROFESSIONAL CRYPTO EXCHANGE
               </p>
             </div>

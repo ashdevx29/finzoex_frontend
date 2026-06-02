@@ -315,14 +315,14 @@ function Home() {
                       <Line
                         type="monotone"
                         dataKey="Date"
-                        stroke="#4F41A4"
+                        stroke="#009DFF"
                         activeDot={{ r: 4 }}
                       />
                       <Legend />
                       <Line
                         type="monostone"
                         dataKey="Balance"
-                        stroke="#4F41A4"
+                        stroke="#009DFF"
                       />
                     </LineChart>
                   ) : (
