@@ -303,28 +303,38 @@ function Home() {
                   </div>
                   {loader_icon == false ? (
                     <LineChart
-                      width={800}
-                      height={365}
-                      style={{ cursor: "poiter" }}
-                      data={chartdataref.current}
-                    >
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      {/* <CartesianGrid stroke="" /> */}
-                      <Line
-                        type="monotone"
-                        dataKey="Date"
-                        stroke="#4F41A4"
-                        activeDot={{ r: 4 }}
-                      />
-                      <Legend />
-                      <Line
-                        type="monostone"
-                        dataKey="Balance"
-                        stroke="#4F41A4"
-                      />
-                    </LineChart>
+  width={800}
+  height={365}
+  data={chartdataref.current}
+>
+  <defs>
+    <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stopColor="#00D4FF" />
+      <stop offset="100%" stopColor="#0066FF" />
+    </linearGradient>
+  </defs>
+
+  <XAxis dataKey="name" />
+  <YAxis />
+  <Tooltip />
+
+  <Line
+    type="monotone"
+    dataKey="Date"
+    stroke="url(#lineGradient)"
+    strokeWidth={2}
+    activeDot={{ r: 4 }}
+  />
+
+  <Legend />
+
+  <Line
+    type="monotone"
+    dataKey="Balance"
+    stroke="url(#lineGradient)"
+    strokeWidth={2}
+  />
+</LineChart>
                   ) : (
                     <i className="fa-solid fa-spinner fa-spin chart_loader"></i>
                   )}
