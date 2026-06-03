@@ -23,6 +23,13 @@ body {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
+.website_color {
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
 
 .imgCls {
   margin: 0 auto;
@@ -8499,6 +8506,12 @@ button.treiee {
   margin: 90px 15px;
   padding: 43px 26px;
 }
+@media (max-width: 767px) {
+  .pading_cardd {
+  margin: 60px 10px !important;
+  padding: 20px 15px !important;
+}
+}
 
 .site-info__row {
   display: flex;
@@ -8814,7 +8827,7 @@ div.home {
 }
 
 .onlywhitee.tradepage-bg {
-  background: #280363;
+  background: #131313;
   background-image: url(../src/img/newimg/login.png);
   height: 100%;
   background-size: auto !important;
@@ -8824,13 +8837,14 @@ div.home {
 }
 
 .onlywhitee .register_login .form-control {
-  background: #ebebeb;
-  color: #000;
+  background: #202020;
+  color: #fff;
+  border-radius: 20px;
 }
 
 .onlywhitee .otp_content_e input {
-  background: #ebebeb;
-  color: #000;
+  background: #202020;
+  color: #fff;
 }
 
 .padin_cls_00>span {

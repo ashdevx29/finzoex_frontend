@@ -9,6 +9,8 @@ import { Grid, Paper, Container } from "@mui/material";
 import { setAuthorization } from "../../../core/service/axios";
 import { Button } from "semantic-ui-react";
 import moment from "moment";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
+import bannerImg from "../../../img/Dashboard/launch.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -62,10 +64,23 @@ function Home() {
   const details_page_moving = (data) => {
     navigate(`/Launchpadbuynew/${data._id}`);
   };
+
+  const pageBackgroundStyle = pageLoader
+    ? undefined
+    : {
+        backgroundImage: `url(${DashboardBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        minHeight: "100vh",
+      };
+
   return (
-    <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
-        <Header />
+    <div className="" style={pageBackgroundStyle}>
+      {/* <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb"> */}
+        <main className="main-content "> 
+          <Header />
         {pageLoader == true ? (
           <Grid item xs={12} sm={12} md={8} lg={12} xl={12}>
             <div className="loading">
@@ -82,7 +97,15 @@ function Home() {
             >
               {/* Item for xs (extra small) screens */}
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                <div className="heading_card_new">
+                  <div
+    className="heading_card_new"
+    style={{
+      backgroundImage: `url(${bannerImg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
                   <h1>
                     A Token Launch Platform For Transformative project{" "}
                     <i className="ri-arrow-right-line"></i>
@@ -94,6 +117,10 @@ function Home() {
                   </div>
                 </div>
               </Grid>
+
+
+
+
               <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
                 <div className="bootsrab_tabs">
                   <ul className="nav nav-tabs">

@@ -11,6 +11,7 @@ import { Button } from "semantic-ui-react";
 import { Checkbox } from "semantic-ui-react";
 import { Dropdown } from "semantic-ui-react";
 import useStateRef from "react-usestateref";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -252,6 +253,15 @@ function Home() {
   const cancel_function = () => {
     console.log("===========work");
     navigate("/launchpadlistnew");
+  };
+
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
   };
 
   const validate = async () => {
@@ -728,14 +738,17 @@ function Home() {
     }
   };
   return (
-    <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+    <div >
+      {/* <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb"> */}
+            <main className="main-content  bg-cover onlywhitee new_login_bb ">  
+
+        <div className="" style={pageBackgroundStyle}>
         <Header />
         <Container maxWidth="xl">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
             <Grid item xs={12} sm={12} md={8} lg={6} xl={5}>
-              <div className="card_logoki pading_cardd">
+              <div className="new_card_logoki card_logoki  pading_cardd">
                 <div className={stage1}>
                   <div className="form_content">
                     <Button onClick={cancel_function} className="back_butn">
@@ -745,8 +758,8 @@ function Home() {
                       ></i>{" "}
                       Back to Launchpad
                     </Button>
-                    <h1 className="mb-2 Launch_pad_steps">
-                      Fill in the details <span>Step 1/5</span>
+                    <h1 className="mb-2 Launch_pad_steps !text-[#fff]">
+                      Fill in the details <span className="website_color">Step 1/5</span>
                     </h1>
                   </div>
                   <div className="form_login_section p-0 mt-4">
@@ -871,8 +884,8 @@ function Home() {
                       ></i>{" "}
                       Back to Launchpad
                     </Button>
-                    <h1 className="mb-2 Launch_pad_steps">
-                      Fill in the details <span>Step 2/5</span>
+                    <h1 className="mb-2 Launch_pad_steps !text-[#fff]">
+                      Fill in the details <span className="website_color">Step 2/5</span>
                     </h1>
                   </div>
                   <div className="form_login_section p-0 mt-4">
@@ -899,7 +912,7 @@ function Home() {
                             )}
                           </div>
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                           <label>Project Description</label>
                           <textarea
                             rows="5"
@@ -918,8 +931,8 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div>
-                        <div className="form-group">
+                        </div> */}
+                        {/* <div className="form-group">
                           <label>Token Feature</label>
                           <textarea
                             rows="5"
@@ -938,7 +951,7 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div>
+                        </div> */}
                         <div className="form-group">
                           <label>Official website</label>
                           <input
@@ -960,41 +973,7 @@ function Home() {
                             )}
                           </div>
                         </div>
-                        <div className="form-group">
-                          <h4 className="text-white text-center">
-                            Currency image
-                          </h4>
-                          <div className="input_section_kyc d-block mx-auto">
-                            {imgloader1 == true ? (
-                              <i
-                                className="fa fa-circle-o-notch fa-spin icon_loader"
-                                style={{ "font-size": "36px" }}
-                              ></i>
-                            ) : currencyImage == "" ? (
-                              <img
-                                src={new URL("../../../img/New_images/profile_img.png", import.meta.url).href}
-                                className=""
-                              />
-                            ) : (
-                              <img src={currencyImage} className="" />
-                            )}
-                            <input
-                              type="file"
-                              name="image"
-                              onChange={(e) =>
-                                imageUpload("front", e.target.files[0])
-                              }
-                            />
-                          </div>
-                          {CurrencyImageValidateref.current == true ? (
-                            <p className="text-danger">
-                              {" "}
-                              {validationnErr.image}{" "}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                        </div>
+                       
                         <div className="form-group">
                           <label>Token/ Coin Symbol</label>
                           <input
@@ -1100,6 +1079,39 @@ function Home() {
                             )}
                           </div>
                         </div>
+                         <div className="form-group">
+  <label>Currency Image</label>
+
+  <input
+    type="file"
+    className="form-control"
+    accept="image/*"
+    onChange={(e) => imageUpload("front", e.target.files[0])}
+  />
+
+  {CurrencyImageValidateref.current === true && (
+    <p className="text-danger">
+      {validationnErr.image}
+    </p>
+  )}
+
+  {currencyImage && (
+    <div className="mt-3 text-center">
+      <img
+        src={currencyImage}
+        alt="Currency"
+        style={{
+          width: "100px",
+          height: "100px",
+          objectFit: "cover",
+          borderRadius: "10px",
+        }}
+      />
+    </div>
+  )}
+</div>
+
+
                         <div className="form-group">
                           <label>Short Description of Token/Coin</label>
                           <textarea
@@ -1120,20 +1132,9 @@ function Home() {
                             )}
                           </div>
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                           <label>Token  Address Type</label>
-                          {/* <div className="button_launch ">
-                            <Checkbox
-                              label="Security"
-                              checked={tokenCheckone}
-                              onChange={tokenOne}
-                            />
-                            <Checkbox
-                              label="Utility"
-                              checked={tokenchecktwo}
-                              onChange={tokenTwo}
-                            />
-                          </div> */}
+                        
                           <div className="button_checkbox">
                             <div className="checkbox_1">
                               <input
@@ -1165,7 +1166,7 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div>
+                        </div> */}
                       </form>
                       <div className="button_launch">
                         <button
@@ -1841,6 +1842,7 @@ function Home() {
           </Grid>
           {/* Your other components and content */}
         </Container>
+        </div>
       </main>
     </div>
   );

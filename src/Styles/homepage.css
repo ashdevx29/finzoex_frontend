@@ -27,3 +27,13 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+.buypill.active {
+  background: #21A75F !important;
+}
+
+.sellpill.active {
+  background: #E84747 !important;
+}
+
+

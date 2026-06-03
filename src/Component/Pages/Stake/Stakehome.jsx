@@ -3664,7 +3664,7 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                               ></i>{" "}
                               Back
                             </Button>
-                          <h1 className="mb-4 text-[#B3B3B3] text-left ">Fill in the Details</h1>
+                          <h1 className="mb-4 !text-[#ffffff] text-left ">Fill in the Details</h1>
                           </div>
                           {stakeTyperef.current == "fixed" ||
                           stakeTyperef.current == "yield" ? (
@@ -4082,7 +4082,7 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                 >
                   {/* Item for xs (extra small) screens */}
                   <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-                    <div className="card_logoki pading_cardd !bg-black ">
+                    <div className="card_logoki pading_cardd new_card_logoki !bg-black ">
                       <div className="form_content">
                         <h1 className="mb-2 aling_flexx">
                           {" "}
@@ -4243,7 +4243,7 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                   marginTop={"20px"}
                 >
                   <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
-                    <div className="card_logoki pading_cardd">
+                    <div className="card_logoki pading_cardd new_card_logoki">
                       <Grid
                         container
                         spacing={2}
@@ -4263,7 +4263,7 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                               ></i>{" "}
                               Back
                             </Button>
-                            <h1 className="mb-4">Fill in the Details</h1>
+                            <h1 className="mb-4 !text-[#ffffff] !text-left ">Fill in the Details</h1>
                           </div>
                           <div className="step-5 ">
                             <div className="profile_content_image">
@@ -4522,13 +4522,23 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
 
                                       <div className="form-group flex_start_sae">
                                         <p className="preview">
-                                          APR: <span>{yieldAPY} %</span>
+                                          APR:  <span className="
+        !bg-[linear-gradient(90deg,#03DDFD_0%,#0058F5_100%)]
+        !bg-clip-text
+        !text-transparent
+       
+      " >{yieldAPY} %</span>
                                         </p>
                                       </div>
                                       <div className="form-group flex_start_sae">
                                         <p className="preview">
                                           Estimated Total Interest:{" "}
-                                          <span>
+                                           <span className="
+        !bg-[linear-gradient(90deg,#03DDFD_0%,#0058F5_100%)]
+        !bg-clip-text
+        !text-transparent
+       
+      " >
                                             {" "}
                                             {YieldEstimation === "null"
                                               ? 0
@@ -4543,7 +4553,12 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                                       <div className="form-group flex_start_sae">
                                         <p className="preview">
                                           Estimated Interest per cycle:{" "}
-                                          <span>
+                                          <span className="
+        !bg-[linear-gradient(90deg,#03DDFD_0%,#0058F5_100%)]
+        !bg-clip-text
+        !text-transparent
+       
+      " >
                                             {" "}
                                             {YieldEstimation_interest === "null"
                                               ? 0
@@ -4556,26 +4571,30 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                                       </div>
                                       <div className="line_border"></div>
                                     </form>
-                                    {authToken && authToken == true ? (
+                                   
+                                  </div>
+                                  
+                                </div>
+
+
+                                 {authToken && authToken == true ? (
                                       buttonLoader == false ? (
                                         <button
-                                          className="btn btn-primary w-100"
+                                          className="btn btn-primary w-100 mt-6"
                                           onClick={confirmStackYield}
                                         >
                                           Confirm
                                         </button>
                                       ) : (
-                                        <button className="btn btn-primary w-100">
+                                        <button className="btn btn-primary  w-100 mt-6">
                                           Loading...
                                         </button>
                                       )
                                     ) : (
-                                      <button className="btn btn-primary w-100">
+                                      <button className="btn btn-primary w-100 mt-6">
                                         login to continue
                                       </button>
                                     )}
-                                  </div>
-                                </div>
                               </div>
                             </Grid>
                           </Grid>
@@ -4585,7 +4604,11 @@ bg-[linear-gradient(135deg,#00D4FF_0%,#0066FF_100%)] font-medium text-sm
                   </Grid>
                 </Grid>
               </div>
+       
             </div>
+
+
+            
           </>
         )}
       </main>

@@ -7,6 +7,7 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import "../Styles/homepage.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import { socket } from "./context/socket";
@@ -2453,17 +2454,16 @@ function Home() {
               <div className="formplac card_light card_light-w transe cart_trade ">
                 <ul className="nav nav-pills tabsinner">
                   <li className="active">
-                    <a
+                    <a className="!text-[#21A75F] !border-[#21A75F]  hover:!text-[#21A75F] buypill  "
                       data-toggle="pill"
                       href="#Buy"
-                      className="active"
                       onClick={() => type_tab_change("buy")}
                     >
                       Buy
                     </a>
                   </li>
                   <li>
-                    <a
+                    <a className="!text-[#E84747] !border-[#E84747] hover:!text-[#E84747]  sellpill"
                       data-toggle="pill"
                       href="#Sell"
                       onClick={() => type_tab_change("sell")}
@@ -3526,9 +3526,9 @@ function Home() {
                                   <td>{item.pairName} </td>
                                   <td>
                                     {item.tradeType == "buy" ? (
-                                      <span className="text-green"> Buy </span>
+                                      <span className="text-[#21A75F]"> Buy </span>
                                     ) : (
-                                      <span className="text-red"> Sell </span>
+                                      <span className="text-[#F6465D]"> Sell </span>
                                     )}
                                   </td>
                                   <td>{item.ordertype} </td>

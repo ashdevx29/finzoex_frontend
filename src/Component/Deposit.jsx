@@ -174,7 +174,7 @@ function Home() {
                           </div>
                         )}
                       </form>
-                      {/* <div className="button_launch">
+                      <div className="button_launch">
                         <button
                           // onClick={cancel_function}
                           type="button"
@@ -189,7 +189,7 @@ function Home() {
                         >
                           Submit
                         </button>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
