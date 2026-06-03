@@ -23,8 +23,11 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 import useStateRef from "react-usestateref";
+
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const [perpage, setperpage] = useState(5);
@@ -44,6 +47,51 @@ function Home() {
   const [AvailablePrice, setAvailablePrice] = useState(0);
   const [inorderPrice, setinorderPrice] = useState(0);
   const [loader_icon, setloader_icon] = useState(false);
+
+
+
+  const formatXAxis = (value) => {
+  const date = new Date(value);
+
+  if (isNaN(date.getTime())) return "";
+
+  if (actives === "") {
+    return date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      hour12: true,
+    });
+  }
+
+  if (actives === "day") {
+    return date.toLocaleDateString("en-US", {
+      weekday: "short",
+    });
+  }
+
+  if (actives === "month") {
+    return date.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "short",
+    });
+  }
+
+  if (actives === "month3") {
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+    });
+  }
+
+  if (actives === "year") {
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+    });
+  }
+
+  return value;
+};
+
+
+
 
   const recordPerPage = 5;
 
@@ -241,7 +289,17 @@ function Home() {
             </div>
           </Grid>
         ) : (
-          <div className="class-padding">
+        
+          <div
+      className="class-padding"
+      style={{
+        backgroundImage: `url(${DashboardBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "calc(100vh - 60px)",
+      }}
+    >
             <p className="dashboard_title">Dashboard</p>
             <Grid
               container
@@ -251,90 +309,173 @@ function Home() {
             >
               {/* Item for xs (extra small) screens */}
               <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
-                <div className="Card_dashboard mb-4">
-                  <div className="row justify-content-between">
-                    <div className="toplable col-lg-4 ">
-                      <p>Portfolio Value</p>
-                      <h2>
+                <div className="Card_dashboard mb-4" style={{ backgroundColor: '#11131a', borderRadius: '12px', border: 'none', padding: '20px' }}>
+                  <div className="row justify-content-between mb-2">
+                    <div className="toplable col-lg-4">
+                      <p style={{ color: '#a0aec0', fontSize: '15px', marginBottom: '8px' }}>Portfolio Value</p>
+                      <h2 style={{ fontSize: '30px', fontWeight: 'bold', margin: 0, display: 'flex', alignItems: 'center', gap: '8px', color: '#fff' }}>
                         {currency_Value == "INR" ? "₹" : "$"}{" "}
                         {parseFloat(totalINRPrice && totalINRPrice).toFixed(2)}{" "}
-                        <span>INR</span>
+                        <span style={{ fontSize: '14px', color: '#a0aec0', fontWeight: 'normal' }}>{currency_Value == "INR" ? "INR" : "USD"}</span>
                       </h2>
                     </div>
                     <div className="toplable label_clr col-lg-5">
-                      <div className="d-flex flex-row justify-around tabs_collection">
+                      <div className="d-flex flex-row justify-around tabs_collection" style={{ gap: '10px' }}>
                         <span
                           onClick={() => prediction("")}
-                          style={{ cursor: "pointer" }}
+                          style={{ cursor: "pointer", background: (actives == "" || actives == undefined) ? '#e2e8f0' : 'transparent', color: (actives == "" || actives == undefined) ? '#0f172a' : '#94a3b8', border: '1px solid #334155', borderRadius: '20px', padding: '4px 16px', fontSize: '13px', fontWeight: '600' }}
                           className={actives == "" || undefined ? "active" : ""}
                         >
-                          1 D
+                          1D
                         </span>
                         <span
                           onClick={() => prediction("day")}
-                          style={{ cursor: "pointer" }}
+                          style={{ cursor: "pointer", background: actives == "day" ? '#e2e8f0' : 'transparent', color: actives == "day" ? '#0f172a' : '#94a3b8', border: '1px solid #334155', borderRadius: '20px', padding: '4px 16px', fontSize: '13px', fontWeight: '600' }}
                           className={actives == "day" ? "active" : ""}
                         >
-                          1 W
+                          1W
                         </span>
                         <span
                           onClick={() => prediction("month")}
-                          style={{ cursor: "pointer" }}
+                          style={{ cursor: "pointer", background: actives == "month" ? '#e2e8f0' : 'transparent', color: actives == "month" ? '#0f172a' : '#94a3b8', border: '1px solid #334155', borderRadius: '20px', padding: '4px 16px', fontSize: '13px', fontWeight: '600' }}
                           className={actives == "month" ? "active" : ""}
                         >
-                          1 M
+                          1M
                         </span>
                         <span
                           onClick={() => prediction("month3")}
-                          style={{ cursor: "pointer" }}
+                          style={{ cursor: "pointer", background: actives == "month3" ? '#e2e8f0' : 'transparent', color: actives == "month3" ? '#0f172a' : '#94a3b8', border: '1px solid #334155', borderRadius: '20px', padding: '4px 16px', fontSize: '13px', fontWeight: '600' }}
                           className={actives == "month3" ? "active" : ""}
                         >
-                          3 M
+                          3M
                         </span>
                         <span
                           onClick={() => prediction("year")}
-                          style={{ cursor: "pointer" }}
+                          style={{ cursor: "pointer", background: actives == "year" ? '#e2e8f0' : 'transparent', color: actives == "year" ? '#0f172a' : '#94a3b8', border: '1px solid #334155', borderRadius: '20px', padding: '4px 16px', fontSize: '13px', fontWeight: '600' }}
                           className={actives == "year" ? "active" : ""}
                         >
-                          1 Y
+                          1Y
                         </span>
                       </div>
                     </div>
                   </div>
+                  
                   {loader_icon == false ? (
-                    <LineChart
-  width={800}
-  height={365}
-  data={chartdataref.current}
->
-  <defs>
-    <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stopColor="#00D4FF" />
-      <stop offset="100%" stopColor="#0066FF" />
-    </linearGradient>
-  </defs>
+                    <div
+                      style={{
+                        marginTop: "20px",
+                        width: "100%",
+                        height: "395px",
+                      }}
+                    >
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart
+                          data={chartdataref.current}
+                          margin={{
+                            top: 10,
+                            right: 20,
+                            left: 0,
+                            bottom: 10,
+                          }}
+                        >
+                          <XAxis
+                            dataKey="Date"
+                            tickFormatter={formatXAxis}
+                            axisLine={{ stroke: "#1e293b" }}
+                            tickLine={false}
+                            tick={{
+                              fill: "#64748b",
+                              fontSize: 12,
+                            }}
+                          />
 
-  <XAxis dataKey="name" />
-  <YAxis />
-  <Tooltip />
+                          <YAxis
+                            orientation="right"
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{
+                              fill: "#64748b",
+                              fontSize: 12,
+                            }}
+                            tickFormatter={(value) =>
+                              `${currency_Value === "INR" ? "₹" : "$"}${Number(value).toFixed(0)}`
+                            }
+                          />
 
-  <Line
-    type="monotone"
-    dataKey="Date"
-    stroke="url(#lineGradient)"
-    strokeWidth={2}
-    activeDot={{ r: 4 }}
-  />
+                          <Tooltip
+                            contentStyle={{
+                              background: "#111827",
+                              border: "1px solid #334155",
+                              borderRadius: "10px",
+                              color: "#fff",
+                            }}
+                            formatter={(value) => [
+                              `${currency_Value === "INR" ? "₹" : "$"}${Number(value).toFixed(2)}`,
+                              "Portfolio",
+                            ]}
+                            labelFormatter={(label) => {
+                              const d = new Date(label);
 
-  <Legend />
+                              if (isNaN(d.getTime())) return label;
 
-  <Line
-    type="monotone"
-    dataKey="Balance"
-    stroke="url(#lineGradient)"
-    strokeWidth={2}
-  />
-</LineChart>
+                              if (actives === "") {
+                                return d.toLocaleTimeString();
+                              }
+
+                              if (actives === "day") {
+                                return d.toLocaleDateString("en-US", {
+                                  weekday: "long",
+                                });
+                              }
+
+                              if (actives === "month") {
+                                return d.toLocaleDateString();
+                              }
+
+                              if (actives === "month3") {
+                                return d.toLocaleDateString("en-US", {
+                                  month: "long",
+                                  year: "numeric",
+                                });
+                              }
+
+                              if (actives === "year") {
+                                return d.toLocaleDateString("en-US", {
+                                  month: "long",
+                                  year: "numeric",
+                                });
+                              }
+
+                              return label;
+                            }}
+                          />
+
+<Line
+  type="linear"
+  dataKey="Balance"
+  stroke="#00B7FF"
+  strokeWidth={1.5}
+  dot={false}
+  activeDot={false}
+/>
+
+                          {/* <Line
+                            type="monotone"
+                            dataKey="Balance"
+                            stroke="#00A2FF"
+                            strokeWidth={2}
+                            dot={false}
+                            activeDot={{
+                              r: 6,
+                              fill: "#00A2FF",
+                              stroke: "#111827",
+                              strokeWidth: 2,
+                            }}
+                          /> */}
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                    
                   ) : (
                     <i className="fa-solid fa-spinner fa-spin chart_loader"></i>
                   )}

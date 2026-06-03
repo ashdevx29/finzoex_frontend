@@ -45,7 +45,7 @@ const App = () => {
         setNotification(resp.Message);
       } else {
       }
-    } catch (error) {}
+    } catch (error) { }
   };
   const toggleDrawer = (open) => (event) => {
     if (
@@ -61,11 +61,11 @@ const App = () => {
   const currentUrl = window.location.href;
 
   console.log(currentUrl, "currentUrl");
-const currentPath = currentUrl.split("/")[3];
+  const currentPath = currentUrl.split("/")[3];
   console.log(URL, "URL");
   const [authtoken, setauthtoken] = useState(false);
-const [Activestate, setActivestate, Activestateref] =
-  useState(currentPath);
+  const [Activestate, setActivestate, Activestateref] =
+    useState(currentPath);
   const [currenychoose, setCurrencyChoose, currenychooseref] = useState("INR");
 
   useEffect(() => {
@@ -196,8 +196,16 @@ const [Activestate, setActivestate, Activestateref] =
               <ListItemText primary="INR" />
             </ListItem> */}
 
-            <ListItem button key="Port" onClick={() => navbar("Userprofile")}>
+            {/* <ListItem button key="Port" onClick={() => navbar("Userprofile")}>
               <ListItemText primary="Account" />
+            </ListItem> */}
+            <ListItem button key="Port" onClick={() => navbar("Userprofile")}>
+              <ListItemText
+                primary="Account"
+                classes={{
+                  primary: "gradient-text"
+                }}
+              />
             </ListItem>
 
             <ListItem button key="Logout" onClick={logout}>
@@ -275,13 +283,11 @@ const [Activestate, setActivestate, Activestateref] =
     setIsOpen(settheme);
     console.log("theme set===", isOpenref.current);
     document.body.classList.toggle("light", isOpenref.current);
-    
+
     var pathsplit = window.location.pathname.split('/');
 
-    if(pathsplit.length > 0)
-    {
-      if(pathsplit[1] == "trade")
-      {
+    if (pathsplit.length > 0) {
+      if (pathsplit[1] == "trade") {
         socket.emit("loadchart", value);
       }
     }
@@ -441,8 +447,8 @@ const [Activestate, setActivestate, Activestateref] =
                     color="inherit"
                     className={
                       Activestateref.current == "Userprofile"
-                        ? "link active"
-                        : "link"
+                        ? "link active gradient-btn"
+                        : "link gradient-btn"
                     }
                   >
                     <svg
@@ -450,16 +456,24 @@ const [Activestate, setActivestate, Activestateref] =
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-4 h-4 mr-1"
+                      className="gradient-icon w-4 h-4 mr-1"
                     >
+                      <defs>
+                        <linearGradient id="userGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#00D4FF" />
+                          <stop offset="100%" stopColor="#0066FF" />
+                        </linearGradient>
+                      </defs>
+
                       <path
+                        stroke="url(#userGradient)"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                       />
                     </svg>
-                    Account
+
+                    <span className="gradient-text">Account</span>
                   </Button>
                 </Grid>
               )}
