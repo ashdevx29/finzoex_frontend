@@ -9582,12 +9582,22 @@ p.balance {
 
 .loading i {
   font-size: 50px;
-  color: #553bf5;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* color: #553bf5; */
 }
 
 .loading_icon {
   font-size: 50px;
-  color: #553bf5;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  /* color: #553bf5; */
 }
 
 .light .overflow_seee {

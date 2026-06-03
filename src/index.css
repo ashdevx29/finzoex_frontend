@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "Roboto", sans-serif ;
+ font-family: Inter !important;
 }
 h1,
 h2,
@@ -19,7 +19,32 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: "Roboto", sans-serif ;
+  font-family: Inter !important;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.gradient-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link.active {
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link.active svg {
+  stroke: #00AFFF !important;
 }
 
 /* New Css for Finzo X */
@@ -325,8 +350,22 @@ button.link {
   font-size: 14px;
   color: #A5AAB5;
 }
+button.link.hover {
+  /* color: #9685ff; */
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 button.link.active {
-  color: #9685ff;
+  /* color: #9685ff; */
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 .heading_card_new {
   padding: 25px 20px;
@@ -826,7 +865,9 @@ button.primary_butn {
   flex: 1 1;
   padding: 10px;
   border: 0px solid #ddd;
-  color: #A5AAB5;
+  color: #E5E5E5;
+  font-size: 16px;
+  font-weight: 400;
   vertical-align: middle;
   align-items: center;
   display: flex;
@@ -838,7 +879,7 @@ button.primary_butn {
   background-color: transparent;
 }
 .border_table_row {
-  background: #181818;
+  background: #0E1115;
   border: 1px solid #252525;
   border-radius: 21px;
   padding: 18px 20px;
@@ -1755,8 +1796,9 @@ span.color {
   background-clip: text !important;
   color: transparent !important;
   text-transform: capitalize !important;
-  font-size: 14px !important;
-  font-weight: 400 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  font-style: Inter !important;
   flex-grow: 1 !important;
   border: none !important;
   border-radius: 16px !important;
