@@ -106,8 +106,8 @@ textarea {
 }
 .new_login_bb .form_pading_s {
   padding: 24px 25px;
-  background: #0E1115;
-  border-radius: 20px;
+  background: #2727274D;
+ 
 }
 .new_login_bb .register_login label {
   font-size: 14px;
@@ -116,18 +116,18 @@ textarea {
   font-weight: 400;
 }
 .onlywhitee.new_login_bb .register_login .form-control {
-  background: #2C2C2C;
+  background: #0E1115;
   color: #fff;
-  border: none;
+  border: 2px solid #252525;
   border-radius: 10px;
 }
 .onlywhitee.new_login_bb .register_login .form-textarea {
-  background: #000000;
+  background: #0E1115;
   color: #fff;
-  border: none;
+  border: 2px solid #252525;
   padding: 1rem;
   width: 100% !important;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .new_login_bb .form-group .text-danger {
@@ -569,6 +569,9 @@ button.primary_butn {
 }
 .class-padding {
   padding: 0 60px;
+}
+.n_class-padding{
+  padding: 0 10px;
 }
 .new_login_bb .register_login .btn-primary {
   padding: 12px 10px;
@@ -3830,7 +3833,7 @@ input:placeholder-shown {
     gap: 15px;
   }
   .onlywhitee.new_login_bb .register_login .form-control {
-    margin-top: 15px;
+    margin-top: 1px;
   }
 
   .input_section_kyc {

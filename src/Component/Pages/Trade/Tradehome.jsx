@@ -100,7 +100,7 @@ function Home() {
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Header />
         <div className="trade_page_new">
-          <div className="class-padding">
+          <div className=" n_class-padding">
             <Treadenewpage />
           </div>
         </div>
