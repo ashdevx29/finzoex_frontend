@@ -298,9 +298,10 @@ function Home() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "calc(100vh - 60px)",
+        marginTop:"-20px",
       }}
     >
-            <p className="dashboard_title">Dashboard</p>
+            <p className="dashboard_title ">Dashboard</p>
             <Grid
               container
               spacing={2}
