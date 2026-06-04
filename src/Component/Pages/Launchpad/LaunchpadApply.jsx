@@ -317,19 +317,20 @@ function Home() {
       setproject_namevalidate(false);
     }
 
-    if (formValue.token_feature == "") {
-      errors.token_feature = "Token Feature is required field";
-      settoken_featurevalidate(true);
-    } else {
-      settoken_featurevalidate(false);
-    }
+    // if (formValue.token_feature == "") {
+    //   errors.token_feature = "Token Feature is required field";
+    //   settoken_featurevalidate(true);
+    // } else {
+    //   settoken_featurevalidate(false);
+    // }
 
-    if (formValue.Project_description == "") {
-      errors.Project_description = "Project Description is required field";
-      setProject_descriptionvalidate(true);
-    } else {
-      setProject_descriptionvalidate(false);
-    }
+    // if (formValue.Project_description == "") {
+    //   errors.Project_description = "Project Description is required field";
+    //   setProject_descriptionvalidate(true);
+    // } 
+    // else {
+    //   setProject_descriptionvalidate(false);
+    // }
     if (formValue.official_website == "") {
       errors.official_website = "website required field";
       setofficial_websitevalidate(true);
@@ -394,13 +395,13 @@ function Home() {
     } else {
       setdescriptionvalidate(false);
     }
-    if (token_contract_addressref.current == false) {
-      errors.token_contract_address =
-        " contract Address type is required field";
-      settoken_contract_addressvalidate(true);
-    } else {
-      settoken_contract_addressvalidate(false);
-    }
+    // if (token_contract_addressref.current == false) {
+    //   errors.token_contract_address =
+    //     " contract Address type is required field";
+    //   settoken_contract_addressvalidate(true);
+    // } else {
+    //   settoken_contract_addressvalidate(false);
+    // }
     setvalidationnErr(errors);
     return errors;
   };
@@ -430,7 +431,7 @@ function Home() {
       setendDatevalidate(false);
     }
     if (network == "") {
-      errors.network = "Networkis required field";
+      errors.network = "Network is required field";
       setnetworkvalidate(true);
     } else {
       setnetworkvalidate(false);
@@ -466,12 +467,12 @@ function Home() {
     } else {
       settotalSupplyvalidate(false);
     }
-    if (formValue.price == "" && formValue.price == 0) {
-      errors.price = "public sale type is required field";
-      setpricevalidate(true);
-    } else {
-      setpricevalidate(false);
-    }
+    // if (formValue.price == "" && formValue.price == 0) {
+    //   errors.price = "public sale type is required field";
+    //   setpricevalidate(true);
+    // } else {
+    //   setpricevalidate(false);
+    // }
     setvalidationnErr(errors);
     return errors;
   };
@@ -747,7 +748,7 @@ function Home() {
         <Container maxWidth="xl">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
-            <Grid item xs={12} sm={12} md={8} lg={6} xl={5}>
+         <Grid item xs={12} sm={12} md={8} lg={8} xl={9}>
               <div className="new_card_logoki card_logoki  pading_cardd">
                 <div className={stage1}>
                   <div className="form_content">
@@ -853,22 +854,31 @@ function Home() {
                           )}
                         </div>
                       </form>
-                      <div className="button_launch">
-                        <button
-                          onClick={cancel_function}
-                          type="button"
-                          className="btn btn-second w-100"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={() => nexttabfun("step1")}
-                        >
-                          Next
-                        </button>
-                      </div>
+                      
+           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+  {/* Cancel Button */}
+  <div className="rounded-xl bg-gradient-to-r from-[#03DDFD] to-[#0058F5] p-[1px]">
+    <button
+      onClick={cancel_function}
+      type="button"
+      className="h-[50px] min-w-[160px] rounded-xl bg-[#0E1115] px-6 flex items-center justify-center leading-none"
+    >
+     <span className="!w-auto !block !p-0 !leading-none bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+  Back
+</span>
+    </button>
+  </div>
+
+  {/* Next Button */}
+  <button
+    type="button"
+    onClick={() => nexttabfun("step1")}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Next
+  </button>
+</div>
+
                     </div>
                   </div>
                 </div>
@@ -890,7 +900,7 @@ function Home() {
                   </div>
                   <div className="form_login_section p-0 mt-4">
                     <div className="form register_login p-0">
-                      <form className="form_pading_s">
+                      <form className="form_pading_s grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="form-group">
                           <label>Project name</label>
                           <input
@@ -912,6 +922,7 @@ function Home() {
                             )}
                           </div>
                         </div>
+
                         {/* <div className="form-group">
                           <label>Project Description</label>
                           <textarea
@@ -931,8 +942,8 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div> */}
-                        {/* <div className="form-group">
+                        </div>
+                        <div className="form-group">
                           <label>Token Feature</label>
                           <textarea
                             rows="5"
@@ -952,6 +963,8 @@ function Home() {
                             )}
                           </div>
                         </div> */}
+
+
                         <div className="form-group">
                           <label>Official website</label>
                           <input
@@ -1112,7 +1125,7 @@ function Home() {
 </div>
 
 
-                        <div className="form-group">
+                     <div className="form-group md:col-span-2">
                           <label>Short Description of Token/Coin</label>
                           <textarea
                             rows="5"
@@ -1167,23 +1180,35 @@ function Home() {
                             )}
                           </div>
                         </div> */}
+
                       </form>
-                      <div className="button_launch">
-                        <button
-                          type="button"
-                          className="btn btn-second w-100"
-                          onClick={() => back_function("step2")}
-                        >
-                          Back
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={() => nexttabfun("step2")}
-                        >
-                          Next
-                        </button>
-                      </div>
+
+
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+  {/* Back Button */}
+  <div className="rounded-xl bg-gradient-to-r from-[#03DDFD] to-[#0058F5] p-[1px]">
+    <button
+      type="button"
+      onClick={() => back_function("step2")}
+      className="h-[50px] min-w-[160px] rounded-xl bg-[#0E1115] px-6 flex items-center justify-center"
+    >
+      <span className="!inline !w-auto !p-0 font-semibold bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+        Back
+      </span>
+    </button>
+  </div>
+
+  {/* Next Button */}
+  <button
+    type="button"
+    onClick={() => nexttabfun("step2")}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Next
+  </button>
+</div>
+
+
                     </div>
                   </div>
                 </div>
@@ -1199,13 +1224,13 @@ function Home() {
                       ></i>{" "}
                       Back to Launchpad
                     </Button>
-                    <h1 className="mb-2 Launch_pad_steps">
-                      Fill in the details <span>Step 3/5</span>
+                    <h1 className="mb-2 Launch_pad_steps !text-[#B3B3B3]">
+                      Fill in the details <span className="website_color">Step 3/5</span>
                     </h1>
                   </div>
                   <div className="form_login_section p-0 mt-4">
                     <div className="form register_login p-0">
-                      <form className="form_pading_s">
+                      <form className="form_pading_s grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="form-group">
                           <label>Start Date</label>
 
@@ -1250,7 +1275,9 @@ function Home() {
                             )}
                           </div>
                         </div>
-                        <div className="form-group">
+
+
+                        {/* <div className="form-group">
                           <label>Select Network</label>
                           <Dropdown
                             placeholder="Select Network"
@@ -1271,7 +1298,34 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div>
+                        </div> */}
+
+<div className="form-group">
+  <label className="block mb-2 text-white">
+    Select Network
+  </label>
+
+  <select
+    className="w-full h-[50px] px-4 rounded-lg bg-[#0E1115] border border-[#252525] text-white outline-none focus:border-[#03DDFD]"
+    value={selectedOption}
+    onChange={(e) => {
+      setselectedOption(e.target.value);
+      setnetwork(e.target.value);
+    }}
+  >
+    <option value="">Select Network</option>
+    <option value="ERC20">ERC20</option>
+    <option value="BEP20">BEP20</option>
+    <option value="TRC20">TRC20</option>
+  </select>
+
+  {networkvalidateref.current === true && (
+    <p className="text-red-500 mt-1">
+      {validationnErr.network}
+    </p>
+  )}
+</div>
+
                         <div className="form-group">
                           <label>Min. Buy Amount</label>
                           <input
@@ -1362,8 +1416,7 @@ function Home() {
                         </div>
                         <div className="form-group">
                           <label>
-                            How much of the Token Sale would you like to
-                            allocate to Taikonz Launcpad
+                         Token Sale  Allocation for FinzoEX Launchpad 
                           </label>
                           <input
                             type="number"
@@ -1385,7 +1438,8 @@ function Home() {
                             )}
                           </div>
                         </div>
-                        <div className="form-group">
+
+                        {/* <div className="form-group">
                           <label>
                             Public Sale Converston Price (e.g. 1xxx =0.1 USDT )
                           </label>
@@ -1408,24 +1462,34 @@ function Home() {
                               ""
                             )}
                           </div>
-                        </div>
+                        </div> */}
+
+
                       </form>
-                      <div className="button_launch">
-                        <button
-                          type="button"
-                          className="btn btn-second w-100"
-                          onClick={() => back_function("step3")}
-                        >
-                          Back
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={() => nexttabfun("step3")}
-                        >
-                          Next
-                        </button>
-                      </div>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+  {/* Back Button */}
+  <div className="rounded-xl bg-gradient-to-r from-[#03DDFD] to-[#0058F5] p-[1px]">
+    <button
+      type="button"
+      onClick={() => back_function("step3")}
+      className="h-[50px] min-w-[160px] rounded-xl bg-[#0E1115] px-6 flex items-center justify-center"
+    >
+      <span className="!inline !w-auto !p-0 font-semibold bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+        Back
+      </span>
+    </button>
+  </div>
+
+  {/* Next Button */}
+  <button
+    type="button"
+    onClick={() => nexttabfun("step3")}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Next
+  </button>
+</div>
+                      
                     </div>
                   </div>
                 </div>
@@ -1442,12 +1506,12 @@ function Home() {
                       Back to Launchpad
                     </Button>
                     <h1 className="mb-2 Launch_pad_steps">
-                      Fill in the details <span>Step 4/5</span>
+                      Fill in the details <span className="website_color">Step 4/5</span>
                     </h1>
                   </div>
                   <div className="form_login_section p-0 mt-4">
                     <div className="form register_login p-0">
-                      <form className="form_pading_s">
+                     <form className="form_pading_s grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="form-group">
                           <label>Telegram Group</label>
                           <input
@@ -1553,23 +1617,52 @@ function Home() {
                             )}
                           </div>
                         </div>
+                        <div className="form-group">
+                          <label>Youtube Video link</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="Enter link"
+                            name="Youtube_video"
+                            onChange={handleChange}
+                          />
+                          <div>
+                            {Youtube_videovalidateref.current == true ? (
+                              <p className="text-danger">
+                                {" "}
+                                {validationnErr.Youtube_video}{" "}
+                              </p>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </div>
                       </form>
-                      <div className="button_launch">
-                        <button
-                          type="button"
-                          className="btn btn-second w-100"
-                          onClick={() => back_function("step4")}
-                        >
-                          Back
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={() => nexttabfun("step4")}
-                        >
-                          Next
-                        </button>
-                      </div>
+                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+  {/* Back Button */}
+  <div className="rounded-xl bg-gradient-to-r from-[#03DDFD] to-[#0058F5] p-[1px]">
+    <button
+      type="button"
+      onClick={() => back_function("step4")}
+      className="h-[50px] min-w-[160px] rounded-xl bg-[#0E1115] px-6 flex items-center justify-center"
+    >
+      <span className="!inline !w-auto !p-0 font-semibold bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+        Back
+      </span>
+    </button>
+  </div>
+
+  {/* Next Button */}
+  <button
+    type="button"
+    onClick={() => nexttabfun("step4")}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Next
+  </button>
+</div>
+
                     </div>
                   </div>
                 </div>
@@ -1586,12 +1679,12 @@ function Home() {
                       Back to Launchpad
                     </Button>
                     <h1 className="mb-2 Launch_pad_steps">
-                      Fill in the details <span>Step 5/5</span>
+                      Fill in the details <span className="website_color">Step 5/5</span>
                     </h1>
                   </div>
                   <div className="form_login_section p-0 mt-4">
                     <div className="form register_login p-0">
-                      <form className="form_pading_s">
+               <form className="form_pading_s grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="form-group">
                           <label>
                             Taikonz can publish any of the information you
@@ -1645,25 +1738,35 @@ function Home() {
                           </div>
                         </div>
                       </form>
-                      <div className="button_launch">
-                        <button
-                          type="button"
-                          className="btn btn-second w-100"
-                          onClick={() => back_function("step5")}
-                        >
-                          Back
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={() => nexttabfun("step5")}
-                        >
-                          Preview
-                        </button>
-                      </div>
+                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+  {/* Back Button */}
+  <div className="rounded-xl bg-gradient-to-r from-[#03DDFD] to-[#0058F5] p-[1px]">
+    <button
+      type="button"
+      onClick={() => back_function("step5")}
+      className="h-[50px] min-w-[160px] rounded-xl bg-[#0E1115] px-6 flex items-center justify-center"
+    >
+      <span className="!inline !w-auto !p-0 font-semibold bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent">
+        Back
+      </span>
+    </button>
+  </div>
+
+  {/* Preview Button */}
+  <button
+    type="button"
+    onClick={() => nexttabfun("step5")}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Preview
+  </button>
+</div>
+
                     </div>
                   </div>
                 </div>
+
+
                 <div className={stage6}>
                   <div className="form_content">
                     <Button
@@ -1680,163 +1783,290 @@ function Home() {
                   </div>
                   <div className="form_login_section p-0 mt-4">
                     <div className="form register_login word_break p-0">
-                      <form className="form_pading_s">
+                      <form className="form_pading_s grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="form-group">
-                          <p className="preview">
-                            Your Name <span>{formValue.name}</span>
-                          </p>
+                          <label>Your Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.name}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Email <span>{formValue.email}</span>
-                          </p>
+                          <label>Email</label>
+                          <input
+                            type="email"
+                            className="form-control"
+                            value={formValue.email}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Position <span>{formValue.position}</span>
-                          </p>
+                          <label>Position</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.position}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Reffer Email <span>{formValue.refemail}</span>
-                          </p>
+                          <label>Referrer Email</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.refemail}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Project <span>{formValue.project_name}</span>
-                          </p>
+                          <label>Project Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.project_name}
+                            readOnly
+                          />
                         </div>
-                        {/* <div className="form-group">
-                          <p className="preview">
-                            Project description{" "}
-                            <span>{formValue.Project_description}</span>
-                          </p>
-                        </div> */}
+
                         <div className="form-group">
-                          <p className="preview">
-                            Website <span>{formValue.official_website}</span>
-                          </p>
+                          <label>Official Website</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.official_website}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Currency Symbol <span>{formValue.symbol}</span>
-                          </p>
+                          <label>Currency Symbol</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.symbol}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Currency Name <span>{formValue.currency_name}</span>
-                          </p>
+                          <label>Currency Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.currency_name}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Whitepaper Link
-                            <span>{formValue.whitepaper_link}</span>
-                          </p>
+                          <label>Whitepaper Link</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.whitepaper_link}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Contract Address
-                            <span>{formValue.contract_address}</span>
-                          </p>
+                          <label>Contract Address</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.contract_address}
+                            readOnly
+                          />
                         </div>
-                        <div className="form-group">
-                          <p className="preview">
-                            Detailed Roadmap <span>{formValue.milestone}</span>
-                          </p>
+
+                        <div className="form-group md:col-span-2">
+                          <label>Detailed Roadmap</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.milestone}
+                            readOnly
+                          />
                         </div>
-                        <div className="form-group">
-                          <p className="preview">
-                            Description <span>{formValue.description}</span>
-                          </p>
+
+                        <div className="form-group md:col-span-2">
+                          <label>Description</label>
+                          <textarea
+                            rows="4"
+                            className="form-textarea"
+                            value={formValue.description}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Address Type{" "}
-                            <span>{token_contract_addressref.current}</span>
-                          </p>
+                          <label>Address Type</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={token_contract_addressref.current}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            StartDate <span>{formValue.startDate}</span>
-                          </p>
+                          <label>Start Date</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.startDate}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            EndDate <span>{formValue.endDate}</span>
-                          </p>
+                          <label>End Date</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.endDate}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Buy Amount <span>{formValue.buyAmount}</span>
-                          </p>
+                          <label>Min. Buy Amount</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.buyAmount}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            SoftCap <span>{formValue.softCap}</span>
-                          </p>
+                          <label>Soft Cap</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.softCap}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            HardCap <span>{formValue.hardCap}</span>
-                          </p>
+                          <label>Hard Cap</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.hardCap}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Total supply <span>{formValue.token_supply}</span>
-                          </p>
+                          <label>Total Token Supply</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.token_supply}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Public Sale Price <span>{formValue.price}</span>
-                          </p>
+                          <label>Public Sale Price</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.price}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Telegram Group <span>{formValue.telegram}</span>
-                          </p>
+                          <label>Telegram Group</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.telegram}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Instagram Link{" "}
-                            <span>{formValue.instagramlink}</span>
-                          </p>
+                          <label>Instagram Link</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.instagramlink}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Twitter link <span>{formValue.twitterLink}</span>
-                          </p>
+                          <label>Twitter Link</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.twitterLink}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Youtube Channel{" "}
-                            <span>{formValue.youtubeChannel}</span>
-                          </p>
+                          <label>Youtube Channel</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.youtubeChannel}
+                            readOnly
+                          />
                         </div>
+
                         <div className="form-group">
-                          <p className="preview">
-                            Youtube Video link{" "}
-                            <span>{formValue.Youtube_video}</span>
-                          </p>
+                          <label>Youtube Video Link</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={formValue.Youtube_video}
+                            readOnly
+                          />
+                        </div>
+
+                        <div className="form-group md:col-span-2">
+                          <label>Currency Image</label>
+                          {currencyImage ? (
+                            <div className="mt-2 text-center">
+                              <img
+                                src={currencyImage}
+                                alt="Currency"
+                                style={{ width: "100px", height: "100px", objectFit: "cover", borderRadius: "10px" }}
+                              />
+                            </div>
+                          ) : (
+                            <input type="text" className="form-control" value="No image uploaded" readOnly />
+                          )}
                         </div>
                       </form>
-                      <div className="button_launch">
-                        {/* {buttonLoader == true ? (
-                          <button type="button" className="btn btn-primary w-100">
-                            Loading...
-                          </button>
-                        ) : ( */}
-                        <button
-                          type="button"
-                          className="btn btn-primary w-100"
-                          onClick={formSubmit}
-                        >
-                          Submit
-                        </button>
-                        {/* )} */}
-                      </div>
+
+
+                   <div className="flex justify-center mt-8">
+  <button
+    type="button"
+    onClick={formSubmit}
+    className="h-[50px] min-w-[160px] rounded-xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF] px-6 flex items-center justify-center font-semibold text-white transition-all hover:opacity-90"
+  >
+    Submit
+  </button>
+</div>
+
+
                     </div>
                   </div>
                 </div>
+
+                
               </div>
             </Grid>
           </Grid>

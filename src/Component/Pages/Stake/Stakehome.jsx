@@ -1081,7 +1081,7 @@ function Home() {
         <Header />
 
         {pageLoader == true ? (
-          <Grid item xs={12} sm={12} md={8} lg={12} xl={12}>
+          <Grid item xs={12} sm={12} md={8} lg={12} xl={16}>  
             <div className="loading">
               <i className="fa-solid fa-spinner fa-spin-pulse "></i>
             </div>

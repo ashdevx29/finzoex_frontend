@@ -16,6 +16,7 @@ import useStateref from "react-usestateref";
 import QRCode from "react-qr-code";
 import { socket } from "../../Pages/socket/socket";
 import countrylist from "../../country.json";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const initialFormValue = {
@@ -501,13 +502,13 @@ function Home() {
     }
   };
 
-  const [location, setlocation, locationref] = useStateref("");
-
-  const changeHandler = (e, option) => {
-    let obj = countryOptions.find((o) => o.value === option.value);
-    setlocation(obj.text);
-    console.log(locationref.current);
-  };
+  // const [location, setlocation, locationref] = useStateref("");
+const [location, setlocation, locationref] = useStateref("");
+  // const changeHandler = (e, option) => {
+  //   let obj = countryOptions.find((o) => o.value === option.value);
+  //   setlocation(obj.text);
+  //   console.log(locationref.current);
+  // };
 
   const [dateValue, setdateValue] = useState("");
   const [monthValue, setmonthValue] = useState("");
@@ -532,16 +533,29 @@ function Home() {
     }
   };
 
+  // const countryOptions = countrylist.data.map((country) => ({
+  //   key: country.name,
+  //   text: country.name,
+  //   value: country.name,
+  // }));
+
   const countryOptions = countrylist.data.map((country) => ({
-    key: country.name,
-    text: country.name,
-    value: country.name,
-  }));
+  value: country.name,
+  label: country.name,
+}));
  
-  
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
+  };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main style={pageBackgroundStyle} className="main-content   bg-cover ">
         <Account_Header/>
         <Container maxWidth="xl" className="container-lg">
           <Grid container spacing={2} justifyContent={"center"}>
@@ -553,7 +567,7 @@ function Home() {
               <Grid container spacing={2} justifyContent={"center"}>
                 {loader == false ? (
                   <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
-                    <div className="card_logoki pading_cardd">
+                    <div className="n_card_logoki  pading_cardd">
 
                       <div className={stage1}>
                         <div className="form_content">
@@ -563,21 +577,30 @@ function Home() {
                           </p>
                         </div>
 
+
+
                         <div className="form_login_section p-0">
                           <div className="form register_login p-0">
                             <form className="form_pading_s">
                               <div className="form-group">
                                 <label>Location</label>
-                                <Dropdown
-                                  placeholder="Select your location"
-                                  fluid
-                                  selection
-                                  className="text_memu"
-                                  // value={locationref.current}
-                                  onChange={changeHandler}
-                                  options={countryOptions}
-                                  search
-                                />
+                                <Select
+  options={countryOptions}
+  placeholder="Select your location"
+  value={
+    location
+      ? {
+          value: location,
+          label: location,
+        }
+      : null
+  }
+  onChange={(selectedOption) => {
+    setlocation(selectedOption.value);
+  }}
+  className="text-black"
+  classNamePrefix="react-select"
+/>
                               </div>
                               <div className="red_alert">
                                 {locationvalidate == true ? (
@@ -625,6 +648,11 @@ function Home() {
                             )}
                           </div>
                         </div>
+
+
+
+
+
                       </div>
                       <div className={stage2}>
                         <div className="form_content">
