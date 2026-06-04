@@ -12,6 +12,12 @@ import Moment from "moment";
 import countrylist from "../../country.json";
 import $ from "jquery";
 import useStateRef from "react-usestateref";
+
+
+
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
+
+
 function Home() {
   const inputType = "password";
   const options = ["one", "two", "three"];
@@ -385,7 +391,7 @@ function Home() {
     } catch (error) {}
   };
   const [countryName, setCountryName] = useState("");
-  const [paymentmethod, setPaymentMethod] = useState();
+  const [paymentmethod, setPaymentMethod] = useState("All payments");
   // Other state variables and functions
 
   const choosecountryfilter = (e, value) => {
@@ -632,7 +638,17 @@ function Home() {
     <div className="">
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Header />
-        <div className="class-padding">
+         <div
+              className="class-padding"
+              style={{
+                backgroundImage: `url(${DashboardBg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                minHeight: "calc(100vh - 60px)",
+                marginTop:"-20px",
+              }}
+            >
           <Grid
             container
             spacing={2}
@@ -825,8 +841,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -834,7 +850,7 @@ function Home() {
                                           <div className="form-group">
                                             <label>Country/ Region</label>
                                             <Dropdown
-                                              placeholder="Country/ Region"
+                                              placeholder="Country/ Region" search
                                               fluid
                                               selection
                                               className="text_memu"
@@ -849,8 +865,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -884,8 +900,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -1115,19 +1131,19 @@ function Home() {
                                           justifyContent={"start"}
                                         >
                                           {/* Item for xs (extra small) screens */}
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Country/ Region</label>
                                                 <Dropdown
-                                                  placeholder="Country/ Region"
+                                                  placeholder="Country/ Region" search
                                                   fluid
                                                   selection
                                                   className="text_memu"
@@ -1139,14 +1155,14 @@ function Home() {
                                               </div>
                                             </div>
                                           </Grid>
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Amount</label>
@@ -1173,14 +1189,14 @@ function Home() {
                                               </div>
                                             </div>
                                           </Grid>
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Payment Method</label>
@@ -1444,7 +1460,7 @@ function Home() {
                           //           <div className="form-group">
                           //             <label>Country/ Region</label>
                           //             <Dropdown
-                          //               placeholder="Country/ Region"
+                          //               placeholder="Country/ Region" search
                           //               fluid
                           //               selection
                           //               className="text_memu"
@@ -1629,7 +1645,7 @@ function Home() {
                           //           <div className="form-group">
                           //             <label>Country/ Region</label>
                           //             <Dropdown
-                          //               placeholder="Country/ Region"
+                          //               placeholder="Country/ Region" search
                           //               fluid
                           //               selection
                           //               className="text_memu"
@@ -1872,8 +1888,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -1881,7 +1897,7 @@ function Home() {
                                           <div className="form-group">
                                             <label>Country/ Region</label>
                                             <Dropdown
-                                              placeholder="Country/ Region"
+                                              placeholder="Country/ Region" search
                                               fluid
                                               selection
                                               className="text_memu"
@@ -1896,8 +1912,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -1930,8 +1946,8 @@ function Home() {
                                       <Grid
                                         item
                                         xs={12}
-                                        sm={12}
-                                        md={12}
+                                        sm={6}
+                                        md={4}
                                         lg={3}
                                         xl={3}
                                       >
@@ -2152,19 +2168,19 @@ function Home() {
                                           justifyContent={"start"}
                                         >
                                           {/* Item for xs (extra small) screens */}
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Country/ Region</label>
                                                 <Dropdown
-                                                  placeholder="Country/ Region"
+                                                  placeholder="Country/ Region" search
                                                   fluid
                                                   selection
                                                   className="text_memu"
@@ -2176,14 +2192,14 @@ function Home() {
                                               </div>
                                             </div>
                                           </Grid>
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Amount</label>
@@ -2210,14 +2226,14 @@ function Home() {
                                               </div>
                                             </div>
                                           </Grid>
-                                          <Grid
-                                            item
-                                            xs={12}
-                                            sm={12}
-                                            md={12}
-                                            lg={3}
-                                            xl={3}
-                                          >
+                                           <Grid
+                                        item
+                                        xs={12}
+                                        sm={6}
+                                        md={4}
+                                        lg={3}
+                                        xl={3}
+                                      >
                                             <div className="small_search bar">
                                               <div className="form-group">
                                                 <label>Payment Method</label>
@@ -2458,7 +2474,7 @@ function Home() {
                                     <div className="form-group">
                                       <label>Country/ Region</label>
                                       <Dropdown
-                                        placeholder="Country/ Region"
+                                        placeholder="Country/ Region" search
                                         fluid
                                         selection
                                         className="text_memu"
@@ -2643,7 +2659,7 @@ function Home() {
                                     <div className="form-group">
                                       <label>Country/ Region</label>
                                       <Dropdown
-                                        placeholder="Country/ Region"
+                                        placeholder="Country/ Region" search
                                         fluid
                                         selection
                                         className="text_memu"

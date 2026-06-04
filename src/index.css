@@ -22,6 +22,9 @@ textarea {
   font-family: Inter !important;
 }
 
+
+
+
 .gradient-text {
   background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
   -webkit-background-clip: text;
@@ -370,21 +373,28 @@ button.link.active {
   background-clip: text;
   color: transparent;
 }
+
+
+
+
+
 .heading_card_new {
   padding: 25px 20px;
-  background: #202020;
+  background: #0E1115;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding-left: 40px;
+  margin-top: 25px;
 }
 .heading_card_new h1 {
   margin-bottom: 0;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 0;
-  color: #A5AAB5;
-  font-weight: 400;
+  font-size: 30px !important;
+  color: #B3B3B3 !important;
+  font-weight: 400 !important;
 }
 .heading_card_new::before {
   content: "";
@@ -438,18 +448,20 @@ button.primary_butn {
   display: block;
   padding: 10px 33px;
   margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   position: relative;
   z-index: 1;
 
   /* Gradient Border */
-  border: 1.5px solid #00A5FF;
+  border: 1.5px solid #00A5FF !important;
   background:
     linear-gradient(#0b1120, #0b1120) padding-box,
     linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) border-box;
+    font-style: 16px;
+    font-weight: 500;
 
   /* Gradient Text */
-  background-image: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%);
+  background-image: linear-gradient(90deg, #03DDFD 0%, #0058F5 100%) ;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -1170,14 +1182,14 @@ button.primary_butn {
   align-items: center;
 }
 .flex_image_coloe {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 10px;
   white-space: nowrap;
 }
-.flex_image_coloe {
+/* .flex_image_coloe {
   width: 25px;
-}
+} */
 .new_login_bb .register_login .btn-primary.burdas_buttnd {
   background: transparent !important;
   color: #9685ff;
@@ -1238,19 +1250,21 @@ button.primary_butn {
   align-items: center;
 }
 .histroy_tabs .nav li a {
-  padding: 6px 20px;
+  padding: 6px 16px;
   margin-right: 10px;
-  color: #999;
+  color: #E5E5E5;
+  font-size: 14px;
+  font-weight: 400;
   border: 1px solid #252525;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .text_color_imhd {
   color: #A5AAB5 !important;
 }
 .histroy_tabs .nav li a.active {
-  color: #000 !important;
-  background: #fff;
-  border: 1px solid #fff;
+  color: #131313 !important;
+  background: #B3B3B3;
+  border: 1px solid #B3B3B3;
 }
 .bg_trans {
   background: transparent !important;
@@ -1281,7 +1295,7 @@ button.primary_butn {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: -60px; */
+  /* margin-left: -80px; */
 }
 .data_inner .profile_image img {
   max-width: 55px;
@@ -1290,8 +1304,11 @@ button.primary_butn {
   width: 55px;
   border-radius: 50%;
 }
-.data_inner .name_details {
+/* .data_inner .name_details {
   min-width: 150px;
+} */
+.data_inner {
+  min-width: 170px;
 }
 .data_inner .name_details h5 {
   margin-bottom: 2px;
@@ -2769,6 +2786,7 @@ span.color {
   margin-top: 20px !important;
   margin-bottom: -10px;
   font-size: 19px;
+  padding-top: 20px !important;
 }
 .toplable h2 {
   margin-top: 3px;
@@ -3482,9 +3500,9 @@ input:placeholder-shown {
   .new_login_bb .pading_cardd {
     padding: 50px 30px !important;
   }
-  .data_inner .p2p_profile_image {
+  /* .data_inner .p2p_profile_image {
     margin-left: -80px;
-  }
+  } */
   .light .banner-text {
     font-size: 50px;
   }
@@ -3523,6 +3541,28 @@ input:placeholder-shown {
   .profile_image.sell_profile {
     margin-left: 0px !important;
   }
+  .table_responsive {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+  .table_responsive .table-row {
+    flex-direction: row;
+    min-width: max-content;
+  }
+  .table_responsive .table-cell {
+    border: 0px solid #ddd;
+    min-width: 240px;
+    background: transparent;
+  }
+  .table_responsive .border_table_row {
+    border: 1px solid #252525;
+  }
+  .light .table_responsive {
+    background-color: #ededed;
+    border-radius: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3530,9 +3570,9 @@ input:placeholder-shown {
     font-size: 18px;
     margin-left: 55px;
   }
-  .data_inner .p2p_profile_image {
+  /* .data_inner .p2p_profile_image {
     margin-left: -56px;
-  }
+  } */
   .border_table_row {
     padding: 18px 8px;
   }
@@ -3564,34 +3604,7 @@ input:placeholder-shown {
   .index_1 p {
     font-size: 18px;
   }
-  .table_responsive {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: 10px;
-  }
-  .table_responsive .table-row {
-    flex-direction: row;
-    background: transparent;
-  }
-  .table_responsive {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: 10px;
-  }
-  .table_responsive .table-cell {
-    border: 0px solid #ddd;
-    min-width: 240px;
-    background: transparent;
-  }
-  .table_responsive .border_table_row {
-    border: 0px solid #252525;
-  }
-  .light .table_responsive {
-    background-color: #ededed;
-    border-radius: 20px;
-  }
+
   .posab {
     left: 75px !important;
   }
@@ -3648,24 +3661,7 @@ input:placeholder-shown {
   /* .table-cell:last-child {
     border-bottom: 1px solid #ddd;
   } */
-  .table_responsive .table-row {
-    flex-direction: row;
-    background: transparent;
-  }
-  .table_responsive {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: 10px;
-  }
-  .table_responsive .table-cell {
-    border: 0px solid #ddd;
-    min-width: 240px;
-    background: transparent;
-  }
-  .table_responsive .border_table_row {
-    border: 0px solid #252525;
-  }
+
   .page-link {
     padding: 8px 14px !important;
   }
@@ -3904,3 +3900,80 @@ input:placeholder-shown {
     left: 3%;
   }
 }
+
+/* P2P Dropdown and Input Styling - Figma Matching */
+.small_search .form-group label {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.small_search .ui.selection.dropdown,
+.small_search .form-control {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  height: 48px !important;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+}
+
+.small_search .ui.selection.dropdown .text.default,
+.small_search .ui.selection.dropdown .text {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.small_search .ui.selection.dropdown > .icon {
+  color: rgba(255, 255, 255, 0.6) !important;
+  /* padding-top: 5px !important; */
+}
+
+.small_search .ui.selection.dropdown .menu {
+  background: #131313 !important;
+  border: 1px solid #009DFF !important;
+  border-radius: 8px !important;
+  margin-top: 5px !important;
+}
+
+.small_search .ui.selection.dropdown .menu .item {
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-top: 1px solid #009DFF !important;
+}
+
+.small_search .ui.selection.dropdown .menu .item:hover {
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) !important;
+  color: #fff !important;
+}
+
+.small_search .ui.search.selection.dropdown > input.search {
+  color: #fff !important;
+}
+
+.small_search .postion_reletitt {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.small_search .postion_reletitt .input-group-addon {
+  position: absolute;
+  right: 15px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.small_search .postion_reletitt input.form-control {
+  padding-right: 60px !important;
+  width: 100%;
+}
+
+
+
