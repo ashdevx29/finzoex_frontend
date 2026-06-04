@@ -40,22 +40,25 @@ const Charts = () => {
           ? null
           : decodeURIComponent(results[1].replace(/\+/g, " "));
       };
-    
-      const buildchart = (theme, pair) => {
-        const widgetOptions = {
-          symbol: pair,
-          // BEWARE: no trailing slash is expected in feed URL
-          datafeed: new window.Datafeeds.UDFCompatibleDatafeed(
-            env.apiHost + "chartapi/chart"
-          ),
-          interval: "5",
-          container_id: "tv_chart_container",
-          library_path: "/charting_library/",
-    
-          locale: getLanguageFromURL() || "en",
-          disabled_features: ["use_localstorage_for_settings"],
-          enabled_features: ["study_templates"],
-          charts_storage_url: "",
+
+  const getChartLibraryPath = () => {
+    const base = import.meta.env.BASE_URL || "/";
+    return new URL("charting_library/", new URL(base, `${window.location.origin}/`)).toString();
+  };
+
+  const buildchart = (theme, pair) => {
+    const widgetOptions = {
+      symbol: pair,
+      datafeed: new window.Datafeeds.UDFCompatibleDatafeed(
+        env.apiHost + "chartapi/chart"
+      ),
+      interval: "5",
+      container_id: "tv_chart_container",
+      library_path: getChartLibraryPath(),
+      locale: getLanguageFromURL() || "en",
+      disabled_features: ["use_localstorage_for_settings"],
+      enabled_features: ["study_templates"],
+      charts_storage_url: "",
           charts_storage_api_version: "1.1",
           client_id: "tradingview.com",
           user_id: "public_user_id",

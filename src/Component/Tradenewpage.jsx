@@ -1033,7 +1033,35 @@ function Home() {
       : decodeURIComponent(results[1].replace(/\+/g, " "));
   };
 
+  const getChartLibraryPath = () => {
+    const base = import.meta.env.BASE_URL || "/";
+    return new URL("charting_library/", new URL(base, `${window.location.origin}/`)).toString();
+  };
+
+  const waitForTradingView = (callback, retryCount = 40) => {
+    if (
+      window.TradingView &&
+      window.Datafeeds &&
+      window.Datafeeds.UDFCompatibleDatafeed
+    ) {
+      callback();
+      return;
+    }
+
+    if (retryCount <= 0) {
+      console.error("TradingView chart libraries are not ready yet.");
+      return;
+    }
+
+    setTimeout(() => waitForTradingView(callback, retryCount - 1), 250);
+  };
+
   const buildchart = (theme, pair) => {
+    if (!window.TradingView || !window.Datafeeds || !window.Datafeeds.UDFCompatibleDatafeed) {
+      waitForTradingView(() => buildchart(theme, pair));
+      return;
+    }
+
     const widgetOptions = {
       symbol: pair,
       // BEWARE: no trailing slash is expected in feed URL
@@ -1042,7 +1070,7 @@ function Home() {
       ),
       interval: pair == "USDT_INR" ? "240" : "30",
       container_id: "tv_chart_container",
-      library_path: "/charting_library/",
+      library_path: getChartLibraryPath(),
 
       locale: getLanguageFromURL() || "en",
       disabled_features: ["use_localstorage_for_settings"],
