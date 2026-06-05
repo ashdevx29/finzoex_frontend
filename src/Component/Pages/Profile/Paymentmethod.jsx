@@ -418,7 +418,7 @@ function Home() {
               </Grid>
               <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
                 <Grid container spacing={2} justifyContent={"center"}>
-                  <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
+                  <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
                     <div className="heading_card_new mt-5">
                       <h1>
                         Payment Methods

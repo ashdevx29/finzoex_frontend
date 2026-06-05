@@ -711,7 +711,7 @@ button.primary_butn {
   color: #fff;
   font-size: 17px;
   font-weight: 300;
-  color: #9685ff;
+  color: #fff;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -798,8 +798,9 @@ button.primary_butn {
 }
 
 .tabs_inside .nav li a.active {
-  border-bottom: 2px solid #4f41a4;
-  color: #9685ff;
+  border-bottom: 2px solid #00D4FF;
+  color: #fff;
+ 
 }
 .tfa_box h3 {
   font-size: 34px;
@@ -822,7 +823,7 @@ button.primary_butn {
   margin: 24px 0px !important;
 }
 .menu_items_fex .navlink_new.active {
-  color: #9685ff;
+  color: #fff;
 }
 .gap_button {
   display: flex;
@@ -967,7 +968,7 @@ button.primary_butn {
 }
 .account_setting {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .groow-1_widut {
