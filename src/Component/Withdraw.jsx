@@ -278,16 +278,16 @@ function Home() {
     <div className="">
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Header />
-        <Container maxWidth="xl" className="container-lg"
-        style={{
+        <div style={{
                                   backgroundImage: `url(${DashboardBg})`,
                                   backgroundSize: "cover",
                                   backgroundPosition: "center",
                                   backgroundRepeat: "no-repeat",
                                   minHeight: "calc(100vh - 60px)",
-                                  marginTop:"-20px",
+                                  marginTop:"16px",
                                 }}
         >
+        <Container maxWidth="xl" className="container-xl">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
             <Grid item xs={12} sm={12} md={8} lg={6} xl={5}>
@@ -481,6 +481,7 @@ function Home() {
           </Grid>
           {/* Your other components and content */}
         </Container>
+        </div>
       </main>
     </div>
   );

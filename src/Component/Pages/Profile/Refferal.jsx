@@ -15,6 +15,10 @@ import { Dropdown } from "semantic-ui-react";
 import SidebarNew from "./SidebarNew";
 import moment from "moment";
 import Pagination from "react-js-pagination";
+
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
+
+
 function Home() {
   const [refferance, setrefferance,refferanceref] = useState("");
   const [totalRef, settotalRef] = useState([]);
@@ -110,6 +114,15 @@ console.log(refferanceref.current,"-0-0-0-0")
     <div className="">
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Account_Header />
+        <div style={{
+                                          backgroundImage: `url(${DashboardBg})`,
+                                          backgroundSize: "cover",
+                                          backgroundPosition: "center",
+                                          backgroundRepeat: "no-repeat",
+                                          minHeight: "calc(100vh - 60px)",
+                                          marginTop:"16px",
+                                        }}
+                >
         <Container maxWidth="xl" className="container-lg">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
@@ -260,6 +273,7 @@ console.log(refferanceref.current,"-0-0-0-0")
           </Grid>
           {/* Your other components and content */}
         </Container>
+        </div>
       </main>
     </div>
   );

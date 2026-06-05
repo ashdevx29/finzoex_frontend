@@ -109,7 +109,9 @@ textarea {
 }
 .new_login_bb .form_pading_s {
   padding: 24px 25px;
-  background: #2727274D;
+  background: #0000004D;
+  border: 1px solid #1E1E1E;
+  border-radius: 16px;
  
 }
 .new_login_bb .register_login label {
@@ -845,11 +847,11 @@ button.primary_butn {
 }
 
 .form_pading_s.box {
-  background: linear-gradient(93deg, #009DFF 3.79%, #683018 104.96%),
-    linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
+  background: linear-gradient(93deg, #00D4FF 3.79%, #0066FF 104.96%),
+    linear-gradient(180deg, #0E1115 0%, rgba(217, 217, 217, 0) 100%);
   padding: 0 !important;
   border-radius: 11px;
-  padding: 4px 4px !important;
+  padding: 1px 1px !important;
 }
 /* #box::before {
   position: absolute;
@@ -861,7 +863,7 @@ button.primary_butn {
   bottom: -13px;
 } */
 
-.form_pading_s.box::before {
+/* .form_pading_s.box::before {
   position: absolute;
   background-image: url("./img/New_images/ref_bg.png");
   background-repeat: no-repeat;
@@ -870,14 +872,14 @@ button.primary_butn {
   background-size: contain;
   width: 25%;
   z-index: 1;
-  /* bottom: 256px; */
-}
+  /* bottom: 256px; *
+} */
 .light .onlywhitee.new_login_bb .register_login .form-control-ref {
   color: #252525 !important;
 }
 
 .form_pading_s.box .form-group {
-  background: #202020;
+  background: #0E1115;
   border-radius: 8px;
   margin: 0;
   padding: 19px 10px !important;
@@ -3506,9 +3508,10 @@ input:placeholder-shown {
 
 .postion_reletitt.refer {
   position: relative;
-  background: #2c2c2c;
+  background: transparent;
+  /* background: #2c2c2c; */
   color: #fff;
-  border: none;
+  border: 1px solid #5D5D5D8F;
   border-radius: 10px;
   height: 44px;
   padding: 11px;

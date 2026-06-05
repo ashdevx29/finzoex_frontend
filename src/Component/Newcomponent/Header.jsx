@@ -561,7 +561,7 @@ const App = () => {
               )}
               <Grid item className="d-flex align-items-center">
                 {/* <ToggleLight /> */}
-                <div>
+                {/* <div>
                   {isOpenref.current == true ? (
                     <div>
                       <input
@@ -592,7 +592,7 @@ const App = () => {
                       </label>
                     </div>
                   )}
-                </div>
+                </div> */}
                 {authtoken == true ? (
                   ""
                 ) : (
