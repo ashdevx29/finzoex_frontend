@@ -567,12 +567,12 @@ const [location, setlocation, locationref] = useStateref("");
               <Grid container spacing={2} justifyContent={"center"}>
                 {loader == false ? (
                   <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
-                    <div className="n_card_logoki  pading_cardd">
+                    <div className="new_card_logoki  pading_cardd">
 
                       <div className={stage1}>
                         <div className="form_content">
-                          <h1 className="mb-2">Let’s get you verified </h1>
-                          <p className="form_lable_botton mb-5">
+                          <h1 className="mb-2 !text-[#fff]">Let’s get you verified </h1>
+                          <p className="form_lable_botton mb-5 !text-center">
                             Select your residency and follow the steps
                           </p>
                         </div>
@@ -598,7 +598,7 @@ const [location, setlocation, locationref] = useStateref("");
   onChange={(selectedOption) => {
     setlocation(selectedOption.value);
   }}
-  className="text-black"
+  className="text-black rounded-xl"
   classNamePrefix="react-select"
 />
                               </div>
@@ -612,19 +612,19 @@ const [location, setlocation, locationref] = useStateref("");
                                 )}
                               </div>
                               <div className="register_login2">
-                                <p className="form_lable_botton mt-3 mb-0 right-margjs">
+                                <p className="form_lable_botton mt-3 mb-0 right-margjs !text-[#EBEBEBEE]">
                                   Complete the following steps to verify your
                                   account.
                                 </p>
                               </div>
-                              <div className="register_login2 check mt-2">
+                              <div className="register_login2 check mt-2 !text-[#EBEBEBEE]">
                                 <p>
-                                  <i className="ri-file-text-line mr-2"></i>Personal
+                                  <i className="ri-file-text-line mr-2 !text-[#EBEBEBEE]"></i>Personal
                                   information
                                   <br />
                                 </p>
                                 <p>
-                                  <i className="ri-news-line mr-2"></i>Government
+                                  <i className="ri-news-line mr-2  !text-[#EBEBEBEE]"></i>Government
                                   issued ID
                                   <br />
                                 </p>

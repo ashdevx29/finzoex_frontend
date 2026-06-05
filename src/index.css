@@ -173,13 +173,13 @@ button.back_butn {
 p.form_lable_botton {
   font-size: 14px !important;
   text-align: left !important;
-  color: #A5AAB5 !important;
+  color: #EBEBEBEE !important;
   margin-bottom: 19px !important;
 }
 .form_pading_s p.form_lable_botton {
   font-size: 14px;
   text-align: left;
-  color: #A5AAB5;
+  color: #EBEBEBEE;
   margin-bottom: 19px;
 }
 .new_login_bb .postion_reletitt .input-group-addon {
@@ -2913,7 +2913,7 @@ span.color {
 }
 
 .light .register_login p {
-  color: #131313 !important;
+  color: #EBEBEBEE!important;
 }
 
 /* launchpad buy new light mode */

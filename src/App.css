@@ -3112,7 +3112,7 @@ nav.pagination-wrapper .pagination li button {
 }
 
 .register_login p {
-  color: #000;
+  color: #EBEBEBEE;
   text-align: center;
   padding: 8px 0px;
 }
@@ -3148,7 +3148,7 @@ nav.pagination-wrapper .pagination li button {
 }
 
 .register_login p {
-  color: #000;
+  color: #EBEBEBEE;
   text-align: start;
   padding: 8px 0px;
 }
@@ -12159,9 +12159,7 @@ body.light {
   color: #686868 !important;
 }
 
-.register_login2 p {
-  color: #7a7a7a !important;
-}
+
 
 .light .form_login_section .red_alert p {
   color: #dc3545 !important;
