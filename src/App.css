@@ -3045,7 +3045,7 @@ nav.pagination-wrapper .pagination li button {
 }
 
 .register_login label {
-  font-size: 18px;
+  font-size: 15px !important;
   color: #fff;
   margin-bottom: 10px;
   font-weight: 400;
@@ -3053,9 +3053,10 @@ nav.pagination-wrapper .pagination li button {
 
 .register_login .form-control {
   height: 43px;
-  background: #1a223f;
+  background: #fff;
   border: 1px solid #b6bece;
-  color: #fff;
+  color: #000;
+  border-radius: 12px;
 }
 
 .register_login label {
@@ -3071,9 +3072,7 @@ nav.pagination-wrapper .pagination li button {
   margin: 22px auto;
   padding: 13px 10px;
   display: block;
-  background: linear-gradient(90.15deg,
-      #5c2d91 0.73%,
-      #502abb 101.92%) !important;
+ background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%) !important;
 }
 
 .form_login_section p {
@@ -8482,7 +8481,7 @@ button.treiee {
 }
 
 .form_pading_s {
-  padding: 25px 25px;
+  padding: 25px 10px;
   
 }
 @media (max-width: 768px) {
@@ -8493,10 +8492,12 @@ button.treiee {
 }
 
 .form_content h1 {
-  font-size: 34px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 400;
   text-align: center;
   margin-bottom: 12px;
+  color:#fff;
+
 }
 
 .form_content p {
@@ -8513,11 +8514,22 @@ button.treiee {
   margin: 90px 15px;
   padding: 43px 26px;
 }
+
+.new_pading_cardd{
+  margin: 90px 15px;
+  padding: 43px 26px;
+}
+
 @media (max-width: 767px) {
   .pading_cardd {
   margin: 60px 10px !important;
   padding: 20px 15px !important;
+  }
+.new_pading_cardd{
+  margin: 20px 2px;
+  padding: 20px 10px;
 }
+
 }
 
 .site-info__row {
@@ -8845,7 +8857,7 @@ div.home {
 
 .onlywhitee .register_login .form-control {
   background: #202020;
-  color: #fff;
+  color: #bbb;
   border-radius: 20px;
 }
 
@@ -11825,7 +11837,7 @@ body.light {
 }
 
 .light .new_login_bb .form_pading_s {
-  padding: 22px 25px;
+  padding: 22px 10px;
   border-radius: 16px;
   background: #ededed;
   padding-bottom: 20px;
@@ -11859,7 +11871,7 @@ body.light {
 
 .light .navlink_new.active,
 .light .navlink_new:hover {
-  background: #553bf5;
+  background: #00D4FF;
   color: #ffffff !important;
 }
 
@@ -13389,7 +13401,7 @@ input[type="checkbox"] {
   }
 
   .form_content h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .navbar-collapse {
@@ -14190,7 +14202,8 @@ input[type="checkbox"] {
   }
 
   .asidemeni {
-    padding: 50px;
+    padding: 20px;
+    margin: 40px 0px 0px 0px;
   }
 
   .tfa_box h3 {

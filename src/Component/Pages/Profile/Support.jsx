@@ -16,6 +16,7 @@ import { ValidationError } from "yup";
 import moment from "moment";
 import Pagination from "react-js-pagination";
 import useStateref from "react-usestateref";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const value = {
@@ -142,20 +143,45 @@ function Home() {
     } catch (error) { }
   };
 
+  const truncateWords = (text, limit = 2) => {
+    if (!text) return "";
+    const words = text.toString().trim().split(/\s+/);
+    return words.length <= limit ? text : `${words.slice(0, limit).join(" ")}...`;
+  };
+
+  const copyText = async (text) => {
+    if (!text) return;
+    try {
+      await navigator.clipboard.writeText(text.toString());
+      toast.success("Copied to clipboard");
+    } catch (error) {
+      console.error("Copy failed", error);
+    }
+  };
+
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
+  };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main style={pageBackgroundStyle} className="main-content bg-cover">
         <Account_Header />
-        <Container maxWidth="xl" className="container-lg">
+        <Container maxWidth="xl" className="!container-xl !pl-4 lg:!pl-20">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
-            <Grid item xs={12} sm={12} md={8} lg={3} xl={3}>
+            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
               <SidebarNew />
             </Grid>
             <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
               <Grid container spacing={2} justifyContent={"center"}>
-                <Grid item xs={12} sm={12} md={10} lg={7} xl={7}>
-                  <div className="card_logoki pading_cardd">
+                <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
+                  <div className="new_card_logoki new_pading_cardd">
                     <div className="step-2 ">
                       <div className="form_content">
                         <h1 className="mb-3">Support Ticket</h1>
@@ -249,41 +275,177 @@ function Home() {
                     </div>
                   </div>
                 </Grid>
-                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                <Grid item xs={12} sm={12} md={12} lg={10} xl={10}>
                   <div className="table_section">
-                    <h3 className="font_color">Ticket History</h3>
+                    <h3 className="font_color !text-[#E5E5E5]">Ticket History</h3>
                     <div className="table_responsive">
-                      <div className="custom-table">
-                        <div className="table-row header">
-                          <div className="table-cell">Subject</div>
-                          <div className="table-cell">Message</div>
-                          <div className="table-cell">Category</div>
-                          <div className="table-cell">Date</div>
+                      <div
+                        className="custom-table"
+                        style={{
+                        
+                          borderRadius: 20,
+                          color: "#B3B3B3",
+                          padding: 16,
+                        }}
+                      >
+                        <div
+                          className="table-row header"
+                          style={{
+                           
+                            borderRadius: 12,
+                            color: "#B3B3B3",
+                            fontWeight: 600,
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <div
+                            className="table-cell"
+                            style={{
+                              minWidth: 0,
+                              flex: "1 1 auto",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textAlign: "center",
+                            }}
+                          >
+                            Subject
+                          </div>
+                          <div
+                            className="table-cell"
+                            style={{
+                              minWidth: 0,
+                              flex: "1 1 auto",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textAlign: "center",
+                            }}
+                          >
+                            Message
+                          </div>
+                          <div
+                            className="table-cell"
+                            style={{
+                              minWidth: 0,
+                              flex: "1 1 auto",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textAlign: "center",
+                            }}
+                          >
+                            Category
+                          </div>
+                          <div
+                            className="table-cell"
+                            style={{
+                              minWidth: 0,
+                              flex: "1 1 auto",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textAlign: "center",
+                            }}
+                          >
+                            Date
+                          </div>
                         </div>
 
                         {user.length > 0 ? (
                           user.map((data, i) => {
                             return (
-                              <div className="table-row border_table_row">
-                                <div className="table-cell">
-                                  <div className="table-cell">
-                                    <div className="data_inner">
-                                      {data.subject}
+                              <div
+                                className="table-row border_table_row"
+                                style={{
+                                  color: "#B3B3B3",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                  <div
+                                    className="table-cell"
+                                    style={{
+                                      minWidth: 0,
+                                      flex: "1 1 auto",
+                                      justifyContent: "center",
+                                      alignItems: "center",
+                                      textAlign: "center",
+                                    }}
+                                  >
+                                    <div className="data_inner" title={data.subject} style={{ width: "100%", textAlign: "center" }}>
+                                      {truncateWords(data.subject, 2)}
                                     </div>
                                   </div>
-                                </div>
-                                <div className="table-cell table_message">
-                                  <div className="data_inner">
-                                    {data.message}
+                                <div
+                                  className="table-cell table_message"
+                                  style={{
+                                    minWidth: 0,
+                                    flex: "1 1 auto",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    position: "relative",
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  <div
+                                    style={{
+                                      width: "100%",
+                                      position: "relative",
+                                      display: "flex",
+                                      alignItems: "center",
+                                      justifyContent: "center",
+                                    }}
+                                  >
+                                    <span
+                                      className="data_inner"
+                                      title={data.message}
+                                      style={{ display: "block", width: "100%", textAlign: "center" }}
+                                    >
+                                      {truncateWords(data.message, 2)}
+                                    </span>
+                                    {data.message ? (
+                                      <span
+                                        onClick={() => copyText(data.message)}
+                                        style={{
+                                          position: "absolute",
+                                          right: 8,
+                                          cursor: "pointer",
+                                          color: "#B3B3B3",
+                                          fontSize: 16,
+                                          display: "inline-flex",
+                                          alignItems: "center",
+                                          justifyContent: "center",
+                                        }}
+                                        title="Copy full message"
+                                      >
+                                        <i className="ri-file-copy-line"></i>
+                                      </span>
+                                    ) : null}
                                   </div>
                                 </div>
-                                <div className="table-cell">
-                                  <div className="data_inner">
-                                    {data.category}
+                                <div
+                                  className="table-cell"
+                                  style={{
+                                    minWidth: 0,
+                                    flex: "1 1 auto",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  <div className="data_inner" title={data.category} style={{ width: "100%", textAlign: "center" }}>
+                                    {truncateWords(data.category, 2)}
                                   </div>
                                 </div>
-                                <div className="table-cell">
-                                  <div className="data_inner">
+                                <div
+                                  className="table-cell"
+                                  style={{
+                                    minWidth: 0,
+                                    flex: "1 1 auto",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    textAlign: "center",
+                                  }}
+                                >
+                                  <div className="data_inner" title={moment(data.created_at).format("L")} style={{ width: "100%", textAlign: "center" }}>
                                     {moment(data.created_at).format("L")}
                                   </div>
                                 </div>
@@ -291,20 +453,23 @@ function Home() {
                             );
                           })
                         ) : (
-                          <div className="table-cell justify-center">
+                          <div className="table-cell justify-center" style={{ color: "#B3B3B3" }}>
                             <div className="data_inner">No Data found</div>
                           </div>
                         )}
-                        {user.length > 0 ?
-                          <Pagination
-                            itemClass="page-item" // add it for bootstrap 4
-                            linkClass="page-link" // add it for bootstrap 4
-                            activePage={currentPageref.current}
-                            itemsCountPerPage={recordPerPage}
-                            totalItemsCount={totalPage}
-                            pageRangeDisplayed={pageRange}
-                            onChange={handlePageChange}
-                          /> : ""}
+                        {user.length > 0 ? (
+                          <div style={{ padding: "16px 0",  color: "#B3B3B3" }}>
+                            <Pagination
+                              itemClass="page-item"
+                              linkClass="page-link"
+                              activePage={currentPageref.current}
+                              itemsCountPerPage={recordPerPage}
+                              totalItemsCount={totalPage}
+                              pageRangeDisplayed={pageRange}
+                              onChange={handlePageChange}
+                            />
+                          </div>
+                        ) : ("")}
                       </div>
                     </div>
                   </div>

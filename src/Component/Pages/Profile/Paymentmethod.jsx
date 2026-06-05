@@ -12,6 +12,7 @@ import { Button } from "semantic-ui-react";
 import { Checkbox } from "semantic-ui-react";
 import { Dropdown } from "semantic-ui-react";
 import SidebarNew from "./SidebarNew";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 import useState from "react-usestateref";
 import Pagination from "react-js-pagination";
 
@@ -389,9 +390,18 @@ function Home() {
     } catch (error) {}
   };
 
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
+  };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main style={pageBackgroundStyle} className="main-content bg-cover">
         <Account_Header />
 
         {pageLoader == true ? (
@@ -401,15 +411,14 @@ function Home() {
             </div>
           </Grid>
         ) : (
-          <Container maxWidth="xl" className="container-lg">
+          <Container maxWidth="xl" className="!container-xl !pl-4 lg:!pl-20">
             <Grid container spacing={2} justifyContent={"center"}>
-              {/* Item for xs (extra small) screens */}
-              <Grid item xs={12} sm={12} md={8} lg={3} xl={3}>
+              <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
                 <SidebarNew />
               </Grid>
               <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
                 <Grid container spacing={2} justifyContent={"center"}>
-                  <Grid item xs={12} sm={12} md={12} lg={8} xl={7}>
+                  <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
                     <div className="heading_card_new mt-5">
                       <h1>
                         Payment Methods
@@ -421,7 +430,7 @@ function Home() {
                         </Button>
                       </div>
                     </div>
-                    <div className="card_logoki pading_cardd payment_card mt-5 p-0">
+                    <div className="new_card_logoki new_pading_cardd mt-5 p-0">
                       {page_status == true && editpage == false ? (
                         <div className="step-5 ">
                           <div className="form register_login  marhing_pading">
