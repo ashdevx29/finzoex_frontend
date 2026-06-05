@@ -13,6 +13,10 @@ import { Dropdown } from "semantic-ui-react";
 import useState from "react-usestateref";
 import Pagination from "react-js-pagination";
 
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
+
+
+
 function Home() {
   const [fromTab, setFromTab] = useState([]);
   const [toTab, setToTab] = useState([]);
@@ -370,7 +374,16 @@ function Home() {
         ) : (
           <>
             {swapPage == "one" ? (
-              <div className="class-padding">
+              <div className="class-padding" 
+                style={{
+                                backgroundImage: `url(${DashboardBg})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                                minHeight: "calc(100vh - 60px)",
+                                marginTop:"-20px",
+                              }}
+              >
                 <Grid
                   container
                   spacing={2}
@@ -472,7 +485,16 @@ function Home() {
                 {/* Your other components and content */}
               </div>
             ) : swapPage == "two" ? (
-              <div className="class-padding">
+              <div className="class-padding" 
+                style={{
+                                backgroundImage: `url(${DashboardBg})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat",
+                                minHeight: "calc(100vh - 60px)",
+                                marginTop:"-20px",
+                              }}
+              >
                 <Grid
                   container
                   spacing={2}
@@ -540,7 +562,7 @@ function Home() {
                               className="pt-0"
                             >
                               <div className="step-5 ">
-                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o">
+                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o" style={{ position: "relative", zIndex: 9999 }}>
                                   <form className="form_pading_s">
                                     <div className="form_content payment_form pl-0">
                                       <h1 className="mb-3 Launch_pad_steps m-0 padding_botn padidnr_color">
@@ -548,7 +570,7 @@ function Home() {
                                       </h1>
                                     </div>
                                     <div className="account_setting">
-                                      <div className="form-group groow-1_widut ">
+                                      <div className="form-group groow-1_widut" style={{ position: "relative", zIndex: 100 }}>
                                         <label>Currency</label>
                                         <Dropdown
                                           placeholder="Select Currency"
@@ -600,20 +622,20 @@ function Home() {
                                     </div>
                                   </form>
                                 </div>
-                                <div className="text_icon_swap">
+                                <div className="text_icon_swap" style={{ position: "relative", zIndex: 100000 }}>
                                   <div className="cicle_section" onClick={Swap}>
                                     <i className="ri-arrow-up-down-line"></i>
                                   </div>
                                 </div>
-                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o">
-                                  <form className="form_pading_s">
+                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o" style={{ position: "relative", zIndex: 9998 }}>
+                                  <form className="form_pading_s" style={{ position: "relative", zIndex: 9998 }}>
                                     <div className="form_content payment_form pl-0">
                                       <h1 className="mb-3 Launch_pad_steps m-0 padding_botn padidnr_color">
                                         To
                                       </h1>
                                     </div>
                                     <div className="account_setting">
-                                      <div className="form-group groow-1_widut ">
+                                      <div className="form-group groow-1_widut" style={{ position: "relative", zIndex: 99999 }}>
                                         <label>Currency</label>
                                         <Dropdown
                                           placeholder="Select Currency"
@@ -645,7 +667,7 @@ function Home() {
                                       </div>
                                     </div>
                                   </form>
-                                  <div className="aling_caseds">
+                                  <div className="aling_caseds" style={{ position: "relative", zIndex: -1 }}>
                                     <button
                                       type="button"
                                       className="btn btn-primary w-100 burdas_buttnd cancel_burdas"
@@ -695,7 +717,7 @@ function Home() {
                                           <span>Price</span>
                                           {fromref.current != "" ||
                                           toref.current != "" ? (
-                                            <span>
+                                            <span className="!bg-gradient-to-br from-[#00D4FF] to-[#0066FF] !bg-clip-text !text-transparent font-bold text-[20px] leading-[120%]">
                                               {" "}
                                               1{" "}
                                               {fromref.current == "" ||
@@ -714,7 +736,7 @@ function Home() {
                                               {toref.current}{" "}
                                             </span>
                                           ) : (
-                                            <span>0.0000</span>
+                                            <span className="bg-gradient-to-br from-[#00D4FF] to-[#0066FF] bg-clip-text text-transparent font-bold text-[20px] leading-[120%]">0.0000</span>
                                           )}
                                         </p>
                                       </div>

@@ -23,8 +23,6 @@ textarea {
 }
 
 
-
-
 .gradient-text {
   background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
   -webkit-background-clip: text;
@@ -82,9 +80,11 @@ textarea {
   min-height: 100vh !important;
 }
 .new_login_bb .card_logoki {
-  border-radius: 20px;
-  background: #181818;
+  border-radius: 24px;
+  background: linear-gradient(129.79deg, rgba(0, 0, 0, 0.11) 0.6%, rgba(102, 102, 102, 0.11) 96.54%);
   border: 1px solid #252525;
+  backdrop-filter: blur(56.70000076293945px);
+
 }
 
 
@@ -94,8 +94,8 @@ textarea {
 }
 .new_login_bb .card_logoki h1 {
   text-align: left;
-  color: #A5AAB5;
-  font-size: 34px;
+  color: #E5E5E5;
+  font-size: 24px;
   font-weight: 400;
   margin-bottom: 35px;
   text-transform: capitalize;
@@ -109,12 +109,15 @@ textarea {
 }
 .new_login_bb .form_pading_s {
   padding: 24px 25px;
-  background: #2727274D;
- 
+  background: #0000004D;
+  border: 1px solid #1E1E1E;
+  backdrop-filter: blur(101.5px);
+  border-radius: 16px;
+  z-index: 1 !important;
 }
 .new_login_bb .register_login label {
   font-size: 14px;
-  color: #A5AAB5;
+  color: #E5E5E5;
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -123,6 +126,7 @@ textarea {
   color: #fff;
   border: 2px solid #252525;
   border-radius: 10px;
+  font-weight: 400 !important;
 }
 .onlywhitee.new_login_bb .register_login .form-textarea {
   background: #0E1115;
@@ -151,7 +155,7 @@ textarea {
   color: #A5AAB5 !important;
 }
 .agrreement a {
-  color: #9685ff;
+  color: #009DFF;
 }
 .agrreement {
   margin-top: 30px;
@@ -206,20 +210,22 @@ p.form_lable_botton {
   align-items: center;
 }
 .form_pading_s .ui.fluid.dropdown.text_memu {
-  background: #2c2c2c !important;
+  background: #0E1115 !important;
   color: #fff !important;
   border: none !important;
   height: 44px !important;
   border-radius: 10px !important;
   padding-top: 15px !important;
+  border: 1px solid #252525 !important;
 }
 .form_pading_s .ui.fluid.dropdown.text_memu.swapmenui {
-  background: #2c2c2c !important;
+  background: #0E1115 !important;
   color: #fff !important;
-  border: none !important;
-  height: 53px !important;
+  /* border: none !important; */
+  /* height: 53px !important; */
   border-radius: 10px !important;
-  padding-top: 21px !important;
+  /* padding-top: 21px !important; */
+  border: 1px solid #009DFF !important;
 }
 .new_login_bb .pading_cardd.swap {
   padding: 0px 60px;
@@ -250,7 +256,7 @@ p.right-margjs {
   display: block;
   width: 100%;
   text-align: center;
-  color: #9685ff;
+  color: #009DFF;
   font-size: 16px;
 }
 .input_flex_propery {
@@ -357,7 +363,7 @@ button.link {
   color: #A5AAB5;
 }
 button.link.hover {
-  /* color: #9685ff; */
+  /* color: #009DFF; */
   background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -366,7 +372,7 @@ button.link.hover {
 }
 
 button.link.active {
-  /* color: #9685ff; */
+  /* color: #009DFF; */
   background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -576,7 +582,7 @@ button.primary_butn {
 }
 .Launch_pad_steps span {
   font-size: 20px;
-  color: #9685ff;
+  color: #009DFF;
   font-weight: 300;
 }
 .class-padding {
@@ -689,7 +695,7 @@ button.primary_butn {
   background: #1c1a26;
   font-size: 17px;
   font-weight: 300;
-  color: #9685ff;
+  color: #009DFF;
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -776,8 +782,12 @@ button.primary_butn {
 }
 
 .tabs_inside .nav li a.active {
-  border-bottom: 2px solid #4f41a4;
-  color: #9685ff;
+  border-bottom: 2px solid;
+border-image-source: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+border-image-slice: 1;
+background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 .tfa_box h3 {
   font-size: 34px;
@@ -800,7 +810,7 @@ button.primary_butn {
   margin: 24px 0px !important;
 }
 .menu_items_fex .navlink_new.active {
-  color: #9685ff;
+  color: #009DFF;
 }
 .gap_button {
   display: flex;
@@ -813,17 +823,17 @@ button.primary_butn {
 .gap_button .form_pading_s h6 {
   font-size: 34px;
   font-weight: 500;
-  color: #9685ff;
+  color: #009DFF;
 }
 .gap_button .groow-1 {
   flex-grow: 1;
 }
 .text-color-pur {
-  color: #9685ff !important;
+  color: #009DFF !important;
 }
 
 .form_pading_s.box {
-  background: linear-gradient(93deg, #9685ff 3.79%, #683018 104.96%),
+  background: linear-gradient(93deg, #009DFF 3.79%, #683018 104.96%),
     linear-gradient(180deg, #d9d9d9 0%, rgba(217, 217, 217, 0) 100%);
   padding: 0 !important;
   border-radius: 11px;
@@ -931,14 +941,14 @@ button.primary_butn {
 }
 .payment_form button {
   background: transparent !important;
-  color: #9685ff !important;
+  color: #009DFF !important;
   font-weight: 400 !important;
   color: #A5AAB5 !important;
 
   font-size: 17px !important;
 }
 .payment_form button.primary_one {
-  color: #9685ff !important;
+  color: #009DFF !important;
 }
 .marhing_pading {
   padding: 24px 24px !important;
@@ -979,16 +989,16 @@ button.primary_butn {
 }
 .stake_button h4 a {
   display: block;
-  color: #9685ff;
+  color: #009DFF;
   /* padding: 10px 33px; */
-  /* border: 1px solid #9685ff; */
+  /* border: 1px solid #009DFF; */
   border-radius: 10px;
   /* margin-right: 20px; */
 }
 .colo_bold {
   font-size: 25px;
   font-weight: 500;
-  color: #9685ff;
+  color: #009DFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1142,7 +1152,7 @@ button.primary_butn {
   border-bottom: 1px solid #767676;
 }
 .color_sec {
-  color: #9685ff;
+  color: #009DFF;
 }
 .aling_flexx {
   display: flex;
@@ -1151,7 +1161,7 @@ button.primary_butn {
 }
 .section_class_grs h4 {
   margin: 0;
-  color: #9685ff;
+  color: #009DFF;
   font-size: 20px;
 }
 .section_class_grs h5 {
@@ -1194,13 +1204,34 @@ button.primary_butn {
   width: 25px;
 } */
 .new_login_bb .register_login .btn-primary.burdas_buttnd {
-  background: transparent !important;
-  color: #9685ff;
-  border: 1px solid #9685ff;
+    position: relative;
+    background: transparent !important;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    z-index: 1;
+}
+
+.new_login_bb .register_login .btn-primary.burdas_buttnd::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 1px; /* Border thickness */
+    background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+    
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    z-index: -1;
 }
 .padidnr_color {
   font-size: 20px !important;
-  color: #9685ff !important;
+  color: #FFFFFF !important;
 }
 .paddinte_ledy_o {
   padding-left: 0 !important;
@@ -1216,14 +1247,17 @@ button.primary_butn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 11px;
-  background: #9684f8;
-  font-size: 27px;
-  border-radius: 40px;
+  padding: 7px 14px;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  font-size: 24px;
+  border-radius: 50px;
   color: #fff;
+  z-index: 1000 !important;
 }
 .data_inner span {
-  color: #9685ff;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-right: 10px;
 }
 .bi-trash-fill::before {
@@ -1232,9 +1266,9 @@ button.primary_butn {
 }
 .data_inner button {
   display: block;
-  color: #9685ff;
+  color: #009DFF;
   padding: 10px 14px;
-  border: 1px solid #9685ff;
+  border: 1px solid #009DFF;
   border-radius: 10px;
   min-width: 130px;
 }
@@ -1345,7 +1379,7 @@ button.primary_butn {
   display: block;
   color: #fff;
   padding: 12px 14px;
-  border: 0px solid #9685ff;
+  border: 0px solid #009DFF;
   border-radius: 10px;
   min-width: 110px;
   margin-left: auto;
@@ -1720,7 +1754,7 @@ span.primary_red {
   padding: 11px;
 }
 .light .onlywhitee.new_login_bb .register_login .form-control-ref {
-  color: #9685ff;
+  color: #009DFF;
 }
 .new_buyform .nav {
   gap: 20px;
@@ -1739,7 +1773,7 @@ span.primary_red {
   border-bottom: 1px solid #252525 !important;
 }
 .inner_form li a.active {
-  color: #9685ff !important;
+  color: #009DFF !important;
   border-bottom: 1px solid #4f41a4 !important;
 }
 .formtext label {
@@ -2232,7 +2266,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #009DFF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2248,7 +2282,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #009DFF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2265,7 +2299,7 @@ span.color {
   content: "";
   position: absolute;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #009DFF;
   border-radius: 101px;
   right: 34px;
   z-index: 1;
@@ -2516,7 +2550,7 @@ span.color {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #9685ff;
+  color: #009DFF;
   font-size: 59px;
   font-style: normal;
   font-weight: 800;
@@ -2862,7 +2896,7 @@ span.color {
   content: "";
   position: absolute !important;
   height: 26px;
-  background-color: #9685ff;
+  background-color: #009DFF;
   border-radius: 101px;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -2996,7 +3030,7 @@ span.color {
   font-weight: 400;
 }
 .modal-text1 h3 {
-  color: #9685ff;
+  color: #009DFF;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -3106,7 +3140,7 @@ input {
   gap: 6px;
   border-radius: 12px;
   border: 1.5px solid #4f41a4;
-  color: #9685ff;
+  color: #009DFF;
   font-size: 16px;
   font-weight: 500;
 }
@@ -3309,7 +3343,7 @@ input {
   background-position-y: -36px;
 }
 .register_btn {
-  color: #9685ff !important;
+  color: #009DFF !important;
   text-transform: capitalize !important;
   border: 1px solid #4f41a4 !important;
   border-radius: 12px !important;
@@ -3769,9 +3803,9 @@ input:placeholder-shown {
   }
   .bootsrab_tabs .nav li a {
     display: block;
-    color: #9685ff;
+    color: #009DFF;
     padding: 10px 26px;
-    border: 1px solid #9685ff;
+    border: 1px solid #009DFF;
     border-radius: 10px;
     margin-right: 0px;
   }

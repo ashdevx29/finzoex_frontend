@@ -575,7 +575,7 @@ function Home() {
                               className="pt-0"
                             >
                               <div className="step-5 ">
-                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o">
+                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o" style={{ position: "relative", zIndex: 9999 }}>
                                   <form className="form_pading_s">
                                     <div className="form_content payment_form pl-0">
                                       <h1 className="mb-3 Launch_pad_steps m-0 padding_botn padidnr_color">
@@ -583,7 +583,7 @@ function Home() {
                                       </h1>
                                     </div>
                                     <div className="account_setting">
-                                      <div className="form-group groow-1_widut ">
+                                      <div className="form-group groow-1_widut" style={{ position: "relative", zIndex: 100 }}>
                                         <label>Currency</label>
                                         <Dropdown
                                           placeholder="Select Currency"
@@ -633,15 +633,15 @@ function Home() {
                                     <i className="ri-arrow-up-down-line"></i>
                                   </div>
                                 </div>
-                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o">
-                                  <form className="form_pading_s">
+                                <div className="form register_login  marhing_pading pl-0 paddinte_ledy_o" style={{ position: "relative", zIndex: 9998 }}>
+                                  <form className="form_pading_s" style={{ position: "relative", zIndex: 9999 }}>
                                     <div className="form_content payment_form pl-0">
                                       <h1 className="mb-3 Launch_pad_steps m-0 padding_botn padidnr_color">
                                         To
                                       </h1>
                                     </div>
                                     <div className="account_setting">
-                                      <div className="form-group groow-1_widut ">
+                                      <div className="form-group groow-1_widut" style={{ position: "relative", zIndex: 90 }}>
                                         <label>Currency</label>
                                         <Dropdown
                                           placeholder="Select Currency"
@@ -673,7 +673,7 @@ function Home() {
                                       </div>
                                     </div>
                                   </form>
-                                  <div className="aling_caseds">
+                                  <div className="aling_caseds" style={{ position: "relative", zIndex: 1 }}>
                                     <button
                                       type="button"
                                       className="btn btn-primary w-100 burdas_buttnd cancel_burdas"

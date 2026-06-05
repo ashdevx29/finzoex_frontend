@@ -10,6 +10,11 @@ import { setAuthorization } from "../core/service/axios";
 import { Button } from "semantic-ui-react";
 import { Dropdown } from "semantic-ui-react";
 import useState from "react-usestateref";
+
+
+import DashboardBg from "../img/Dashboard/DashboadBg.jpg";
+
+
 function Home() {
   //========================================================================//
 
@@ -273,7 +278,16 @@ function Home() {
     <div className="">
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Header />
-        <Container maxWidth="xl" className="container-lg">
+        <Container maxWidth="xl" className="container-lg"
+        style={{
+                                  backgroundImage: `url(${DashboardBg})`,
+                                  backgroundSize: "cover",
+                                  backgroundPosition: "center",
+                                  backgroundRepeat: "no-repeat",
+                                  minHeight: "calc(100vh - 60px)",
+                                  marginTop:"-20px",
+                                }}
+        >
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
             <Grid item xs={12} sm={12} md={8} lg={6} xl={5}>

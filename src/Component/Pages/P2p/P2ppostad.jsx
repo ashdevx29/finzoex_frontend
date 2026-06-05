@@ -10,6 +10,11 @@ import { Grid, Paper, Container } from "@mui/material";
 import { setAuthorization } from "../../../core/service/axios";
 import { Button } from "semantic-ui-react";
 import { Dropdown } from "semantic-ui-react";
+
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
+
+
+
 function Home() {
   const friendOptions = [
     {
@@ -530,28 +535,47 @@ console.log( LimitFromvalidref.current ,
     <div className="">
       <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
         <Header />
-        <Container maxWidth="xl">
+        <Container maxWidth="xl"
+          style={{
+                          backgroundImage: `url(${DashboardBg})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                          minHeight: "calc(100vh - 60px)",
+                          marginTop:"-20px",
+                        }}
+        >
           <Grid
             container
             spacing={2}
             justifyContent={"center"}
             marginTop={"20px"}
           >
+          
             {/* Item for xs (extra small) screens */}
             <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+            
               <div className="card_logoki pading_cardd post_card">
+              
+                      <Button className="back_butn" onClick={() => navback()}>
+                        <i className="ri-arrow-left-line"></i> Back
+                      </Button>
+              
+                   
                 <Grid
                   container
                   spacing={2}
                   justifyContent={"start"}
                   marginTop={"20px"}
                 >
+
+                
                   {/* Item for xs (extra small) screens */}
                   <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <div className="form_content">
-                      <Button className="back_butn" onClick={() => navback()}>
+                      {/* <Button className="back_butn" onClick={() => navback()}>
                         <i className="ri-arrow-left-line"></i> Back
-                      </Button>
+                      </Button> */}
                       <h1 className="mb-4">Fill in the Details</h1>
                     </div>
                   </Grid>

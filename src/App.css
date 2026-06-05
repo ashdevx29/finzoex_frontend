@@ -11722,7 +11722,7 @@ body.light {
 
 .light .ui.default.dropdown:not(.button)>.text,
 .ui.dropdown:not(.button)>.default.text {
-  color: #131313;
+  color: #fff;
 }
 
 .light .small_search.bar .form-control {
@@ -12452,6 +12452,11 @@ input[type="checkbox"] {
 
 .form_pading_s.buy-padding {
   padding: 24px 50px !important;
+  background: #0000004D !important;
+  border: 1px solid #1E1E1E !important;
+  /* backdrop-filter: blur(101.5px) !important; */
+  border-radius: 16px !important;
+
 }
 
 .table-cell.number {
