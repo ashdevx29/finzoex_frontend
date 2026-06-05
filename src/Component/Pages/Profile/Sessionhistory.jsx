@@ -14,6 +14,7 @@ import { Dropdown } from "semantic-ui-react";
 import SidebarNew from "./SidebarNew";
 import Pagination from "react-js-pagination";
 import moment from "moment";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const [pageLoader, setPageloader] = useState(false);
@@ -50,9 +51,18 @@ function Home() {
     }
   };
 
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
+  };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main style={pageBackgroundStyle} className="main-content bg-cover">
         <Account_Header />
         {pageLoader == true ? (
           <Grid item xs={12} sm={12} md={8} lg={12} xl={12}>
@@ -61,16 +71,16 @@ function Home() {
             </div>
           </Grid>
         ) : (
-          <Container maxWidth="xl" className="container-lg">
+          <Container maxWidth="xl" className="!container-xl !pl-4 lg:!pl-20">
             <Grid container spacing={2} justifyContent={"center"}>
               {/* Item for xs (extra small) screens */}
-              <Grid item xs={12} sm={12} md={8} lg={3} xl={3}>
+              <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
                 <SidebarNew />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
+              <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
                 <Grid container spacing={2} justifyContent={"center"}>
-                  <Grid item xs={12} sm={12} md={12} lg={11} xl={11}>
-                    <div className="card_logoki pading_cardd history pl-4 pr-4">
+                  <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
+                    <div className="new_card_logoki new_pading_cardd">
                       <div className="step-5 ">
                         <div className="form_content">
                           <h1 className="mb-3 Launch_pad_steps">
@@ -79,31 +89,54 @@ function Home() {
                         </div>
                         <div className="table_responsive">
                           <div className="table_section">
-                            <div className="custom-table">
-                              <div className="table-row header">
-                                <div className="table-cell">IP Address</div>
-                                <div className="table-cell">Device</div>
-                                <div className="table-cell">Date</div>
+                            <div
+                              className="custom-table"
+                              style={{
+                                backgroundColor: "#0E1115",
+                                border: "1px solid #212121",
+                                borderRadius: 20,
+                                color: "#B3B3B3",
+                                padding: 16,
+                              }}
+                            >
+                              <div
+                                className="table-row header"
+                                style={{
+                                  backgroundColor: "#131619",
+                                  borderRadius: 12,
+                                  color: "#B3B3B3",
+                                  fontWeight: 600,
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                  IP Address
+                                </div>
+                                <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                  Device
+                                </div>
+                                <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                  Date
+                                </div>
                               </div>
                               {sessionHistory && sessionHistory.length > 0 ? (
                                 sessionHistory.map((item, i) => {
                                   return (
-                                    <div className="table-row border_table_row">
-                                      <div className="table-cell">
-                                        <div className="table-cell">
-                                          <div className="data_inner">
-                                            {item.ipAddress}
-                                          </div>
+                                    <div className="table-row border_table_row" style={{ alignItems: "center", justifyContent: "center" }}>
+                                      <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                        <div className="data_inner" style={{ width: "100%", textAlign: "center" }}>
+                                          {item.ipAddress}
                                         </div>
                                       </div>
-                                      <div className="table-cell">
-                                        <div className="data_inner">
+                                      <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                        <div className="data_inner" style={{ width: "100%", textAlign: "center" }}>
                                           {item.OS}
                                         </div>
                                       </div>
 
-                                      <div className="table-cell">
-                                        <div className="data_inner">
+                                      <div className="table-cell" style={{ justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+                                        <div className="data_inner" style={{ width: "100%", textAlign: "center" }}>
                                           {moment(item.createdDate).format("L")}
                                         </div>
                                       </div>

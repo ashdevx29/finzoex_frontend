@@ -557,22 +557,22 @@ const [location, setlocation, locationref] = useStateref("");
     <div className="">
       <main style={pageBackgroundStyle} className="main-content   bg-cover ">
         <Account_Header/>
-        <Container maxWidth="xl" className="container-lg">
+        <Container maxWidth="xl" className="!container-xl !pl-4 lg:!pl-20">
           <Grid container spacing={2} justifyContent={"center"}>
             {/* Item for xs (extra small) screens */}
-            <Grid item xs={12} sm={12} md={8} lg={3} xl={3}>
+            <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
               <SidebarNew />
             </Grid>
             <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
               <Grid container spacing={2} justifyContent={"center"}>
                 {loader == false ? (
-                  <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
-                    <div className="n_card_logoki  pading_cardd">
+                  <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
+                    <div className="new_card_logoki  new_pading_cardd">
 
                       <div className={stage1}>
                         <div className="form_content">
-                          <h1 className="mb-2">Let’s get you verified </h1>
-                          <p className="form_lable_botton mb-5">
+                          <h1 className="mb-2 !text-[#fff]">Let’s get you verified </h1>
+                          <p className="form_lable_botton mb-5 !text-center">
                             Select your residency and follow the steps
                           </p>
                         </div>
@@ -598,7 +598,7 @@ const [location, setlocation, locationref] = useStateref("");
   onChange={(selectedOption) => {
     setlocation(selectedOption.value);
   }}
-  className="text-black"
+  className="text-black rounded-xl"
   classNamePrefix="react-select"
 />
                               </div>
@@ -612,24 +612,25 @@ const [location, setlocation, locationref] = useStateref("");
                                 )}
                               </div>
                               <div className="register_login2">
-                                <p className="form_lable_botton mt-3 mb-0 right-margjs">
+                                <p className="form_lable_botton mt-3 mb-0 right-margjs !text-[#EBEBEBEE]">
                                   Complete the following steps to verify your
                                   account.
                                 </p>
                               </div>
-                              <div className="register_login2 check mt-2">
+                              <div className="register_login2 check mt-2 !text-[#EBEBEBEE]">
                                 <p>
-                                  <i className="ri-file-text-line mr-2"></i>Personal
+                                  <i className="ri-file-text-line mr-2 !text-[#EBEBEBEE]"></i>Personal
                                   information
                                   <br />
                                 </p>
                                 <p>
-                                  <i className="ri-news-line mr-2"></i>Government
+                                  <i className="ri-news-line mr-2  !text-[#EBEBEBEE]"></i>Government
                                   issued ID
                                   <br />
                                 </p>
                               </div>
                             </form>
+
                             {buttonLoader == false ? (
                               <button
                                 type="button"
@@ -646,6 +647,8 @@ const [location, setlocation, locationref] = useStateref("");
                                 loading...
                               </button>
                             )}
+
+
                           </div>
                         </div>
 
@@ -666,7 +669,7 @@ const [location, setlocation, locationref] = useStateref("");
                             ></i>{" "}
                             Back
                           </Button>
-                          <h1 className="mb-2">Personal Information</h1>
+                          <h1 className="mb-2 !text-[#EBEBEBEE]">Personal Information</h1>
                           <p className="form_lable_botton">
                             Please provide the following information as shown on
                             your passport or ID card.
@@ -1022,8 +1025,8 @@ const [location, setlocation, locationref] = useStateref("");
                           ) : (
                             ""
                           )}
-                          <h1 className="mb-2">Identity Verification</h1>
-                          <p className="form_lable_botton">
+                          <h1 className="mb-4">Identity Verification</h1>
+                          <p className="form_lable_botton ">
                             Follow the steps below for verifying your identity.
                             This is required for security purposes.
                           </p>
@@ -1031,7 +1034,7 @@ const [location, setlocation, locationref] = useStateref("");
                         <div className="form_login_section p-0">
                           <div className="form register_login p-0">
                             <form className="form_pading_s">
-                              <h2 className="text_inner_card">
+                              <h2 className="text_inner_card ">
                                 Which type of photo ID would you like to
                                 provide?
                               </h2>
@@ -1105,7 +1108,7 @@ const [location, setlocation, locationref] = useStateref("");
                         </div>
                         <div className="form_login_section p-0">
                           <div className="form register_login p-0">
-                            <ul className="option_instruction image-marker">
+                            <ul className="option_instruction image-marker mb-16">
                               <li>
                                 Upload a complete image if your ID document.
                               </li>

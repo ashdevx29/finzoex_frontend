@@ -109,11 +109,8 @@ textarea {
 }
 .new_login_bb .form_pading_s {
   padding: 24px 25px;
-  background: #0000004D;
-  border: 1px solid #1E1E1E;
-  backdrop-filter: blur(101.5px);
-  border-radius: 16px;
-  z-index: 1 !important;
+  background: #2727274D;
+ 
 }
 .new_login_bb .register_login label {
   font-size: 14px;
@@ -122,11 +119,10 @@ textarea {
   font-weight: 400;
 }
 .onlywhitee.new_login_bb .register_login .form-control {
-  background: #0E1115;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: 2px solid #252525;
   border-radius: 10px;
-  font-weight: 400 !important;
 }
 .onlywhitee.new_login_bb .register_login .form-textarea {
   background: #0E1115;
@@ -177,13 +173,14 @@ button.back_butn {
 p.form_lable_botton {
   font-size: 14px !important;
   text-align: left !important;
-  color: #A5AAB5 !important;
+  color: #EBEBEBEE !important;
   margin-bottom: 19px !important;
+  padding-left:22px;
 }
 .form_pading_s p.form_lable_botton {
   font-size: 14px;
   text-align: left;
-  color: #A5AAB5;
+  color: #EBEBEBEE;
   margin-bottom: 19px;
 }
 .new_login_bb .postion_reletitt .input-group-addon {
@@ -256,7 +253,7 @@ p.right-margjs {
   display: block;
   width: 100%;
   text-align: center;
-  color: #009DFF;
+  color: #9685ff;
   font-size: 16px;
 }
 .input_flex_propery {
@@ -266,18 +263,20 @@ p.right-margjs {
   gap: 10px;
 }
 .text_inner_card {
-  font-weight: 500;
-  color: #A5AAB5;
-  font-size: 23px;
+  font-weight: 400;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 .a.accepte {
   display: block;
-  background: #2c2c2c;
+  background: #00000063;
   padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #32323287;
 }
 .a.accepte:active {
   display: block;
@@ -328,7 +327,7 @@ a.accepte:focus {
 .image-marker li::before {
   position: absolute;
   left: 0;
-  content: url("../src/img/New_images/Star.png");
+  content: url("../src/img/New_images/Star2.png");
   display: inline-block;
   background: transparent;
   width: 20px;
@@ -396,9 +395,9 @@ button.link.active {
 }
 .heading_card_new h1 {
   margin-bottom: 0;
-  /* margin-top: 20px; */
+  margin-top: 10px;
   margin-bottom: 0;
-  font-size: 30px !important;
+  font-size: 22px !important;
   color: #B3B3B3 !important;
   font-weight: 400 !important;
 }
@@ -670,12 +669,28 @@ button.primary_butn {
 }
 .asidemeni {
   height: 100vh;
-  background: #181818;
   padding: 20px;
   margin: 40px 0px;
   border-radius: 20px;
   position: sticky;
   top: 20px;
+
+  /* Glass background */
+  background: linear-gradient(
+    129.79deg,
+    rgba(0, 0, 0, 0.11) 0.6%,
+    rgba(102, 102, 102, 0.11) 96.54%
+  );
+
+  /* Blur effect */
+  backdrop-filter: blur(26.9px);
+  -webkit-backdrop-filter: blur(26.9px);
+
+  /* Border gradient trick */
+  border: 0.5px solid #585858;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+
 }
 .dropdown_butn {
   width: 100%;
@@ -685,26 +700,27 @@ button.primary_butn {
 }
 .button_accorndi,
 .button_accorndi:hover {
-  color: #A5AAB5 !important;
+  color: #fff !important;
   font-size: 19px !important;
   font-weight: 400 !important;
 }
 .navlink_new.active,
 .navlink_new:hover {
   padding: 14px 12px;
-  background: #1c1a26;
+  background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
+  color: #fff;
   font-size: 17px;
   font-weight: 300;
-  color: #009DFF;
+  color: #9685ff;
   margin-bottom: 10px;
   border-radius: 10px;
 }
 .navlink_new {
   padding: 14px 20px;
   background: transparent;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
-  color: #A5AAB5;
+  color: #fff;
   margin-bottom: 10px;
 }
 .bg_tras {
@@ -717,7 +733,7 @@ button.primary_butn {
   font-weight: 400;
 }
 .menu_items_fex .navlink_new {
-  color: #A5AAB5;
+  color: #fff;
   font-size: 19px;
   font-weight: 400;
   display: flex;
@@ -778,20 +794,16 @@ button.primary_butn {
   font-weight: 400;
   font-size: 16px;
   margin-bottom: -2px;
-  color: #A5AAB5;
+  color: #fff;
 }
 
 .tabs_inside .nav li a.active {
-  border-bottom: 2px solid;
-border-image-source: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
-border-image-slice: 1;
-background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  border-bottom: 2px solid #4f41a4;
+  color: #9685ff;
 }
 .tfa_box h3 {
   font-size: 34px;
-  color: #A5AAB5;
+  color: #fff;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -810,7 +822,7 @@ background: linear-gradient(135deg, #00D4FF 0%, #0066FF 100%);
   margin: 24px 0px !important;
 }
 .menu_items_fex .navlink_new.active {
-  color: #009DFF;
+  color: #9685ff;
 }
 .gap_button {
   display: flex;
@@ -2947,7 +2959,7 @@ span.color {
 }
 
 .light .register_login p {
-  color: #131313 !important;
+  color: #EBEBEBEE!important;
 }
 
 /* launchpad buy new light mode */
@@ -3482,7 +3494,7 @@ input:placeholder-shown {
   width: 250px;
   background: transparent;
   border: none;
-  color: #fff;
+  color: #bbb;
   text-overflow: ellipsis;
   overflow: hidden;
 }

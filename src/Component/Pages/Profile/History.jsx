@@ -16,6 +16,7 @@ import moment from "moment";
 import Pagination from "react-js-pagination";
 import PaymentMethod from "./Paymentmethod";
 import { PropTypes } from "prop-types";
+import DashboardBg from "../../../img/Dashboard/DashboadBg.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -358,9 +359,41 @@ function Home() {
     } catch (error) {}
   };
 
+  const pageBackgroundStyle = {
+    backgroundImage: `url(${DashboardBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",
+  };
+
+  const historyTableStyle = {
+    backgroundColor: "#0E1115",
+    border: "1px solid #212121",
+    borderRadius: 20,
+    color: "#B3B3B3",
+    padding: 16,
+  };
+
+  const historyHeaderStyle = {
+    backgroundColor: "#131619",
+    borderRadius: 12,
+    color: "#B3B3B3",
+    fontWeight: 600,
+    alignItems: "center",
+    justifyContent: "center",
+  };
+
+  const historyCellCenter = {
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+  };
+
   return (
     <div className="">
-      <main className="main-content tradepage-bg  bg-cover onlywhitee new_login_bb">
+      <main style={pageBackgroundStyle} className="main-content bg-cover">
         <Account_Header/>
         {pageLoader == true ? (
           <Grid item xs={12} sm={12} md={8} lg={12} xl={12}>
@@ -369,17 +402,17 @@ function Home() {
             </div>
           </Grid>
         ) : (
-          <Container maxWidth="xl" className="container-lg">
+          <Container maxWidth="xl" className="!container-xl !pl-4 lg:!pl-20">
             <Grid container spacing={2} justifyContent={"center"}>
               {/* Item for xs (extra small) screens */}
-              <Grid item xs={12} sm={12} md={8} lg={3} xl={3}>
+              <Grid item xs={12} sm={12} md={4} lg={3} xl={3}>
                 <SidebarNew />
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={9} xl={9}>
+              <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
                 <Grid container spacing={2} justifyContent={"center"}>
                   {editpage == true ? (
                     <Grid item xs={12} sm={12} md={8} lg={7} xl={7}>
-                      <div className="card_logoki pading_cardd mt-5 p-0">
+                      <div className="new_card_logoki new_pading_cardd mt-5 p-0">
                         <div className="step-5 ">
                           <div className="form register_login  marhing_pading">
                             <form className="form_pading_s mb-5">
@@ -519,15 +552,26 @@ function Home() {
                       </div>
                     </Grid>
                   ) : (
-                    <Grid item xs={12} sm={12} md={12} lg={11} xl={11}>
-                      <div className="card_logoki pading_cardd history pl-4 pr-4">
+                    <Grid item xs={12} sm={12} md={8} lg={9} xl={9}>
+                      <div className="new_card_logoki new_pading_cardd">
                         <div className="step-5 ">
                           <div className="form_content">
                             <h1 className="mb-3 Launch_pad_steps">History</h1>
                           </div>
-                          <div className="tabs_inside">
-                            <ul className="nav nav-tabs">
-                              <li className="active">
+                          <div className="tabs_inside" style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+                            <ul
+                              className="nav nav-tabs"
+                              style={{
+                                display: "flex",
+                                flexWrap: "nowrap",
+                                justifyContent: "space-between",
+                                gap: "12px",
+                                width: "100%",
+                                whiteSpace: "nowrap",
+                                minWidth: 0,
+                              }}
+                            >
+                              <li style={{ flex: 1, minWidth: 120 }} className="active website_color">
                                 <a
                                   data-toggle="tab"
                                   href="#tFA"
@@ -536,17 +580,17 @@ function Home() {
                                   Deposit
                                 </a>
                               </li>
-                              <li>
+                              <li style={{ flex: 1, minWidth: 120 }} className="website_color">
                                 <a data-toggle="tab" href="#Withdraw">
                                   Withdraw
                                 </a>
                               </li>
-                              <li>
+                              <li style={{ flex: 1, minWidth: 120 }} className="website_color">
                                 <a data-toggle="tab" href="#Launchpad">
                                   Launchpad
                                 </a>
                               </li>
-                              <li>
+                              <li style={{ flex: 1, minWidth: 120 }} className="website_color">
                                 <a data-toggle="tab" href="#P2P">
                                   Notification
                                 </a>
@@ -562,15 +606,15 @@ function Home() {
                             <div id="tFA" className="tab-pane fade in active show">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell">
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell" style={historyCellCenter}>
                                         Transaction ID
                                       </div>
-                                      <div className="table-cell">Amount</div>
-                                      <div className="table-cell">Currency</div>
-                                      <div className="table-cell">Date</div>
-                                      <div className="table-cell">Status</div>
+                                      <div className="table-cell" style={historyCellCenter}>Amount</div>
+                                      <div className="table-cell" style={historyCellCenter}>Currency</div>
+                                      <div className="table-cell" style={historyCellCenter}>Date</div>
+                                      <div className="table-cell" style={historyCellCenter}>Status</div>
                                     </div>
                                     {depositLoader == true ? (
                                       <Grid
@@ -670,15 +714,15 @@ function Home() {
                             <div id="Withdraw" className="tab-pane fade">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell">
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell" style={historyCellCenter}>
                                         Transaction ID
                                       </div>
-                                      <div className="table-cell">Amount</div>
-                                      <div className="table-cell">Currency</div>
-                                      <div className="table-cell">Date</div>
-                                      <div className="table-cell">Status</div>
+                                      <div className="table-cell" style={historyCellCenter}>Amount</div>
+                                      <div className="table-cell" style={historyCellCenter}>Currency</div>
+                                      <div className="table-cell" style={historyCellCenter}>Date</div>
+                                      <div className="table-cell" style={historyCellCenter}>Status</div>
                                     </div>
 
                                     {pageLoader == true ? (
@@ -778,9 +822,9 @@ function Home() {
                             <div id="Launchpad" className="tab-pane fade">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell">Order ID</div>
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell" style={historyCellCenter}>Order ID</div>
                                       <div className="table-cell">Amount</div>
                                       <div className="table-cell">Currency</div>
                                       <div className="table-cell">Date</div>
@@ -881,9 +925,9 @@ function Home() {
                             <div id="P2P" className="tab-pane fade">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell number  ">
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell number" style={historyCellCenter}>
                                         S.No
                                       </div>
                                       <div className="table-cell number">
@@ -975,9 +1019,9 @@ function Home() {
                             <div id="bank" className="tab-pane fade">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell">Default</div>
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell" style={historyCellCenter}>Default</div>
                                       <div className="table-cell">
                                         Account Number
                                       </div>
@@ -1124,12 +1168,12 @@ function Home() {
                             <div id="notification" className="tab-pane fade">
                               <div className="table_responsive">
                                 <div className="table_section">
-                                  <div className="custom-table">
-                                    <div className="table-row header">
-                                      <div className="table-cell">S.No</div>
-                                      <div className="table-cell"> Date / time</div>
-                                      <div className="table-cell">From</div>
-                                      <div className="table-cell">Message</div>
+                                  <div className="custom-table" style={historyTableStyle}>
+                                    <div className="table-row header" style={historyHeaderStyle}>
+                                      <div className="table-cell" style={historyCellCenter}>S.No</div>
+                                      <div className="table-cell" style={historyCellCenter}> Date / time</div>
+                                      <div className="table-cell" style={historyCellCenter}>From</div>
+                                      <div className="table-cell" style={historyCellCenter}>Message</div>
                                     </div>
                                     {notificaitonLoader == true ? (
                                       <Grid
